@@ -1,2 +1,7 @@
-# FPGA
 FPGA project for the control system of the OAM experiment. FPGA stores a set of images in a DDR memory, displays such images via HDMI port, prepares a train of short pulses to drive an EOM Intensity modulator, and aquires counts from 2 detectors. This project is meant to work along a GUI written in C#.
+
+1. **electronics** contains the source files for the FMC PCB and the LM7171 AMP PCB. These includes manufacturing files, schematics and PCB outlines
+2. **caja** contains a blender file with the mechanical drawings of the plastic box for the project
+3. **Figuras_Hologramas_OAM** contains a set of holograms to display, and some images with numbers for calibration
+4. **FPGA-Vivado-Project** contains the main project file for the Vivado project. You should run the *Genesys2_VideoDemoR1.tcl* file with their respective dependencies and then build your own project. Synthesis, implementation and bitstream generation
+5. **GUI** includes the main Graphical User Interface (GUI) to run the program along with the FPGA project. Notice that a USB UART connection is required to transmit information from the FPGA to PC

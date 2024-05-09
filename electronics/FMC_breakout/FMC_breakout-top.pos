@@ -1,0 +1,40 @@
+### Footprint positions - created on Thu Mar 14 12:13:24 2024 ###
+### Printed by KiCad version 7.0.10
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val        Package                                 PosX       PosY       Rot  Side
+J1        LA01_P_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical    98.4250   -67.3100    0.0000  top
+J2        LA01_N_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical    90.8050   -74.2950    0.0000  top
+J3        LA01_P_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical    90.9650   -88.6950    0.0000  top
+J4        LA01_N_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical    98.5850   -92.7100    0.0000  top
+J5        LA18_P_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical   109.3800   -97.7900    0.0000  top
+J6        LA18_N_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical   103.5050  -102.8700    0.0000  top
+J7        LA00_P_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical    52.7050   -67.3100  180.0000  top
+J8        LA00_N_CC  U.FL_Hirose_U.FL-R-SMT-1_Vertical    58.4200   -74.9300  180.0000  top
+J9        LA32_P     U.FL_Hirose_U.FL-R-SMT-1_Vertical    58.4200  -113.0300  180.0000  top
+J10       LA32_N     U.FL_Hirose_U.FL-R-SMT-1_Vertical    52.0700  -118.7450  180.0000  top
+J11       LA24_P     U.FL_Hirose_U.FL-R-SMT-1_Vertical    35.3300  -101.6000  180.0000  top
+J12       LA24_N     U.FL_Hirose_U.FL-R-SMT-1_Vertical    47.6250  -108.4580  180.0000  top
+J13       LA15_P     U.FL_Hirose_U.FL-R-SMT-1_Vertical    52.0700   -90.1700  180.0000  top
+J14       LA15_N     U.FL_Hirose_U.FL-R-SMT-1_Vertical    47.4650   -96.9500  180.0000  top
+J15       LA04_P     U.FL_Hirose_U.FL-R-SMT-1_Vertical    35.3300   -78.7400  180.0000  top
+J16       LA04_N     U.FL_Hirose_U.FL-R-SMT-1_Vertical    47.2100   -83.1850  180.0000  top
+J17       LA26_P     U.FL_Hirose_U.FL-R-SMT-1_Vertical    91.4400  -108.5850    0.0000  top
+J18       LA26_N     U.FL_Hirose_U.FL-R-SMT-1_Vertical    99.0600  -118.7450    0.0000  top
+J19       LA06_P     U.FL_Hirose_U.FL-R-SMT-1_Vertical   109.2200   -78.7400    0.0000  top
+J20       LA06_N     U.FL_Hirose_U.FL-R-SMT-1_Vertical   103.5050   -85.0900    0.0000  top
+R1        50         R_0402_1005Metric                    90.1700   -67.9450  -90.0000  top
+R2        50         R_0402_1005Metric                    86.3600   -73.6600   90.0000  top
+R3        50         R_0402_1005Metric                    86.3600   -88.2650   90.0000  top
+R4        50         R_0402_1005Metric                    86.3600   -93.3450  -90.0000  top
+R5        50         R_0402_1005Metric                   103.5050   -97.2800   90.0000  top
+R6        50         R_0402_1005Metric                    96.5200  -103.5050  -90.0000  top
+R13       50         R_0402_1005Metric                    59.6900   -89.5350   90.0000  top
+R14       50         R_0402_1005Metric                    59.6900   -96.5200   90.0000  top
+R15       50         R_0402_1005Metric                    41.2750   -79.3750  -90.0000  top
+R16       50         R_0402_1005Metric                    52.7050   -82.5500   90.0000  top
+R17       50         R_0402_1005Metric                    86.3600  -109.2200  -90.0000  top
+R18       50         R_0402_1005Metric                    93.9800  -119.2550  -90.0000  top
+R19       50         R_0402_1005Metric                   103.5050   -78.1050   90.0000  top
+R20       50         R_0402_1005Metric                    96.5200   -80.6450  -90.0000  top
+## End

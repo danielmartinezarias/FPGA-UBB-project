@@ -1,0 +1,7 @@
+### Footprint positions - created on Thu Mar 14 12:13:24 2024 ###
+### Printed by KiCad version 7.0.10
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                   Package                                               PosX       PosY       Rot  Side
+J0        Samtec_ASP-134602-01  Samtec_FMC_ASP-134602-01_10x40_P1.27mm_Vertical    71.0900   -92.0750  180.0000  bottom
+## End
