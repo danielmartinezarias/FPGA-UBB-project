@@ -343,10 +343,12 @@ end component;
             delay_det   : in std_logic_vector(31 downto 0);
             width_det   : in std_logic_vector(31 downto 0);
             sync        : out std_logic;
-            pulse       : out std_logic;
+            MZI         : out std_logic;
             det         : out std_logic;
             SW          : in std_logic;
-            sync_ext    : in std_logic
+            sync_ext    : in std_logic;
+            pulse_control: in std_logic;
+            CW          : in std_logic
      );
   END COMPONENT;
   
@@ -376,7 +378,9 @@ end component;
         data_in_B_dac  : out std_logic_vector(11 downto 0);
         dead_time_APD  : out std_logic_vector(7 downto 0);
         controlDM      : out std_logic_vector(7 downto 0);
-        dataPoints     : out std_logic_vector(15 downto 0)
+        dataPoints     : out std_logic_vector(15 downto 0);
+        pulse_control  : out std_logic;
+        CW             : out std_logic
      );
   END COMPONENT;
 
@@ -747,6 +751,8 @@ signal sync_ext             : std_logic;
  signal ireg_write          : std_logic_vector(31 downto 0);
  signal reset_DDR3          : std_logic; 
  signal dead_time_APD       : std_logic_vector(7 downto 0);
+ signal pulse_control       : std_logic;
+ signal CW                  : std_logic;
 
 --UART_Rx
 signal tick : std_logic;
@@ -1017,10 +1023,12 @@ begin
             delay_det   => delay_det,
             width_det   => width_det,
             sync        => sync,
-            pulse       => pulse,
+            MZI         => pulse,
             det         => det,
             SW          => sw(0),
-            sync_ext    => sync_ext
+            sync_ext    => sync_ext,
+            pulse_control => pulse_control, 
+            CW          => CW
         );
         
         
@@ -1050,7 +1058,9 @@ begin
             data_in_B_dac => data_in_B_dac,
             dead_time_APD => dead_time_APD,
             controlDM     => controlDM,
-            dataPoints    => dataPoints
+            dataPoints    => dataPoints,
+            pulse_control => pulse_control,
+            CW            => CW
      );
      
     --Modulo pmodDA2

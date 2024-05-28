@@ -43,7 +43,8 @@ input clk,
 	output reg [11:0] data_in_A_dac = 12'd0, data_in_B_dac = 12'd0,
 	output reg [7:0] dead_time_APD = 8'd10,
 	output reg [7:0] controlDM,
-	output reg [15:0] dataPoints
+	output reg [15:0] dataPoints,
+	output reg pulse_control = 1'b1, CW = 1'b0
     );
 
 
@@ -271,7 +272,17 @@ case (ctrl)
 	42: begin
 		dataPoints    			<= {d2,d1};
 		ctrl					<= 16'd0;
-	end 
+	end
+	
+	43: begin
+		pulse_control    		<= d1[0];
+		ctrl					<= 16'd0;
+	end
+	
+	44: begin
+		CW            			<= d1[0];
+		ctrl					<= 16'd0;
+	end
 	
 	
 

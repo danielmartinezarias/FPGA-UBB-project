@@ -28,17 +28,20 @@ module sync_pulse_det_generator(
     input wire [31:0] delay_det,
     input wire [31:0] width_det,
     output reg sync = 1'b0,
-    output reg pulse = 1'b0,
+    output wire MZI,
     output reg det = 1'b0,
-    input SW,sync_ext
+    input SW,sync_ext,
+    input pulse_control, CW
     );
     
     reg control = 1'b0;
+    reg pulse = 1'b0;
     reg [31:0] counter = 32'd0;
     wire os_sync;
     wire sync_master;
     
     assign sync_master = (SW) ? sync:sync_ext;
+    assign MZI = (CW) ? 1'b1:pulse;
     
    OneShoot o1 (
     .clk(clk), 
@@ -91,7 +94,7 @@ module sync_pulse_det_generator(
                     counter2    <= counter2 + 32'd1;
                 end
                 else begin
-                    pulse       <= 1'b1;
+                    pulse       <= pulse_control;
                     counter2    <= 32'd0;
                     control2    <= 2'd2;
                 end
