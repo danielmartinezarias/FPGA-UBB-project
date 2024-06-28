@@ -29,7 +29,6 @@ module control_DM(
     input wire [15:0] dataPoints,
     output wire trigger_out,
     input wire vSync,
-    //output reg [3:0] control2 = 0,
     input wire [31:0] width_det, delay_det,
     input wire [13:0] addraRead,
     output wire [15 : 0] douta0,
@@ -40,9 +39,9 @@ module control_DM(
     );
     
     reg [3:0] control = 0;
-    reg [15:0] count_1 = 16'd0;//Cuenta las veces que implemento el DAC
     reg wea = 1'd0;
     wire ovSync;
+    wire masterSync;
     wire [13 : 0] addra;
     reg [13 : 0] addraWrite;
     reg [15 : 0] dina0;
@@ -88,22 +87,27 @@ module control_DM(
     .signal(vSync), 
     .trigger(ovSync)
     );
+    
+    OneShoot o2 (
+    .clk(clk), 
+    .signal(sync), 
+    .trigger(masterSync)
+    );
 
     
 
 
-    always@(posedge clk)begin
+    always@(posedge clk)begin//100MHz
+        //cada mascara ocupa 2073600 bits de memoria DDR3
         mascara_out         <= {24'd0,mascara_aux}*32'd2073600;
         
         case(control2)
-            0:begin
+            0:begin//IDLE state
                 if(buttonStartTx)begin//boton GUI
-                count_1             <= 16'd0;
-                wea                 <= 1'd0;
-                addraWrite          <= 14'd0;
+                wea                 <= 1'd0;//wea memoria, 0 leer,1 escribir
+                addraWrite          <= 14'd0;//inicializa la direccion de blockRAM para APD
                 control2            <= 1;
-                //control2            <= 1;
-                case(controlDM)
+                case(controlDM)//seleccion de mascara
                     0:begin//mascara fija
                         mascara_aux         <= mascara;
                     end
@@ -118,12 +122,11 @@ module control_DM(
                 end
             end
             
-            1:begin//
-                if(sync && ovSync)begin//cada que llega sync actualizo el la masca
-                    if(count_1<dataPoints)begin//cuento los eventos
-                        count_1         <= count_1 + 16'd1;
+            1:begin//espero a que se cargue completamente la primer mascara
+                if(ovSync)begin
+                    if({2'b00,addraWrite}<dataPoints)begin//cuento las mascaras implementadas
                         count32bits     <= 32'd0;
-                        sclrAcc         <= 1'b1;
+                        sclrAcc         <= 1'b1;//reset de cuentas
                         control2        <= 9;
                     end
                     else begin
@@ -135,13 +138,19 @@ module control_DM(
             end
             
             9:begin
-                if(ovSync)begin
+                if(ovSync)begin//ahora me aseguro qye la mascara esta completa
                     sclrAcc         <= 1'b0;
+                    control2        <= 11;
+                end
+            end
+            
+            11:begin
+                if(masterSync)begin//espero el sincronizmo maestro
                     control2        <= 2;
                 end
             end
             
-            2:begin
+            2:begin//si el detector es free running...
                 if(count32bits<delay_det)begin//entre que preparo el mascara y empiezo a adquirir
                     count32bits     <= count32bits + 32'd1;
                 end
@@ -153,17 +162,15 @@ module control_DM(
                 end
             end
             
-            
-
-            
-            3:begin
+            3:begin//abro el detector por un tiempo
                 if(count32bits<width_det)begin
-                    count32bits         <= count32bits + 32'd1;
+                    //+2 porque trabajo a 100 MHz y el pulse gen a 200 MHz
+                    count32bits         <= count32bits + 32'd2;
                 end
                 else begin//terminamos el muestreo
-                    EnAcc               <= 1'b0;
-                    sclrAcc             <= 1'b1;//simultaneo
-                    EnACCCtrl           <= 1'b1;//simultaneo
+                    EnAcc               <= 1'b0;//termino la adquisicion
+                    sclrAcc             <= 1'b1;//reseto cuentas
+                    EnACCCtrl           <= 1'b1;//adquiero registros
                     count32bits         <= 32'd0;
                     control2            <= 10;
                 end
@@ -173,7 +180,7 @@ module control_DM(
                 sclrAcc             <= 1'b0;
                 EnACCCtrl           <= 1'b0;
                 wea                 <= 1'd1;//guardo en la memoria
-                dina0               <= {8'd0,mascara_out};
+                dina0               <= {8'd0,mascara_aux};
                 dina1               <= APD0;
                 dina2               <= APD1;
                 control2            <= 4;
@@ -198,6 +205,7 @@ module control_DM(
                 end
                 else begin
                     count8bits     <= 8'd0;
+                    //elegimos la siguiente mascara
                     case(controlDM)
                     0:begin//fija
                         mascara_aux         <= mascara;

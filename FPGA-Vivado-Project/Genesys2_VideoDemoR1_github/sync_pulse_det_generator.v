@@ -40,6 +40,8 @@ module sync_pulse_det_generator(
     wire os_sync;
     wire sync_master;
     
+    //si el SW0 es 1, usa el sync propio, o sea, esa FPGA es Alice
+    //si el SW0 es 0, usa el sync de la otra FPGA, o sea es BOB
     assign sync_master = (SW) ? sync:sync_ext;
     assign MZI = (CW) ? 1'b1:pulse;
     
@@ -58,7 +60,6 @@ module sync_pulse_det_generator(
                 end
                 else begin
                     counter     <= 32'd0;
-                    sync       <= 1'b1;
                     control     <= 1'd1;
                 end
             end
@@ -66,6 +67,7 @@ module sync_pulse_det_generator(
             1:begin
                 if(counter < freq_sync) begin
                     counter     <=  counter + 32'd1;
+                    sync       <= 1'b1;
                 end
                 else begin
                     counter     <= 32'd0;
@@ -94,7 +96,6 @@ module sync_pulse_det_generator(
                     counter2    <= counter2 + 32'd1;
                 end
                 else begin
-                    pulse       <= pulse_control;
                     counter2    <= 32'd0;
                     control2    <= 2'd2;
                 end
@@ -103,6 +104,7 @@ module sync_pulse_det_generator(
             2:begin
                 if(counter2 < width_pulse)begin
                     counter2    <= counter2 + 32'd1;
+                    pulse       <= pulse_control;
                 end
                 else begin
                     pulse       <= 1'b0;
@@ -130,7 +132,6 @@ module sync_pulse_det_generator(
                     counter3    <= counter3 + 32'd1;
                 end
                 else begin
-                    det         <= 1'b1;
                     counter3    <= 32'd0;
                     control3    <= 2'd2;
                 end
@@ -139,6 +140,7 @@ module sync_pulse_det_generator(
             2:begin
                 if(counter3 < width_det)begin
                     counter3    <= counter3 + 32'd1;
+                    det         <= 1'b1;
                 end
                 else begin
                     det         <= 1'b0;

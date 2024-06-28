@@ -32,6 +32,7 @@ entity Genesys2_VideoDemoR1 is
     fmc_la_p_18                        : out   std_logic;
     fmc_la_p_24                        : out   std_logic;
     fmc_la_p_32                        : in   std_logic;
+    fmc_la_p_04                        : out   std_logic;
     
     -- JC PMOD Header
     jc                        : out   std_logic_vector(7 downto 0);
@@ -451,7 +452,8 @@ PORT(
         addraRead           : out std_logic_vector(13 downto 0);
         douta0              : in std_logic_vector(15 downto 0);
         douta1              : in std_logic_vector(31 downto 0);
-        douta2              : in std_logic_vector(31 downto 0)
+        douta2              : in std_logic_vector(31 downto 0);
+        state               : out std_logic_vector(7 downto 0)
     );
    END COMPONENT;
    
@@ -467,7 +469,7 @@ PORT(
     ReadyTx                 : in std_logic;
     controlDM               : in std_logic_vector(7 downto 0);
     dataPoints              : in std_logic_vector(15 downto 0);
-    trigger_out             : out std_logic;
+    det                     : out std_logic;
     vSync                   : in std_logic;
     width_det               : in std_logic_vector(31 downto 0);
     delay_det               : in std_logic_vector(31 downto 0);
@@ -731,7 +733,7 @@ signal width_pulse          : std_logic_vector(31 downto 0);
 signal delay_det            : std_logic_vector(31 downto 0);
 signal width_det            : std_logic_vector(31 downto 0);
 signal sync                 : std_logic := '0';
-signal pulse                : std_logic := '0';
+signal MZI                  : std_logic := '0';
 signal det                  : std_logic := '0';
 signal det0_in              : std_logic;
 signal det1_in              : std_logic;
@@ -778,7 +780,6 @@ signal EXPIO_P_APD1  : std_logic;
 
 --Modulo UART_TX_control
 signal pin_Tx               : std_logic;
-signal Ndata                : std_logic_vector(15 downto 0);
 signal mascara              : std_logic_vector(7 downto 0);
 signal mascara_out          : std_logic_vector(31 downto 0);
 signal startTx              : std_logic;
@@ -787,10 +788,12 @@ signal addraRead            : std_logic_vector(13 downto 0);
 signal douta0               : std_logic_vector(15 downto 0);
 signal douta1               : std_logic_vector(31 downto 0);
 signal douta2               : std_logic_vector(31 downto 0);
+signal stateuarttx          : std_logic_vector(7 downto 0); 
 -- Modulo control DM
 signal controlDM            : std_logic_vector(7 downto 0);
 signal dataPoints           : std_logic_vector(15 downto 0); 
-signal trigger_out          : std_logic;
+
+
 
 
 
@@ -1023,7 +1026,7 @@ begin
             delay_det   => delay_det,
             width_det   => width_det,
             sync        => sync,
-            MZI         => pulse,
+            MZI         => MZI,
             det         => det,
             SW          => sw(0),
             sync_ext    => sync_ext,
@@ -1083,7 +1086,7 @@ begin
             tick     => tick,
             PinRx    => uart_tx_in,
             bufferRx => bufferRx,
-            ReadyRx  => ReadyRx
+            ReadyRx  => ReadyRx            
   );
   
   --tick_generator
@@ -1142,8 +1145,8 @@ begin
             clk                 => clk100,
             tick                => tick,
             pin_Tx              => uart_rx_out,
-            Ndata               => Ndata,
-            data16bits_0        => freq_sync(15 downto 0),
+            Ndata               => dataPoints,
+            data16bits_0        => freq_sync(15 downto 0),--listo para agregar otro registro
             data32bits_0        => freq_sync,
             data32bits_1        => delay_pulse,
             data32bits_2        => width_pulse,
@@ -1155,7 +1158,8 @@ begin
             addraRead           => addraRead,
             douta0              => douta0,
             douta1              => douta1,
-            douta2              => douta2
+            douta2              => douta2,
+            state    => stateuarttx
   );  
   
   
@@ -1171,7 +1175,7 @@ begin
     ReadyTx                 => ReadyTx,
     controlDM               => controlDM,
     dataPoints              => dataPoints,
-    trigger_out             => trigger_out,
+    det                     => det,
     vSync                   => vSync,
     width_det               => width_det,
     delay_det               => delay_det,
@@ -2035,20 +2039,21 @@ begin
 ----  Other Output Assignments
 ---------------------------------------------------------------------------------
 
-  led(7)  <= '1' when init_calib_complete = '1' else '0';
-  led(6)  <= pll_islocked;
-  led(5)  <= pll_islocked1;
-  led(4)  <= '1' when tstate = ts_readlb else '0';
-  led(3)  <= '1' when tstate = ts_write else '0';
-  led(2)  <= '1' when tstate = ts_read else '0';
-  led(1)  <= '1' when tstate /= ts_idle else '0';
-  led(0)  <= '1' when ddr_test_complete_flg = '1' else '0';
+  led(7)  <= stateuarttx(7);
+  led(6)  <= stateuarttx(6);
+  led(5)  <= stateuarttx(5);
+  led(4)  <= stateuarttx(4);
+  led(3)  <= stateuarttx(3);
+  led(2)  <= stateuarttx(2);
+  led(1)  <= stateuarttx(1);
+  led(0)  <= stateuarttx(0);
   
   --led(0)  <= led_prueba;
 
   fmc_la_p_00 <=  sync;
-  fmc_la_p_18 <=  pulse;
-  fmc_la_p_24 <=  trigger_out;
+  fmc_la_p_04 <=  sync;
+  fmc_la_p_18 <=  MZI;
+  fmc_la_p_24 <=  det;
   
 
 -- FMC

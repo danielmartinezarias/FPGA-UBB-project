@@ -30,10 +30,11 @@ module UART_TX_control(
     output reg ReadyTx = 1'b0,
     output reg [13:0] addraRead,
     input wire [15 : 0] douta0,
-    input wire [31 : 0] douta1,douta2
+    input wire [31 : 0] douta1,douta2,
+    output reg [7:0] state = 8'd0
     );
     
-    reg [7:0] state = 8'd0;
+    //reg [7:0] state = 8'd0;
     /////
     wire [7:0] bufferTx;
 	wire [15:0] indexMem;
@@ -86,7 +87,7 @@ dcodeNto8 dcodeNto8_1 (
                 if(startTx_main)begin
                     palabra_ctrl    <= 8'd99;
                     //el numero de datos que envio es Ndata*10 (douta1 douta2 de 32 bit, douta0 de 16 bit total 10 bytes),
-                    //mas 4 numeros de 32 bits mas 1 de 16 bit
+                    //mas 5 numeros de 32 bits mas 1 de 16 bit
                     Ndata_reg       <= Ndata*16'd10+16'd5*16'd4 + 16'd1*16'd2;
                     addraRead       <= 14'd0;
                     startCode       <= 1'b1;

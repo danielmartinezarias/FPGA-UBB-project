@@ -1,0 +1,16 @@
+### Footprint positions - created on Fri Jun 28 18:06:53 2024 ###
+### Printed by KiCad version 7.0.10
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                Package                                    PosX       PosY       Rot  Side
+C1        2.2u               CP_EIA-1608-08_AVX-J                   108.5075   -92.7100    0.0000  top
+C2        10n                CP_EIA-1608-08_AVX-J                   108.5075   -97.1550    0.0000  top
+C3        2.2u               CP_EIA-1608-08_AVX-J                   108.5075   -83.8200    0.0000  top
+C4        10n                CP_EIA-1608-08_AVX-J                   108.5850   -88.2650    0.0000  top
+J1        Input              SMA_Amphenol_132134-10_Vertical         89.5350   -74.2950    0.0000  top
+J2        Output             SMA_Amphenol_132134-10_Vertical        113.0300   -74.2950    0.0000  top
+J3        -12V___GND___+12V  TerminalBlock_Altech_AK300-3_P5.00mm    95.8850   -95.7250   90.0000  top
+R1        10k                R_0201_0603Metric                      106.0450   -73.6600  -90.0000  top
+R2        1k                 R_0201_0603Metric                      106.0450   -70.8000  -90.0000  top
+U1        LM7171             SOIC-8_3.9x4.9mm_P1.27mm                99.6950   -73.6600    0.0000  top
+## End
