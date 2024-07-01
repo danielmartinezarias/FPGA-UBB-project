@@ -735,6 +735,7 @@ signal width_det            : std_logic_vector(31 downto 0);
 signal sync                 : std_logic := '0';
 signal MZI                  : std_logic := '0';
 signal det                  : std_logic := '0';
+signal det_sync_pulse_det_gen : std_logic := '0';
 signal det0_in              : std_logic;
 signal det1_in              : std_logic;
 signal sync_ext             : std_logic;
@@ -1027,7 +1028,7 @@ begin
             width_det   => width_det,
             sync        => sync,
             MZI         => MZI,
-            det         => det,
+            det         => det_sync_pulse_det_gen,
             SW          => sw(0),
             sync_ext    => sync_ext,
             pulse_control => pulse_control, 

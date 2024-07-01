@@ -27,7 +27,7 @@ module control_DM(
     input wire ReadyTx,
     input wire [7:0] controlDM,
     input wire [15:0] dataPoints,
-    output wire trigger_out,
+    output wire det,
     input wire vSync,
     input wire [31:0] width_det, delay_det,
     input wire [13:0] addraRead,
@@ -56,7 +56,7 @@ module control_DM(
 
     
     assign addra = (wea) ? addraWrite:addraRead;
-    assign trigger_out = EnAcc;
+    assign det = EnAcc;
     
     blk_mem_gen_1 MEM_DAC0 (
       .clka(clk),    // input wire clka
