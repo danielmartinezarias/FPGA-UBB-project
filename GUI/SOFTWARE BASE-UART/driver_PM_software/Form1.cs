@@ -26,7 +26,7 @@ namespace driver_PM_software
         /// agregamos la interfaz de dll para video y dpti
         /// </summary>
         //public const string CppFunctionsDLL = @"C:\Users\danie\Dropbox\physics\FPGA_UBB\221025_uart_hdmi_images\SOFTWARE BASE-UART\genesys2_dpti_video_dll\genesys2_cpp.cpp";
-        public const string CppFunctionsDLL = @"genesys2_dpti_video_dll.dll";
+        public const string CppFunctionsDLL = @"\genesys2_dpti_video_dll.dll";
 
         [DllImport(CppFunctionsDLL, CallingConvention = CallingConvention.Cdecl)]
         public static extern int main(int cszArg,  string[] rgszArg, IntPtr byteArray, int size);
