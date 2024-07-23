@@ -1,0 +1,1 @@
+N	freq_sync	freq_sync	delay_pulse	width_pulse	delay_det	width_det	DAC0	ADC0	ADC1

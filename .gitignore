@@ -1,0 +1,5 @@
+# Ignore propiedades
+\GUI\SOFTWARE BASE-UART\driver_PM_software\bin\Debug\propiedades.dll
+#Ignore logs folder and log files
+/logs
+.log
