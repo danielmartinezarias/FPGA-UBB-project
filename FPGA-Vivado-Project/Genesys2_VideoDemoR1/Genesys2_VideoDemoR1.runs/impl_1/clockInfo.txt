@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Tue Jul 23 18:41:38 2024
-| Host         : donaufeld
+| Date         : Wed Jul 24 10:10:17 2024
+| Host         : LAPTOP-RR96MLV1
 | Design       : design_1
 | Device       : xc7k325t-ffg900-2--
 -------------------------------------

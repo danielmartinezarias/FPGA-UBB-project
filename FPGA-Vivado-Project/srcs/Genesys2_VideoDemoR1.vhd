@@ -2052,7 +2052,7 @@ begin
   --led(0)  <= led_prueba;
 
   fmc_la_p_00 <=  sync;
-  fmc_la_p_04 <=  sync;
+  fmc_la_p_04 <=  det;
   fmc_la_p_18 <=  MZI;
   fmc_la_p_24 <=  det;
   

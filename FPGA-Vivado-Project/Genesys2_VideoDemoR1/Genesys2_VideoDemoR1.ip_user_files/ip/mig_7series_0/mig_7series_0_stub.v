@@ -1,10 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Tue May 23 11:09:35 2023
+// Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+// Date        : Wed Jul 24 10:07:32 2024
 // Host        : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/crist/OneDrive/Escritorio/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_stub.v
+//               c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_stub.v
 // Design      : mig_7series_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7k325tffg900-2
@@ -19,7 +20,9 @@ module mig_7series_0(ddr3_dq, ddr3_dqs_n, ddr3_dqs_p, ddr3_addr,
   app_wdf_mask, app_wdf_wren, app_rd_data, app_rd_data_end, app_rd_data_valid, app_rdy, 
   app_wdf_rdy, app_sr_req, app_ref_req, app_zq_req, app_sr_active, app_ref_ack, app_zq_ack, 
   ui_clk, ui_clk_sync_rst, init_calib_complete, device_temp_i, device_temp, sys_rst)
-/* synthesis syn_black_box black_box_pad_pin="ddr3_dq[31:0],ddr3_dqs_n[3:0],ddr3_dqs_p[3:0],ddr3_addr[14:0],ddr3_ba[2:0],ddr3_ras_n,ddr3_cas_n,ddr3_we_n,ddr3_reset_n,ddr3_ck_p[0:0],ddr3_ck_n[0:0],ddr3_cke[0:0],ddr3_cs_n[0:0],ddr3_dm[3:0],ddr3_odt[0:0],sys_clk_i,app_addr[28:0],app_cmd[2:0],app_en,app_wdf_data[255:0],app_wdf_end,app_wdf_mask[31:0],app_wdf_wren,app_rd_data[255:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk,ui_clk_sync_rst,init_calib_complete,device_temp_i[11:0],device_temp[11:0],sys_rst" */;
+/* synthesis syn_black_box black_box_pad_pin="ddr3_dq[31:0],ddr3_dqs_n[3:0],ddr3_dqs_p[3:0],ddr3_addr[14:0],ddr3_ba[2:0],ddr3_ras_n,ddr3_cas_n,ddr3_we_n,ddr3_reset_n,ddr3_ck_p[0:0],ddr3_ck_n[0:0],ddr3_cke[0:0],ddr3_cs_n[0:0],ddr3_dm[3:0],ddr3_odt[0:0],app_addr[28:0],app_cmd[2:0],app_en,app_wdf_data[255:0],app_wdf_end,app_wdf_mask[31:0],app_wdf_wren,app_rd_data[255:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk_sync_rst,init_calib_complete,device_temp_i[11:0],device_temp[11:0],sys_rst" */
+/* synthesis syn_force_seq_prim="sys_clk_i" */
+/* synthesis syn_force_seq_prim="ui_clk" */;
   inout [31:0]ddr3_dq;
   inout [3:0]ddr3_dqs_n;
   inout [3:0]ddr3_dqs_p;
@@ -35,7 +38,7 @@ module mig_7series_0(ddr3_dq, ddr3_dqs_n, ddr3_dqs_p, ddr3_addr,
   output [0:0]ddr3_cs_n;
   output [3:0]ddr3_dm;
   output [0:0]ddr3_odt;
-  input sys_clk_i;
+  input sys_clk_i /* synthesis syn_isclock = 1 */;
   input [28:0]app_addr;
   input [2:0]app_cmd;
   input app_en;
@@ -54,7 +57,7 @@ module mig_7series_0(ddr3_dq, ddr3_dqs_n, ddr3_dqs_p, ddr3_addr,
   output app_sr_active;
   output app_ref_ack;
   output app_zq_ack;
-  output ui_clk;
+  output ui_clk /* synthesis syn_isclock = 1 */;
   output ui_clk_sync_rst;
   output init_calib_complete;
   input [11:0]device_temp_i;
