@@ -27,7 +27,7 @@ module sync_pulse_det_generator(
     input wire [31:0] width_pulse,
     input wire [31:0] delay_det,
     input wire [31:0] width_det,
-    output reg sync = 1'b0,
+    output wire sync,
     output wire MZI,
     output reg det = 1'b0,
     input wire SW,
@@ -40,16 +40,16 @@ module sync_pulse_det_generator(
     reg pulse = 1'b0;
     reg [31:0] counter = 32'd0;
     wire os_sync;
-    wire sync_master;
+    reg sync_internal = 1'b0;
     
     //si el SW0 es 1, usa el sync propio, o sea, esa FPGA es Alice
     //si el SW0 es 0, usa el sync de la otra FPGA, o sea es BOB
-    assign sync_master = (SW) ? sync:sync_ext;
+    assign sync = (SW) ? sync_internal:sync_ext;
     assign MZI = (CW) ? 1'b1:pulse;
     
    OneShoot o1 (
     .clk(clk), 
-    .signal(sync_master), 
+    .signal(sync), 
     .trigger(os_sync)
     );
     
@@ -68,13 +68,13 @@ module sync_pulse_det_generator(
             
             1:begin
                 if(counter < freq_sync) begin
-                    counter     <=  counter + 32'd1;
-                    sync       <= 1'b1;
+                    counter         <=  counter + 32'd1;
+                    sync_internal   <= 1'b1;
                 end
                 else begin
-                    counter     <= 32'd0;
-                    sync       <= 1'b0;
-                    control     <= 1'd0;
+                    counter         <= 32'd0;
+                    sync_internal   <= 1'b0;
+                    control         <= 1'd0;
                 end
             end
             

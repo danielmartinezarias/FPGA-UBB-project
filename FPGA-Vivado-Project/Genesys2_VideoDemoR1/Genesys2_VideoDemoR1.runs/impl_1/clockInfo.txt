@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Thu Jul 25 16:39:57 2024
+| Date         : Thu Jul 25 21:20:17 2024
 | Host         : donaufeld
 | Design       : design_1
 | Device       : xc7k325t-ffg900-2--

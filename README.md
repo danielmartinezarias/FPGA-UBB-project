@@ -4,7 +4,7 @@ FPGA project for the control system of the OAM experiment. FPGA stores a set of 
 1. **electronics** contains the source files for the FMC PCB and the LM7171 AMP PCB. These includes manufacturing files, schematics and PCB outlines
 2. **caja** contains a blender file with the mechanical drawings of the plastic box for the project
 3. **Figuras_Hologramas_OAM** contains a set of holograms to display, and some images with numbers for calibration
-4. **FPGA-Vivado-Project** contains the main Vivado project in `Genesys2_VideoDemoR1` and its sources in `srcs`. You can use the project as it is ot build the briject by your own running the *srcs/Genesys2_VideoDemoR1.tcl* file with their respective dependencies and then build your own project. Synthesis, implementation and bitstream generation
+4. **FPGA-Vivado-Project** contains the main Vivado project in `Genesys2_VideoDemoR1` and its sources in `srcs`. You can use the project as it is ot build the project by your own running the *srcs/Genesys2_VideoDemoR1.tcl* file with their respective dependencies and then build your own project. Synthesis, implementation and bitstream generation
 5. **GUI** includes the main Graphical User Interface (GUI) to run the program along with the FPGA project. C# project in `SOFTWARE BASE-UART` and final GUI in `FINAL`. Notice that a USB UART connection is required to transmit information from the FPGA to PC 115200 buad rate.
 
 ## GUI
