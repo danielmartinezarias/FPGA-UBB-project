@@ -469,7 +469,7 @@ PORT(
     ReadyTx                 : in std_logic;
     controlDM               : in std_logic_vector(7 downto 0);
     dataPoints              : in std_logic_vector(15 downto 0);
-    det                     : out std_logic;
+    gateDet                 : out std_logic;
     vSync                   : in std_logic;
     width_det               : in std_logic_vector(31 downto 0);
     delay_det               : in std_logic_vector(31 downto 0);
@@ -734,7 +734,7 @@ signal delay_det            : std_logic_vector(31 downto 0);
 signal width_det            : std_logic_vector(31 downto 0);
 signal sync                 : std_logic := '0';
 signal MZI                  : std_logic := '0';
-signal det                  : std_logic := '0';
+signal gateDet              : std_logic := '0';
 signal det_sync_pulse_det_gen : std_logic := '0';
 signal det0_in              : std_logic;
 signal det1_in              : std_logic;
@@ -1176,7 +1176,7 @@ begin
     ReadyTx                 => ReadyTx,
     controlDM               => controlDM,
     dataPoints              => dataPoints,
-    det                     => det,
+    gateDet                 => gateDet,
     vSync                   => vSync,
     width_det               => width_det,
     delay_det               => delay_det,
@@ -2052,9 +2052,9 @@ begin
   --led(0)  <= led_prueba;
 
   fmc_la_p_00 <=  sync;
-  fmc_la_p_04 <=  det;
+  fmc_la_p_04 <=  gateDet;
   fmc_la_p_18 <=  MZI;
-  fmc_la_p_24 <=  det;
+  fmc_la_p_24 <=  sync;
   
 
 -- FMC

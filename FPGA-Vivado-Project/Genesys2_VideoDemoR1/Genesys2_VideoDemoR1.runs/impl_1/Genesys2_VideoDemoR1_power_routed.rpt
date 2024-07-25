@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Wed Jul 24 10:13:54 2024
-| Host             : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
+| Date             : Thu Jul 25 16:44:48 2024
+| Host             : donaufeld running 64-bit major release  (build 9200)
 | Command          : report_power -file Genesys2_VideoDemoR1_power_routed.rpt -pb Genesys2_VideoDemoR1_power_summary_routed.pb -rpx Genesys2_VideoDemoR1_power_routed.rpx
 | Design           : Genesys2_VideoDemoR1
 | Device           : xc7k325tffg900-2
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.490        |
+| Total On-Chip Power (W)  | 2.489        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.310        |
+| Dynamic (W)              | 2.309        |
 | Device Static (W)        | 0.180        |
 | Effective TJA (C/W)      | 1.8          |
 | Max Ambient (C)          | 80.6         |
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.131 |       47 |       --- |             --- |
-| Slice Logic              |     0.058 |    21787 |       --- |             --- |
-|   LUT as Logic           |     0.053 |     8776 |    203800 |            4.31 |
-|   Register               |     0.002 |     7970 |    407600 |            1.96 |
-|   CARRY4                 |     0.001 |      451 |     50950 |            0.89 |
+| Clocks                   |     0.132 |       47 |       --- |             --- |
+| Slice Logic              |     0.058 |    21799 |       --- |             --- |
+|   LUT as Logic           |     0.053 |     8789 |    203800 |            4.31 |
+|   Register               |     0.002 |     7971 |    407600 |            1.96 |
+|   CARRY4                 |     0.001 |      452 |     50950 |            0.89 |
 |   LUT as Distributed RAM |     0.001 |      796 |     64000 |            1.24 |
 |   F7/F8 Muxes            |    <0.001 |       58 |    203800 |            0.03 |
 |   LUT as Shift Register  |    <0.001 |       23 |     64000 |            0.04 |
 |   Others                 |     0.000 |      461 |       --- |             --- |
-| Signals                  |     0.070 |    17633 |       --- |             --- |
+| Signals                  |     0.068 |    17646 |       --- |             --- |
 | Block RAM                |     0.094 |     66.5 |       445 |           14.94 |
 | MMCM                     |     0.437 |        4 |        10 |           40.00 |
 | PLL                      |     0.243 |        2 |        10 |           20.00 |
@@ -70,7 +70,7 @@ Table of Contents
 | PHASER                   |     0.511 |       28 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.180 |          |           |                 |
-| Total                    |     2.490 |          |           |                 |
+| Total                    |     2.489 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,7 +80,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.597 |       0.514 |      0.083 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.596 |       0.513 |      0.083 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.622 |       0.593 |      0.029 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.046 |       0.045 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -194,19 +194,18 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| Genesys2_VideoDemoR1        |     2.310 |
+| Genesys2_VideoDemoR1        |     2.309 |
 |   AccCuentas_inst           |     0.001 |
-|   DDR_INF_inst              |     1.673 |
-|     u_mig_7series_0_mig     |     1.673 |
-|       u_ddr3_infrastructure |     0.250 |
-|       u_iodelay_ctrl        |     0.123 |
-|       u_memc_ui_top_std     |     1.300 |
+|   DDR_INF_inst              |     1.671 |
+|     u_mig_7series_0_mig     |     1.671 |
+|       u_ddr3_infrastructure |     0.249 |
+|       u_iodelay_ctrl        |     0.122 |
+|       u_memc_ui_top_std     |     1.299 |
 |   DPTI_inst                 |     0.114 |
 |     clkwiz_inst             |     0.111 |
 |       inst                  |     0.111 |
 |     dpti2usr_fifo           |     0.002 |
-|   Inst_dvid                 |     0.018 |
-|     TDMS_encoder_blue       |     0.001 |
+|   Inst_dvid                 |     0.019 |
 |     TDMS_encoder_green      |     0.001 |
 |     TDMS_encoder_red        |     0.001 |
 |   LB_0                      |     0.047 |

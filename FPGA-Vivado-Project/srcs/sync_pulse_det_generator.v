@@ -30,8 +30,10 @@ module sync_pulse_det_generator(
     output reg sync = 1'b0,
     output wire MZI,
     output reg det = 1'b0,
-    input SW,sync_ext,
-    input pulse_control, CW
+    input wire SW,
+    input wire sync_ext,
+    input wire pulse_control, 
+    input wire CW
     );
     
     reg control = 1'b0;

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Jul 24 10:08:50 2024
-| Host         : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
+| Date         : Thu Jul 25 16:38:21 2024
+| Host         : donaufeld running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Genesys2_VideoDemoR1_utilization_synth.rpt -pb Genesys2_VideoDemoR1_utilization_synth.pb
 | Design       : Genesys2_VideoDemoR1
 | Device       : xc7k325tffg900-2
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1314 |     0 |          0 |    203800 |  0.64 |
-|   LUT as Logic             | 1311 |     0 |          0 |    203800 |  0.64 |
+| Slice LUTs*                | 1320 |     0 |          0 |    203800 |  0.65 |
+|   LUT as Logic             | 1317 |     0 |          0 |    203800 |  0.65 |
 |   LUT as Memory            |    3 |     0 |          0 |     64000 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |    3 |     0 |            |           |       |
@@ -160,12 +160,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+---------------------+
 | FDRE       | 1379 |        Flop & Latch |
 | LUT2       |  510 |                 LUT |
-| LUT6       |  374 |                 LUT |
-| LUT4       |  360 |                 LUT |
+| LUT6       |  379 |                 LUT |
+| LUT4       |  366 |                 LUT |
 | FDCE       |  335 |        Flop & Latch |
-| LUT5       |  263 |                 LUT |
-| LUT3       |  232 |                 LUT |
-| CARRY4     |  161 |          CarryLogic |
+| LUT5       |  260 |                 LUT |
+| LUT3       |  234 |                 LUT |
+| CARRY4     |  162 |          CarryLogic |
 | LUT1       |   46 |                 LUT |
 | OBUF       |   21 |                  IO |
 | IBUF       |   17 |                  IO |

@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1721829790">
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1721918201">
   <File Type="ROUTE-PWR" Name="Genesys2_VideoDemoR1_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Genesys2_VideoDemoR1.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="Genesys2_VideoDemoR1_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Genesys2_VideoDemoR1_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="Genesys2_VideoDemoR1.msk"/>
-  <File Type="ROUTE-CLK" Name="Genesys2_VideoDemoR1_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="Genesys2_VideoDemoR1.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Genesys2_VideoDemoR1_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="Genesys2_VideoDemoR1.bit"/>
-  <File Type="BG-DRC" Name="Genesys2_VideoDemoR1.drc"/>
-  <File Type="BG-BGN" Name="Genesys2_VideoDemoR1.bgn"/>
-  <File Type="BG-BIN" Name="Genesys2_VideoDemoR1.bin"/>
-  <File Type="BITSTR-RBT" Name="Genesys2_VideoDemoR1.rbt"/>
-  <File Type="BITSTR-NKY" Name="Genesys2_VideoDemoR1.nky"/>
-  <File Type="BITSTR-BMM" Name="Genesys2_VideoDemoR1_bd.bmm"/>
+  <File Type="OPT-RQA-PB" Name="Genesys2_VideoDemoR1_rqa_opted.pb"/>
   <File Type="BITSTR-MMI" Name="Genesys2_VideoDemoR1.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Genesys2_VideoDemoR1_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-SYSDEF" Name="Genesys2_VideoDemoR1.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Genesys2_VideoDemoR1.ltx"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Genesys2_VideoDemoR1_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Genesys2_VideoDemoR1_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="Genesys2_VideoDemoR1_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Genesys2_VideoDemoR1_opt.dcp"/>
   <File Type="OPT-DRC" Name="Genesys2_VideoDemoR1_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Genesys2_VideoDemoR1.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Genesys2_VideoDemoR1_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Genesys2_VideoDemoR1_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Genesys2_VideoDemoR1_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Genesys2_VideoDemoR1_placed.dcp"/>
   <File Type="PLACE-IO" Name="Genesys2_VideoDemoR1_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Genesys2_VideoDemoR1_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Genesys2_VideoDemoR1_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="Genesys2_VideoDemoR1_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="Genesys2_VideoDemoR1_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Genesys2_VideoDemoR1_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Genesys2_VideoDemoR1_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="Genesys2_VideoDemoR1.bin"/>
+  <File Type="PLACE-TIMING" Name="Genesys2_VideoDemoR1_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="Genesys2_VideoDemoR1_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="Genesys2_VideoDemoR1_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Genesys2_VideoDemoR1_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="Genesys2_VideoDemoR1.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Genesys2_VideoDemoR1_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Genesys2_VideoDemoR1_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Genesys2_VideoDemoR1_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="Genesys2_VideoDemoR1.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="Genesys2_VideoDemoR1_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Genesys2_VideoDemoR1_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Genesys2_VideoDemoR1_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Genesys2_VideoDemoR1_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Genesys2_VideoDemoR1_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Genesys2_VideoDemoR1_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="Genesys2_VideoDemoR1_power_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="Genesys2_VideoDemoR1_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Genesys2_VideoDemoR1_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Genesys2_VideoDemoR1_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Genesys2_VideoDemoR1_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="Genesys2_VideoDemoR1_rqs_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="Genesys2_VideoDemoR1_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="Genesys2_VideoDemoR1_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="Genesys2_VideoDemoR1_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Genesys2_VideoDemoR1_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Genesys2_VideoDemoR1_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="Genesys2_VideoDemoR1_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Genesys2_VideoDemoR1_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Genesys2_VideoDemoR1_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="Genesys2_VideoDemoR1_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Genesys2_VideoDemoR1_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="Genesys2_VideoDemoR1_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Genesys2_VideoDemoR1_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Genesys2_VideoDemoR1_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="Genesys2_VideoDemoR1_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="Genesys2_VideoDemoR1_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="Genesys2_VideoDemoR1_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Genesys2_VideoDemoR1_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="Genesys2_VideoDemoR1_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Genesys2_VideoDemoR1_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Genesys2_VideoDemoR1_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Genesys2_VideoDemoR1_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Genesys2_VideoDemoR1_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Genesys2_VideoDemoR1_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Genesys2_VideoDemoR1_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="Genesys2_VideoDemoR1.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Genesys2_VideoDemoR1_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Genesys2_VideoDemoR1_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Genesys2_VideoDemoR1_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="Genesys2_VideoDemoR1_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Genesys2_VideoDemoR1_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="Genesys2_VideoDemoR1.nky"/>
+  <File Type="BITSTR-BMM" Name="Genesys2_VideoDemoR1_bd.bmm"/>
   <File Type="PDI-FILE" Name="Genesys2_VideoDemoR1.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="Genesys2_VideoDemoR1_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="Genesys2_VideoDemoR1_pld.pdi"/>
@@ -66,6 +73,13 @@
   <File Type="RNPI_FILE" Name="Genesys2_VideoDemoR1.rnpi"/>
   <File Type="NPI_FILE" Name="Genesys2_VideoDemoR1.npi"/>
   <File Type="RBD_FILE" Name="Genesys2_VideoDemoR1.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Genesys2_VideoDemoR1.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Genesys2_VideoDemoR1.sysdef"/>
+  <File Type="BG-BGN" Name="Genesys2_VideoDemoR1.bgn"/>
+  <File Type="BG-DRC" Name="Genesys2_VideoDemoR1.drc"/>
+  <File Type="RDI-RDI" Name="Genesys2_VideoDemoR1.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="Genesys2_VideoDemoR1_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="Genesys2_VideoDemoR1_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
