@@ -452,8 +452,7 @@ PORT(
         addraRead           : out std_logic_vector(13 downto 0);
         douta0              : in std_logic_vector(15 downto 0);
         douta1              : in std_logic_vector(31 downto 0);
-        douta2              : in std_logic_vector(31 downto 0);
-        state               : out std_logic_vector(7 downto 0)
+        douta2              : in std_logic_vector(31 downto 0)
     );
    END COMPONENT;
    
@@ -789,7 +788,6 @@ signal addraRead            : std_logic_vector(13 downto 0);
 signal douta0               : std_logic_vector(15 downto 0);
 signal douta1               : std_logic_vector(31 downto 0);
 signal douta2               : std_logic_vector(31 downto 0);
-signal stateuarttx          : std_logic_vector(7 downto 0); 
 -- Modulo control DM
 signal controlDM            : std_logic_vector(7 downto 0);
 signal dataPoints           : std_logic_vector(15 downto 0); 
@@ -1159,8 +1157,7 @@ begin
             addraRead           => addraRead,
             douta0              => douta0,
             douta1              => douta1,
-            douta2              => douta2,
-            state    => stateuarttx
+            douta2              => douta2
   );  
   
   
@@ -2039,15 +2036,8 @@ begin
 ---------------------------------------------------------------------------------
 ----  Other Output Assignments
 ---------------------------------------------------------------------------------
-
-  led(7)  <= stateuarttx(7);
-  led(6)  <= stateuarttx(6);
-  led(5)  <= stateuarttx(5);
-  led(4)  <= stateuarttx(4);
-  led(3)  <= stateuarttx(3);
-  led(2)  <= stateuarttx(2);
-  led(1)  <= stateuarttx(1);
-  led(0)  <= stateuarttx(0);
+  led(7 downto 1)   <= "0000000";
+  led(0)        <= sync;
   
   --led(0)  <= led_prueba;
 

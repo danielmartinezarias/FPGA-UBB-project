@@ -30,11 +30,10 @@ module UART_TX_control(
     output reg ReadyTx = 1'b0,
     output reg [13:0] addraRead,
     input wire [15 : 0] douta0,
-    input wire [31 : 0] douta1,douta2,
-    output reg [7:0] state = 8'd0
+    input wire [31 : 0] douta1,douta2
     );
     
-    //reg [7:0] state = 8'd0;
+    reg [7:0] state = 8'd0;
     /////
     wire [7:0] bufferTx;
 	wire [15:0] indexMem;
