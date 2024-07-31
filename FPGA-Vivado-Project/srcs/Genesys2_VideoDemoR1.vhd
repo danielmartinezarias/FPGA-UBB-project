@@ -22,7 +22,6 @@ entity Genesys2_VideoDemoR1 is
     btnr                      : in    std_logic; -- '1' when pressed
     btnu                      : in    std_logic; -- '1' when pressed
     cpu_resetn                : in    std_logic; -- '0' when pressed
-    sw                        : in    std_logic_vector(7 downto 0);
     led                       : out   std_logic_vector(7 downto 0);  -- '1' lights LEDs
 
     -- FMC Header
@@ -346,7 +345,7 @@ end component;
             sync        : out std_logic;
             MZI         : out std_logic;
             det         : out std_logic;
-            SW          : in std_logic;
+            AliceBob    : in std_logic;
             sync_ext    : in std_logic;
             pulse_control: in std_logic;
             CW          : in std_logic
@@ -381,7 +380,8 @@ end component;
         controlDM      : out std_logic_vector(7 downto 0);
         dataPoints     : out std_logic_vector(15 downto 0);
         pulse_control  : out std_logic;
-        CW             : out std_logic
+        CW             : out std_logic;
+        AliceBob       : out std_logic
      );
   END COMPONENT;
 
@@ -755,6 +755,7 @@ signal sync_ext             : std_logic;
  signal dead_time_APD       : std_logic_vector(7 downto 0);
  signal pulse_control       : std_logic;
  signal CW                  : std_logic;
+ signal AliceBob            : std_logic;
 
 --UART_Rx
 signal tick : std_logic;
@@ -1027,7 +1028,7 @@ begin
             sync        => sync,
             MZI         => MZI,
             det         => det_sync_pulse_det_gen,
-            SW          => sw(0),
+            AliceBob    => AliceBob,
             sync_ext    => sync_ext,
             pulse_control => pulse_control, 
             CW          => CW
@@ -1062,7 +1063,8 @@ begin
             controlDM     => controlDM,
             dataPoints    => dataPoints,
             pulse_control => pulse_control,
-            CW            => CW
+            CW            => CW,
+            AliceBob      => AliceBob
      );
      
     --Modulo pmodDA2

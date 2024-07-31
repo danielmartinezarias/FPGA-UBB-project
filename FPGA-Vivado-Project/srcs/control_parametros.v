@@ -21,9 +21,9 @@
 
 
 module control_parametros(
-input clk,
-	input ReadyRx,
-	input [7:0] bufferRx,
+    input wire clk,
+	input wire ReadyRx,
+	input wire [7:0] bufferRx,
 	output reg [7:0] estadoRx = 8'd0,
 	output reg ready_Tx_PC = 1'd0, 
 	output reg buttonStartTx = 1'b0,
@@ -44,11 +44,11 @@ input clk,
 	output reg [7:0] dead_time_APD = 8'd10,
 	output reg [7:0] controlDM,
 	output reg [15:0] dataPoints,
-	output reg pulse_control = 1'b1, CW = 1'b0
+	output reg pulse_control = 1'b1, CW = 1'b0, AliceBob = 1'b1
     );
 
 
-
+wire os_readyRx;
 OneShoot o1(
     .clk(clk), 
     .signal(ReadyRx), 
@@ -281,6 +281,11 @@ case (ctrl)
 	
 	44: begin
 		CW            			<= d1[0];
+		ctrl					<= 16'd0;
+	end 
+	
+	46: begin
+		AliceBob       			<= d1[0];
 		ctrl					<= 16'd0;
 	end
 	

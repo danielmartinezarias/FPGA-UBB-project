@@ -30,7 +30,7 @@ module sync_pulse_det_generator(
     output wire sync,
     output wire MZI,
     output reg det = 1'b0,
-    input wire SW,
+    input wire AliceBob,
     input wire sync_ext,
     input wire pulse_control, 
     input wire CW
@@ -44,7 +44,7 @@ module sync_pulse_det_generator(
     
     //si el SW0 es 1, usa el sync propio, o sea, esa FPGA es Alice
     //si el SW0 es 0, usa el sync de la otra FPGA, o sea es BOB
-    assign sync = (SW) ? sync_internal:sync_ext;
+    assign sync = (AliceBob) ? sync_internal:sync_ext;
     assign MZI = (CW) ? 1'b1:pulse;
     
    OneShoot o1 (

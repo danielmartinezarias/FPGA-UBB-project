@@ -146,6 +146,8 @@ public Form1()
             radioButton3.Enabled = true;
             radioButton4.Enabled = true;
             radioButton5.Enabled = true;
+            radioButton6.Enabled = true;
+            radioButton7.Enabled = true;
             numericUpDown1.Enabled = true;
             numericUpDown2.Enabled = true;
             numericUpDown3.Enabled = true;
@@ -176,6 +178,8 @@ public Form1()
                 radioButton1.Checked = true;
                 radioButton4.Checked = true;
                 numericUpDown9.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[45, 1]);
+                if(ObjetoIOP.matrixPropiedades[46, 1] == "Alice") { radioButton6.Checked = true;}
+                if (ObjetoIOP.matrixPropiedades[46, 1] == "Bob") { radioButton7.Checked = true; }
 
             }
             else
@@ -1076,6 +1080,18 @@ public Form1()
         {
             normalization = (int)numericUpDown9.Value;
             ObjetoIOP.guardarPropiedades(45, "Norm", numericUpDown9.Value.ToString());
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            ParametroSerial(46, 8, 1, 0);
+            ObjetoIOP.guardarPropiedades(46, "AliceBob", "Alice");
+        }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            ParametroSerial(46, 8, 0, 0);
+            ObjetoIOP.guardarPropiedades(46, "AliceBob", "Bob");
         }
     }
 }
