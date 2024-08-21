@@ -1,0 +1,7 @@
+Running: xsim.dir/UART_Rx_func_synth/xsimk.exe -simmode gui -wdb UART_Rx_func_synth.wdb -simrunnum 0 -socket 63497
+Design successfully loaded
+Design Loading Memory Usage: 8220 KB (Peak: 8220 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8936 KB (Peak: 8936 KB)
+Simulation CPU Usage: 0 ms

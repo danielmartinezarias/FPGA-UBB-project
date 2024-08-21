@@ -3,8 +3,6 @@
     with args -log Genesys2_VideoDemoR1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Genesys2_VideoDemoR1.tcl
 
 
-ECHO is off.
-ECHO is off.
 
 ****** Vivado v2023.2 (64-bit)
   **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
@@ -14,889 +12,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Genesys2_VideoDemoR1.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 490.996 ; gain = 179.266
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/danie/Documents/GitHub/Dropbox/PC/Downloads/Genesys2VideoDemo_R1/Genesys2VideoDemo_R1/hdl'; Can't find the specified path.
-If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
-WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.cache/ip 
-Command: read_checkpoint -auto_incremental -incremental {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp}
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp for incremental synthesis
-INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top Genesys2_VideoDemoR1 -part xc7k325tffg900-2
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-1540] The version limit for your license is '2023.10' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
-INFO: [Device 21-403] Loading part xc7k325tffg900-2
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9688
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1418.285 ; gain = 440.488
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Genesys2_VideoDemoR1' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:87]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/clk_wiz_0_stub.v:6' bound to instance 'PLL2_inst' of component 'clk_wiz_0' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:807]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/clk_wiz_0_stub.v:6]
-	Parameter MULT_MASTER bound to: 37.125000 - type: double 
-	Parameter DIV_MASTER bound to: 5.000000 - type: double 
-	Parameter DIV_5X bound to: 1.000000 - type: double 
-	Parameter DIV_1X bound to: 5.000000 - type: double 
-	Parameter IN_PERIOD bound to: 10.000000 - type: double 
-INFO: [Synth 8-3491] module 'display_clocks' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v:10' bound to instance 'display_clocks_inst' of component 'display_clocks' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:821]
-INFO: [Synth 8-6157] synthesizing module 'display_clocks' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v:10]
-	Parameter MULT_MASTER bound to: 37.125000 - type: double 
-	Parameter DIV_MASTER bound to: 5.000000 - type: double 
-	Parameter DIV_5X bound to: 1.000000 - type: double 
-	Parameter DIV_1X bound to: 5.000000 - type: double 
-	Parameter IN_PERIOD bound to: 10.000000 - type: double 
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
-	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 37.125000 - type: double 
-	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE_F bound to: 1.000000 - type: double 
-	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT1_DIVIDE bound to: 5 - type: integer 
-	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
-	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
-	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
-	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
-	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
-INFO: [Synth 8-6155] done synthesizing module 'display_clocks' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v:10]
-	Parameter INIT_40 bound to: 16'b1010000000000000 
-	Parameter INIT_41 bound to: 16'b0010111011110000 
-	Parameter INIT_42 bound to: 16'b0000010100000000 
-	Parameter INIT_48 bound to: 16'b0100011100000001 
-	Parameter INIT_49 bound to: 16'b0000000000000000 
-	Parameter INIT_4A bound to: 16'b0000000000000001 
-	Parameter INIT_4B bound to: 16'b0000000000000000 
-	Parameter INIT_4C bound to: 16'b0000000000000000 
-	Parameter INIT_4D bound to: 16'b0000000000000000 
-	Parameter INIT_4E bound to: 16'b0000000000000000 
-	Parameter INIT_4F bound to: 16'b0000000000000000 
-	Parameter INIT_50 bound to: 16'b1011010111101101 
-	Parameter INIT_51 bound to: 16'b0101100110011001 
-	Parameter INIT_52 bound to: 16'b1010000101000111 
-	Parameter INIT_53 bound to: 16'b1101110111011101 
-	Parameter INIT_54 bound to: 16'b1010100100111010 
-	Parameter INIT_55 bound to: 16'b0101000100010001 
-	Parameter INIT_56 bound to: 16'b1001000111101011 
-	Parameter INIT_57 bound to: 16'b1010111001001110 
-	Parameter INIT_58 bound to: 16'b0101100110011001 
-	Parameter INIT_5C bound to: 16'b0101000100010001 
-	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-	Parameter SIM_MONITOR_FILE bound to: design.txt - type: string 
-INFO: [Synth 8-113] binding component instance 'XADC_inst' to cell 'XADC' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:841]
-INFO: [Synth 8-3491] module 'dpti_ctrl' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:39' bound to instance 'DPTI_inst' of component 'dpti_ctrl' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:906]
-INFO: [Synth 8-638] synthesizing module 'dpti_ctrl' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:74]
-INFO: [Synth 8-3491] module 'dpti_clock' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/dpti_clock_stub.v:6' bound to instance 'clkwiz_inst' of component 'dpti_clock' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:183]
-INFO: [Synth 8-6157] synthesizing module 'dpti_clock' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/dpti_clock_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dpti_clock' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/dpti_clock_stub.v:6]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter DRIVE bound to: 16 - type: integer 
-	Parameter SLEW bound to: FAST - type: string 
-INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
-	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000000001111 
-	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000111110100000 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter DEVICE bound to: 7SERIES - type: string 
-	Parameter FIFO_SIZE bound to: 36Kb - type: string 
-	Parameter FIRST_WORD_FALL_THROUGH bound to: 1 - type: bool 
-INFO: [Synth 8-3491] module 'FIFO_DUALCLOCK_MACRO' declared at 'C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:36' bound to instance 'usr2dpti_fifo' of component 'FIFO_DUALCLOCK_MACRO' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:334]
-INFO: [Synth 8-638] synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO' [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:70]
-	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000111110100000 
-	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000000001111 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter DEVICE bound to: 7SERIES - type: string 
-	Parameter FIFO_SIZE bound to: 36Kb - type: string 
-	Parameter FIRST_WORD_FALL_THROUGH bound to: 1 - type: bool 
-	Parameter INIT bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter SRVAL bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter SIM_MODE bound to: SAFE - type: string 
-	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000000001111 
-	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000111110100000 
-	Parameter DATA_WIDTH bound to: 9 - type: integer 
-	Parameter DO_REG bound to: 1 - type: integer 
-	Parameter EN_SYN bound to: 0 - type: bool 
-	Parameter FIFO_MODE bound to: FIFO36 - type: string 
-	Parameter FIRST_WORD_FALL_THROUGH bound to: 1 - type: bool 
-	Parameter INIT bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-	Parameter SRVAL bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'fifo_36_bl' to cell 'FIFO36E1' [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:843]
-INFO: [Synth 8-256] done synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO' (0#1) [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:70]
-	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000000001111 
-	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000111111110000 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter DEVICE bound to: 7SERIES - type: string 
-	Parameter FIFO_SIZE bound to: 36Kb - type: string 
-	Parameter FIRST_WORD_FALL_THROUGH bound to: 1 - type: bool 
-INFO: [Synth 8-3491] module 'FIFO_DUALCLOCK_MACRO' declared at 'C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:36' bound to instance 'dpti2usr_fifo' of component 'FIFO_DUALCLOCK_MACRO' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:369]
-INFO: [Synth 8-638] synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO__parameterized0' [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:70]
-	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000111111110000 
-	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000000001111 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter DEVICE bound to: 7SERIES - type: string 
-	Parameter FIFO_SIZE bound to: 36Kb - type: string 
-	Parameter FIRST_WORD_FALL_THROUGH bound to: 1 - type: bool 
-	Parameter INIT bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter SRVAL bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter SIM_MODE bound to: SAFE - type: string 
-	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000000001111 
-	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000111111110000 
-	Parameter DATA_WIDTH bound to: 9 - type: integer 
-	Parameter DO_REG bound to: 1 - type: integer 
-	Parameter EN_SYN bound to: 0 - type: bool 
-	Parameter FIFO_MODE bound to: FIFO36 - type: string 
-	Parameter FIRST_WORD_FALL_THROUGH bound to: 1 - type: bool 
-	Parameter INIT bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-	Parameter SRVAL bound to: 72'b000000000000000000000000000000000000000000000000000000000000000000000000 
-INFO: [Synth 8-113] binding component instance 'fifo_36_bl' to cell 'FIFO36E1' [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:843]
-INFO: [Synth 8-256] done synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO__parameterized0' (0#1) [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'dpti_ctrl' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:74]
-INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/mig_7series_0_stub.v:6' bound to instance 'DDR_INF_inst' of component 'mig_7series_0' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:937]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/mig_7series_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/mig_7series_0_stub.v:6]
-INFO: [Synth 8-3491] module 'dvid' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:15' bound to instance 'Inst_dvid' of component 'dvid' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:980]
-INFO: [Synth 8-638] synthesizing module 'dvid' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:31]
-INFO: [Synth 8-3491] module 'TDMS_encoder' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:14' bound to instance 'TDMS_encoder_red' of component 'TDMS_encoder' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'TDMS_encoder' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'TDMS_encoder' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:22]
-INFO: [Synth 8-3491] module 'TDMS_encoder' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:14' bound to instance 'TDMS_encoder_green' of component 'TDMS_encoder' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:57]
-INFO: [Synth 8-3491] module 'TDMS_encoder' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:14' bound to instance 'TDMS_encoder_blue' of component 'TDMS_encoder' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:58]
-	Parameter DDR_ALIGNMENT bound to: C0 - type: string 
-	Parameter INIT bound to: 1'b0 
-	Parameter SRTYPE bound to: ASYNC - type: string 
-INFO: [Synth 8-113] binding component instance 'ODDR2_red' to cell 'ODDR2' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:60]
-	Parameter DDR_ALIGNMENT bound to: C0 - type: string 
-	Parameter INIT bound to: 1'b0 
-	Parameter SRTYPE bound to: ASYNC - type: string 
-INFO: [Synth 8-113] binding component instance 'ODDR2_green' to cell 'ODDR2' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:63]
-	Parameter DDR_ALIGNMENT bound to: C0 - type: string 
-	Parameter INIT bound to: 1'b0 
-	Parameter SRTYPE bound to: ASYNC - type: string 
-INFO: [Synth 8-113] binding component instance 'ODDR2_blue' to cell 'ODDR2' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:66]
-	Parameter DDR_ALIGNMENT bound to: C0 - type: string 
-	Parameter INIT bound to: 1'b0 
-	Parameter SRTYPE bound to: ASYNC - type: string 
-INFO: [Synth 8-113] binding component instance 'ODDR2_clock' to cell 'ODDR2' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:69]
-INFO: [Synth 8-256] done synthesizing module 'dvid' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:31]
-	Parameter H_PIXELS bound to: 1920 - type: integer 
-INFO: [Synth 8-3491] module 'VideoLineBuffer_1' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:81' bound to instance 'LB_0' of component 'VideoLineBuffer_1' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:998]
-INFO: [Synth 8-638] synthesizing module 'VideoLineBuffer_1' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:108]
-	Parameter H_PIXELS bound to: 1920 - type: integer 
-INFO: [Synth 8-3491] module 'DPRAM_W245_R32' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/DPRAM_W245_R32_stub.v:6' bound to instance 'rgb_mem_inst' of component 'DPRAM_W245_R32' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:186]
-INFO: [Synth 8-6157] synthesizing module 'DPRAM_W245_R32' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/DPRAM_W245_R32_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DPRAM_W245_R32' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/DPRAM_W245_R32_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'VideoLineBuffer_1' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:108]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_1' of component 'sync_pulse_det_generator' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1020]
-INFO: [Synth 8-6157] synthesizing module 'sync_pulse_det_generator' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'OneShoot' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/OneShoot.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'OneShoot' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/OneShoot.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:88]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:124]
-INFO: [Synth 8-6155] done synthesizing module 'sync_pulse_det_generator' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23]
-INFO: [Synth 8-3491] module 'control_parametros' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v:23' bound to instance 'control_parametros_inst' of component 'control_parametros' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1039]
-INFO: [Synth 8-6157] synthesizing module 'control_parametros' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'control_parametros' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v:23]
-INFO: [Synth 8-3491] module 'pmodDA2' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:23' bound to instance 'pmodDA2_inst' of component 'pmodDA2' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1071]
-INFO: [Synth 8-6157] synthesizing module 'pmodDA2' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'pmodDA2' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:23]
-INFO: [Synth 8-3491] module 'UART_Rx' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v:23' bound to instance 'UART_Rx_inst' of component 'UART_Rx' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1084]
-INFO: [Synth 8-6157] synthesizing module 'UART_Rx' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'UART_Rx' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v:23]
-INFO: [Synth 8-3491] module 'tick_generator' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v:23' bound to instance 'tick_generator_inst' of component 'tick_generator' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1094]
-INFO: [Synth 8-6157] synthesizing module 'tick_generator' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'tick_generator' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v:23]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_blue' to cell 'OBUFDS' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1100]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_red' to cell 'OBUFDS' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1101]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_green' to cell 'OBUFDS' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1102]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_clock' to cell 'OBUFDS' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1103]
-	Parameter hori_line bound to: 2200 - type: integer 
-	Parameter hori_back bound to: 148 - type: integer 
-	Parameter hori_front bound to: 88 - type: integer 
-	Parameter vert_line bound to: 1125 - type: integer 
-	Parameter vert_back bound to: 36 - type: integer 
-	Parameter vert_front bound to: 4 - type: integer 
-	Parameter H_sync_cycle bound to: 44 - type: integer 
-	Parameter V_sync_cycle bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'video_sync_generator' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v:1' bound to instance 'vga_gen_inst' of component 'video_sync_generator' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1108]
-INFO: [Synth 8-6157] synthesizing module 'video_sync_generator' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v:1]
-	Parameter hori_line bound to: 2200 - type: integer 
-	Parameter hori_back bound to: 148 - type: integer 
-	Parameter hori_front bound to: 88 - type: integer 
-	Parameter vert_line bound to: 1125 - type: integer 
-	Parameter vert_back bound to: 36 - type: integer 
-	Parameter vert_front bound to: 4 - type: integer 
-	Parameter H_sync_cycle bound to: 44 - type: integer 
-	Parameter V_sync_cycle bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'video_sync_generator' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v:1]
-INFO: [Synth 8-3491] module 'AccCuentas' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:21' bound to instance 'AccCuentas_inst' of component 'AccCuentas' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1130]
-INFO: [Synth 8-6157] synthesizing module 'AccCuentas' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:21]
-INFO: [Synth 8-6157] synthesizing module 'PreProc_Cs' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/PreProc_Cs.v:21]
-INFO: [Synth 8-6157] synthesizing module 'SimpleOneShot' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/SimpleOneShot.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleOneShot' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/SimpleOneShot.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'PreProc_Cs' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/PreProc_Cs.v:21]
-INFO: [Synth 8-6157] synthesizing module 'counter_ADP' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/counter_ADP.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'counter_ADP' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/counter_ADP.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'AccCuentas' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:21]
-INFO: [Synth 8-3491] module 'UART_TX_control' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22' bound to instance 'UART_TX_control_inst' of component 'UART_TX_control' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1144]
-INFO: [Synth 8-6157] synthesizing module 'UART_TX_control' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22]
-INFO: [Synth 8-6157] synthesizing module 'dcodeNto8' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:59]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:40]
-INFO: [Synth 8-6155] done synthesizing module 'dcodeNto8' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:23]
-INFO: [Synth 8-6157] synthesizing module 'modulo_Tx' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/modulo_Tx.v:21]
-INFO: [Synth 8-6157] synthesizing module 'MemTx_1' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/MemTx_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MemTx_1' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/MemTx_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'control_Tx' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:21]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'control_Tx' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:21]
-INFO: [Synth 8-6157] synthesizing module 'UART_Tx' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Tx.v:21]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Tx.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'UART_Tx' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Tx.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'modulo_Tx' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/modulo_Tx.v:21]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:82]
-INFO: [Synth 8-6155] done synthesizing module 'UART_TX_control' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22]
-INFO: [Synth 8-3491] module 'control_DM' declared at 'C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22' bound to instance 'control_DM_inst' of component 'control_DM' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1167]
-INFO: [Synth 8-6157] synthesizing module 'control_DM' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-7924-donaufeld/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:209]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:104]
-INFO: [Synth 8-6155] done synthesizing module 'control_DM' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22]
-WARNING: [Synth 8-614] signal 'reset_DDR3' is read in the process but is not in the sensitivity list [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1403]
-INFO: [Synth 8-226] default block is never used [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1579]
-INFO: [Synth 8-256] done synthesizing module 'Genesys2_VideoDemoR1' (0#1) [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:87]
-WARNING: [Synth 8-3848] Net dip_pattern in module/entity unimacro_FIFO_DUALCLOCK_MACRO does not have driver. [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:590]
-WARNING: [Synth 8-3848] Net dip_pattern in module/entity unimacro_FIFO_DUALCLOCK_MACRO__parameterized0 does not have driver. [C:/Xilinx/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:590]
-WARNING: [Synth 8-6014] Unused sequential element xadc_rd_reg_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1249]
-WARNING: [Synth 8-6014] Unused sequential element ureg_3_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1442]
-WARNING: [Synth 8-6014] Unused sequential element wreqcnt_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1527]
-WARNING: [Synth 8-6014] Unused sequential element wtimer_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1705]
-WARNING: [Synth 8-6014] Unused sequential element rtimer_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1706]
-WARNING: [Synth 8-6014] Unused sequential element dpti_ui_wr_data_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1820]
-WARNING: [Synth 8-6014] Unused sequential element test_state_dgb_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1232]
-WARNING: [Synth 8-6014] Unused sequential element test_state_dgb_1_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1231]
-WARNING: [Synth 8-6014] Unused sequential element app_rd_data_valid_r_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2021]
-WARNING: [Synth 8-6014] Unused sequential element ts_reg was removed.  [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2032]
-WARNING: [Synth 8-3848] Net ireg_data_out in module/entity Genesys2_VideoDemoR1 does not have driver. [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:673]
-WARNING: [Synth 8-3848] Net ireg_address in module/entity Genesys2_VideoDemoR1 does not have driver. [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:672]
-WARNING: [Synth 8-3848] Net ireg_write_stb in module/entity Genesys2_VideoDemoR1 does not have driver. [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:674]
-WARNING: [Synth 8-3848] Net reset in module/entity Genesys2_VideoDemoR1 does not have driver. [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:649]
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[7] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[6] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[5] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[4] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[3] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[2] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[1] driven by constant 0
-WARNING: [Synth 8-7129] Port add_rst in module VideoLineBuffer_1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[7] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[6] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[5] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[4] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnc in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnd in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnl in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnr in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnu in module Genesys2_VideoDemoR1 is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1559.125 ; gain = 581.328
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1559.125 ; gain = 581.328
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1559.125 ; gain = 581.328
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.148 . Memory (MB): peak = 1559.125 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
-WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_blue' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
-WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_clock' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
-WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_green' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
-WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_red' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'PLL2_inst'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'PLL2_inst'
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32/DPRAM_W245_R32_in_context.xdc] for cell 'LB_0/rgb_mem_inst'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32/DPRAM_W245_R32_in_context.xdc] for cell 'LB_0/rgb_mem_inst'
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1/MemTx_1_in_context.xdc] for cell 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1/MemTx_1_in_context.xdc] for cell 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2'
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'control_DM_inst/MEM_DAC0'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'control_DM_inst/MEM_DAC0'
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'control_DM_inst/MEM_ADC0'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'control_DM_inst/MEM_ADC0'
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'control_DM_inst/MEM_ADC1'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'control_DM_inst/MEM_ADC1'
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock/dpti_clock_in_context.xdc] for cell 'DPTI_inst/clkwiz_inst'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock/dpti_clock_in_context.xdc] for cell 'DPTI_inst/clkwiz_inst'
-Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'DDR_INF_inst'
-Finished Parsing XDC File [c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'DDR_INF_inst'
-Parsing XDC File [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
-WARNING: [Vivado 12-507] No nets matched 'PLL2_inst/inst/clk_in1_clk_wiz_0'. [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc:438]
-Finished Parsing XDC File [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Genesys2_VideoDemoR1_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Genesys2_VideoDemoR1_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Genesys2_VideoDemoR1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
-Finished Parsing XDC File [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Genesys2_VideoDemoR1_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Genesys2_VideoDemoR1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/dont_touch.xdc]
-INFO: [Timing 38-2] Deriving generated clocks
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1652.355 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 17 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
-  MMCME2_BASE => MMCME2_ADV: 1 instance 
-  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
-  ODDR2 => ODDR: 4 instances
-
-The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1652.355 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'LB_0/rgb_mem_inst' at clock pin 'clka' is different from the actual clock period '6.734', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'control_DM_inst/MEM_ADC0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'control_DM_inst/MEM_ADC1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'control_DM_inst/MEM_DAC0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1652.355 ; gain = 674.559
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xc7k325tffg900-2
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1652.355 ; gain = 674.559
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sysclk_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 7).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 8).
-Applied set_property IO_BUFFER_TYPE = NONE for sysclk_p. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 9).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk_p. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 10).
-Applied set_property IO_BUFFER_TYPE = NONE for prog_clko. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock/dpti_clock_in_context.xdc}, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for prog_clko. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock/dpti_clock_in_context.xdc}, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 2).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 3).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 7).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 8).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 10).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 12).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 14).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 16).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 18).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 19).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 20).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 21).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 22).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 23).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 24).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 25).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 26).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 27).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 28).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 29).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 30).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 31).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 32).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 33).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 34).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 35).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 36).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 37).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 38).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 39).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 40).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 41).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 42).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 43).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 44).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 45).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 46).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 47).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 48).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 49).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 50).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 51).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 52).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 53).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 54).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 55).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 56).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 57).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 58).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 59).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 60).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 61).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 62).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 63).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 64).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 65).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 66).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 67).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 68).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 69).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 70).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 71).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 72).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 73).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 74).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 75).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 76).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 77).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 78).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 79).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 80).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 81).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 82).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 83).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 84).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 85).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 86).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 87).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 88).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 89).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 90).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 91).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 92).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 93).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 94).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 95).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 96).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 97).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 98).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 99).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 100).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 101).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 102).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 103).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 104).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 105).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 106).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 107).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 108).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 109).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 110).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 111).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 112).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 113).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 114).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 115).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 116).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 117).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 118).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 119).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 120).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 121).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 122).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 123).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 124).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 125).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 126).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 127).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 128).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 129).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 130).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 131).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 132).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 133).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 134).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 135).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 136).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 137).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 138).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 139).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 140).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 141).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 142).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc}, line 143).
-Applied set_property KEEP_HIERARCHY = SOFT for PLL2_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for LB_0/rgb_mem_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for control_DM_inst/MEM_DAC0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for control_DM_inst/MEM_ADC0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for control_DM_inst/MEM_ADC1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for DPTI_inst/clkwiz_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for DDR_INF_inst. (constraint file  auto generated constraint).
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 1652.355 ; gain = 674.559
----------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'stPtiCur_reg' in module 'dpti_ctrl'
-INFO: [Synth 8-802] inferred FSM for state register 'control2_reg' in module 'sync_pulse_det_generator'
-INFO: [Synth 8-802] inferred FSM for state register 'control3_reg' in module 'sync_pulse_det_generator'
-INFO: [Synth 8-802] inferred FSM for state register 'control_reg' in module 'pmodDA2'
-INFO: [Synth 8-802] inferred FSM for state register 'ctrlRx_reg' in module 'UART_Rx'
-INFO: [Synth 8-802] inferred FSM for state register 'controlCode_reg' in module 'dcodeNto8'
-INFO: [Synth 8-802] inferred FSM for state register 'regControl_reg' in module 'control_Tx'
-INFO: [Synth 8-802] inferred FSM for state register 'controlTx_reg' in module 'UART_Tx'
-INFO: [Synth 8-802] inferred FSM for state register 'd_state_reg' in module 'Genesys2_VideoDemoR1'
-INFO: [Synth 8-802] inferred FSM for state register 'ustate_reg' in module 'Genesys2_VideoDemoR1'
-INFO: [Synth 8-802] inferred FSM for state register 'tstate_reg' in module 'Genesys2_VideoDemoR1'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              001 |                               00
-                 iSTATE0 |                              010 |                               01
-                 iSTATE1 |                              100 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'control2_reg' using encoding 'one-hot' in module 'sync_pulse_det_generator'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              001 |                               00
-                 iSTATE0 |                              010 |                               01
-                 iSTATE1 |                              100 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'control3_reg' using encoding 'one-hot' in module 'sync_pulse_det_generator'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              001 |                               00
-                 iSTATE0 |                              010 |                               01
-                 iSTATE1 |                              100 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'control_reg' using encoding 'one-hot' in module 'pmodDA2'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                           000001 |                              000
-                 iSTATE0 |                           000010 |                              001
-                 iSTATE1 |                           000100 |                              010
-                 iSTATE2 |                           001000 |                              011
-                 iSTATE3 |                           010000 |                              100
-                 iSTATE4 |                           100000 |                              101
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'ctrlRx_reg' using encoding 'one-hot' in module 'UART_Rx'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              000 |                              000
-                 iSTATE0 |                              001 |                              001
-                 iSTATE4 |                              010 |                              010
-                 iSTATE3 |                              011 |                              011
-                 iSTATE2 |                              100 |                              100
-                 iSTATE1 |                              101 |                              101
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'controlCode_reg' using encoding 'sequential' in module 'dcodeNto8'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              000 |                              000
-                 iSTATE0 |                              001 |                              001
-                 iSTATE1 |                              010 |                              010
-                 iSTATE2 |                              011 |                              011
-                 iSTATE3 |                              100 |                              100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'regControl_reg' using encoding 'sequential' in module 'control_Tx'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              000 |                              000
-                 iSTATE0 |                              001 |                              001
-                 iSTATE1 |                              010 |                              010
-                 iSTATE2 |                              011 |                              011
-                 iSTATE3 |                              100 |                              100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'controlTx_reg' using encoding 'sequential' in module 'UART_Tx'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 us_idle |                              000 |                              000
-               us_write0 |                              001 |                              001
-               us_write1 |                              010 |                              010
-               us_write2 |                              011 |                              011
-               us_write3 |                              100 |                              100
-                us_read0 |                              101 |                              101
-                us_read1 |                              110 |                              110
-                us_read2 |                              111 |                              111
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'ustate_reg' using encoding 'sequential' in module 'Genesys2_VideoDemoR1'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 ts_idle |                   00000000000001 |                            00000
-                ts_write |                   00000000000010 |                            00001
-                   ts_d0 |                   00000000000100 |                            00010
-                   ts_d1 |                   00000000001000 |                            00100
-                 ts_read |                   00000000010000 |                            00011
-                   ts_d3 |                   00000000100000 |                            00111
-                 ts_wait |                   00000001000000 |                            00101
-                   ts_d4 |                   00000010000000 |                            01000
-                   ts_d5 |                   00000100000000 |                            01001
-                ts_getwd |                   00001000000000 |                            01010
-                ts_wrwd0 |                   00010000000000 |                            01100
-                 ts_wrwd |                   00100000000000 |                            01011
-               ts_readlb |                   01000000000000 |                            10000
-              ts_readlb1 |                   10000000000000 |                            10001
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding 'one-hot' in module 'Genesys2_VideoDemoR1'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  d_idle |                            00001 |                              000
-                   d_rd1 |                            00010 |                              100
-                   d_rd2 |                            00100 |                              101
-                   d_rd3 |                            01000 |                              110
-                   d_wr1 |                            10000 |                              010
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'd_state_reg' using encoding 'one-hot' in module 'Genesys2_VideoDemoR1'
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:43 . Memory (MB): peak = 1652.355 ; gain = 674.559
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   32 Bit       Adders := 6     
-	   2 Input   29 Bit       Adders := 2     
-	   2 Input   26 Bit       Adders := 1     
-	   2 Input   16 Bit       Adders := 4     
-	   2 Input   14 Bit       Adders := 2     
-	   2 Input   12 Bit       Adders := 2     
-	   2 Input   11 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 4     
-	   2 Input    6 Bit       Adders := 1     
-	   2 Input    5 Bit       Adders := 2     
-	   8 Input    4 Bit       Adders := 3     
-	   9 Input    4 Bit       Adders := 3     
-	  11 Input    4 Bit       Adders := 3     
-	   4 Input    4 Bit       Adders := 3     
-	   3 Input    4 Bit       Adders := 3     
-	  10 Input    4 Bit       Adders := 3     
-	   2 Input    4 Bit       Adders := 4     
-	   2 Input    3 Bit       Adders := 5     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 42    
-+---Registers : 
-	              256 Bit    Registers := 1     
-	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 24    
-	               29 Bit    Registers := 4     
-	               16 Bit    Registers := 6     
-	               14 Bit    Registers := 3     
-	               12 Bit    Registers := 5     
-	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 10    
-	                8 Bit    Registers := 26    
-	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 1     
-	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 7     
-	                3 Bit    Registers := 5     
-	                2 Bit    Registers := 9     
-	                1 Bit    Registers := 85    
-+---Muxes : 
-	   2 Input  256 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 9     
-	   3 Input   32 Bit        Muxes := 2     
-	  11 Input   32 Bit        Muxes := 1     
-	  14 Input   32 Bit        Muxes := 3     
-	  11 Input   29 Bit        Muxes := 1     
-	   2 Input   29 Bit        Muxes := 3     
-	   8 Input   29 Bit        Muxes := 2     
-	  14 Input   29 Bit        Muxes := 1     
-	  37 Input   16 Bit        Muxes := 2     
-	   2 Input   16 Bit        Muxes := 8     
-	   6 Input   16 Bit        Muxes := 1     
-	   5 Input   16 Bit        Muxes := 1     
-	   2 Input   14 Bit        Muxes := 15    
-	  11 Input   14 Bit        Muxes := 1     
-	  14 Input   14 Bit        Muxes := 1     
-	   2 Input   12 Bit        Muxes := 2     
-	   2 Input   11 Bit        Muxes := 1     
-	   5 Input   10 Bit        Muxes := 6     
-	   4 Input   10 Bit        Muxes := 3     
-	   2 Input   10 Bit        Muxes := 9     
-	   2 Input    9 Bit        Muxes := 6     
-	   2 Input    8 Bit        Muxes := 11    
-	   6 Input    8 Bit        Muxes := 2     
-	   5 Input    8 Bit        Muxes := 3     
-	   4 Input    8 Bit        Muxes := 1     
-	  13 Input    8 Bit        Muxes := 1     
-	  11 Input    8 Bit        Muxes := 2     
-	   3 Input    7 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 5     
-	   6 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 1     
-	  14 Input    6 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 5     
-	   5 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 12    
-	   3 Input    4 Bit        Muxes := 1     
-	   6 Input    3 Bit        Muxes := 1     
-	   5 Input    3 Bit        Muxes := 3     
-	  13 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 7     
-	   8 Input    3 Bit        Muxes := 2     
-	  37 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 2     
-	   5 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 89    
-	   3 Input    1 Bit        Muxes := 11    
-	  37 Input    1 Bit        Muxes := 35    
-	   6 Input    1 Bit        Muxes := 12    
-	   5 Input    1 Bit        Muxes := 20    
-	   7 Input    1 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 1     
-	  13 Input    1 Bit        Muxes := 5     
-	  12 Input    1 Bit        Muxes := 2     
-	  11 Input    1 Bit        Muxes := 8     
-	  10 Input    1 Bit        Muxes := 4     
-	   8 Input    1 Bit        Muxes := 8     
-	  14 Input    1 Bit        Muxes := 12    
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 840 (col length:140)
-BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP mascara_out, operation Mode is: (A:0x1fa400)*B2.
-DSP Report: register mascara_aux_reg is absorbed into DSP mascara_out.
-DSP Report: operator mascara_out0 is absorbed into DSP mascara_out.
-DSP Report: Generating DSP mascara_out0, operation Mode is: (A:0x1fa400)*B2.
-DSP Report: register mascara_aux_reg is absorbed into DSP mascara_out0.
-DSP Report: operator mascara_out0 is absorbed into DSP mascara_out0.
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[7] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[6] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[5] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[4] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[3] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[2] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port led[1] driven by constant 0
-WARNING: [Synth 8-3917] design Genesys2_VideoDemoR1 has port prog_siwun driven by constant 1
-WARNING: [Synth 8-7129] Port add_rst in module VideoLineBuffer_1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[7] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[6] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[5] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port jc[4] in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnc in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnd in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnl in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnr in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnu in module Genesys2_VideoDemoR1 is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control3_reg[2]) is unused and will be removed from module sync_pulse_det_generator.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control3_reg[1]) is unused and will be removed from module sync_pulse_det_generator.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control3_reg[0]) is unused and will be removed from module sync_pulse_det_generator.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_d_state_reg[4]) is unused and will be removed from module Genesys2_VideoDemoR1.
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:07 . Memory (MB): peak = 1652.355 ; gain = 674.559
----------------------------------------------------------------------------------
- Sort Area is  mascara_out0_0 : 0 0 : 388 388 : Used 1 time 0
- Sort Area is  mascara_out_2 : 0 0 : 388 388 : Used 1 time 0
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|control_DM  | (A:0x1fa400)*B2 | 21     | 8      | -      | -      | 29     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|control_DM  | (A:0x1fa400)*B2 | 21     | 8      | -      | -      | 29     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-+------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-*** Running vivado
-    with args -log Genesys2_VideoDemoR1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Genesys2_VideoDemoR1.tcl
-
-
-
-****** Vivado v2023.2 (64-bit)
-  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
-  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
-  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source Genesys2_VideoDemoR1.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 553.852 ; gain = 179.621
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 555.449 ; gain = 180.648
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/crist/OneDrive/Documentos/Dropbox/PC/Downloads/Genesys2VideoDemo_R1/Genesys2VideoDemo_R1/hdl'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
@@ -916,14 +32,14 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20600
+INFO: [Synth 8-7075] Helper process launched with PID 19824
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1482.383 ; gain = 440.156
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1484.461 ; gain = 440.004
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Genesys2_VideoDemoR1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:87]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6' bound to instance 'PLL2_inst' of component 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:807]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6' bound to instance 'PLL2_inst' of component 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:807]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
 	Parameter MULT_MASTER bound to: 37.125000 - type: double 
 	Parameter DIV_MASTER bound to: 5.000000 - type: double 
 	Parameter DIV_5X bound to: 1.000000 - type: double 
@@ -996,9 +112,9 @@ INFO: [Synth 8-6155] done synthesizing module 'display_clocks' (0#1) [C:/Users/c
 INFO: [Synth 8-113] binding component instance 'XADC_inst' to cell 'XADC' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:841]
 INFO: [Synth 8-3491] module 'dpti_ctrl' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:39' bound to instance 'DPTI_inst' of component 'dpti_ctrl' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:906]
 INFO: [Synth 8-638] synthesizing module 'dpti_ctrl' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:74]
-INFO: [Synth 8-3491] module 'dpti_clock' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6' bound to instance 'clkwiz_inst' of component 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:183]
-INFO: [Synth 8-6157] synthesizing module 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dpti_clock' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
+INFO: [Synth 8-3491] module 'dpti_clock' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6' bound to instance 'clkwiz_inst' of component 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:183]
+INFO: [Synth 8-6157] synthesizing module 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dpti_clock' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
 	Parameter DRIVE bound to: 16 - type: integer 
 	Parameter SLEW bound to: FAST - type: string 
 INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
@@ -1082,9 +198,9 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO__paramete
 INFO: [Synth 8-113] binding component instance 'fifo_36_bl' to cell 'FIFO36E1' [D:/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:843]
 INFO: [Synth 8-256] done synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO__parameterized0' (0#1) [D:/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:70]
 INFO: [Synth 8-256] done synthesizing module 'dpti_ctrl' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:74]
-INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6' bound to instance 'DDR_INF_inst' of component 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:937]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6' bound to instance 'DDR_INF_inst' of component 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:937]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
 INFO: [Synth 8-3491] module 'dvid' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:15' bound to instance 'Inst_dvid' of component 'dvid' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:980]
 INFO: [Synth 8-638] synthesizing module 'dvid' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:31]
 INFO: [Synth 8-3491] module 'TDMS_encoder' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:14' bound to instance 'TDMS_encoder_red' of component 'TDMS_encoder' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:56]
@@ -1113,9 +229,9 @@ INFO: [Synth 8-256] done synthesizing module 'dvid' (0#1) [C:/Users/crist/OneDri
 INFO: [Synth 8-3491] module 'VideoLineBuffer_1' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:81' bound to instance 'LB_0' of component 'VideoLineBuffer_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:998]
 INFO: [Synth 8-638] synthesizing module 'VideoLineBuffer_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:108]
 	Parameter H_PIXELS bound to: 1920 - type: integer 
-INFO: [Synth 8-3491] module 'DPRAM_W245_R32' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6' bound to instance 'rgb_mem_inst' of component 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:186]
-INFO: [Synth 8-6157] synthesizing module 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DPRAM_W245_R32' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
+INFO: [Synth 8-3491] module 'DPRAM_W245_R32' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6' bound to instance 'rgb_mem_inst' of component 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:186]
+INFO: [Synth 8-6157] synthesizing module 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DPRAM_W245_R32' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'VideoLineBuffer_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:108]
 INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_1' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1020]
 INFO: [Synth 8-6157] synthesizing module 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23]
@@ -1176,8 +292,8 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/cris
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:40]
 INFO: [Synth 8-6155] done synthesizing module 'dcodeNto8' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:23]
 INFO: [Synth 8-6157] synthesizing module 'modulo_Tx' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/modulo_Tx.v:21]
-INFO: [Synth 8-6157] synthesizing module 'MemTx_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MemTx_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MemTx_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MemTx_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'control_Tx' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:21]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'control_Tx' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:21]
@@ -1189,10 +305,10 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/cris
 INFO: [Synth 8-6155] done synthesizing module 'UART_TX_control' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22]
 INFO: [Synth 8-3491] module 'control_DM' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22' bound to instance 'control_DM_inst' of component 'control_DM' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1167]
 INFO: [Synth 8-6157] synthesizing module 'control_DM' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-21496-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-8104-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:209]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:104]
 INFO: [Synth 8-6155] done synthesizing module 'control_DM' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22]
@@ -1233,18 +349,18 @@ WARNING: [Synth 8-7129] Port btnl in module Genesys2_VideoDemoR1 is either uncon
 WARNING: [Synth 8-7129] Port btnr in module Genesys2_VideoDemoR1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btnu in module Genesys2_VideoDemoR1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1622.508 ; gain = 580.281
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1624.730 ; gain = 580.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1622.508 ; gain = 580.281
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1624.730 ; gain = 580.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1622.508 ; gain = 580.281
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1624.730 ; gain = 580.273
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1622.508 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1624.730 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_blue' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_clock' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
@@ -1272,6 +388,7 @@ Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-pr
 Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'DDR_INF_inst'
 Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'DDR_INF_inst'
 Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+WARNING: [Vivado 12-584] No ports matched 'fmc_la_p_32'. [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc:360]
 WARNING: [Vivado 12-507] No nets matched 'PLL2_inst/inst/clk_in1_clk_wiz_0'. [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc:438]
 Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Genesys2_VideoDemoR1_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
@@ -1286,7 +403,7 @@ Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-pr
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1702.195 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1726.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 8 instances
@@ -1295,7 +412,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   ODDR2 => ODDR: 4 instances
 
 El sistema no puede encontrar la ruta especificada.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1702.195 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1726.902 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'LB_0/rgb_mem_inst' at clock pin 'clka' is different from the actual clock period '6.734', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'control_DM_inst/MEM_ADC0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
@@ -1304,14 +421,14 @@ WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context s
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1473,7 +590,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for control_DM_inst/MEM_ADC1. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for DPTI_inst/clkwiz_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_INF_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'stPtiCur_reg' in module 'dpti_ctrl'
 INFO: [Synth 8-802] inferred FSM for state register 'control2_reg' in module 'sync_pulse_det_generator'
@@ -1595,7 +712,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'd_state_reg' using encoding 'one-hot' in module 'Genesys2_VideoDemoR1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1744,7 +861,7 @@ WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control3_reg[1]) is unuse
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control3_reg[0]) is unused and will be removed from module sync_pulse_det_generator.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_d_state_reg[4]) is unused and will be removed from module Genesys2_VideoDemoR1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
  Sort Area is  mascara_out0_0 : 0 0 : 388 388 : Used 1 time 0
  Sort Area is  mascara_out_2 : 0 0 : 388 388 : Used 1 time 0
@@ -1768,19 +885,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:44 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:45 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:43 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1798,37 +915,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1911,13 +1028,13 @@ Report Cell Usage:
 |34    |OBUFT          |     4|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 1726.902 ; gain = 682.445
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:48 . Memory (MB): peak = 1702.195 ; gain = 580.281
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1702.195 ; gain = 659.969
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 1726.902 ; gain = 580.273
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 1726.902 ; gain = 682.445
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1702.195 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1726.902 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 188 Unisim elements for replacement
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_blue' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'o_clk_5x_n' that is connected to this pin will not be connected to the replacement instance.
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_clock' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'o_clk_5x_n' that is connected to this pin will not be connected to the replacement instance.
@@ -1926,7 +1043,7 @@ WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_red' of cell typ
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1702.195 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1726.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 8 instances
@@ -1935,12 +1052,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   ODDR2 => ODDR: 4 instances
 
 El sistema no puede encontrar la ruta especificada.
-Synth Design complete | Checksum: e79018e5
+Synth Design complete | Checksum: 13416249
 INFO: [Common 17-83] Releasing license: Synthesis
-169 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
+169 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:58 . Memory (MB): peak = 1702.195 ; gain = 1113.445
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1702.195 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 1726.902 ; gain = 1137.223
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1726.902 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Genesys2_VideoDemoR1_utilization_synth.rpt -pb Genesys2_VideoDemoR1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 31 13:05:39 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 21 10:00:55 2024...

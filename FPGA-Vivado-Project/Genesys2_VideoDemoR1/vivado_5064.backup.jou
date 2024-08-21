@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Aug  5 11:17:39 2024
+# Process ID: 5064
+# Current directory: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17924 C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\Genesys2_VideoDemoR1\Genesys2_VideoDemoR1.xpr
+# Log file: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/vivado.log
+# Journal file: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1\vivado.jou
+# Running On: LAPTOP-RR96MLV1, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 16971 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.xpr
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+source UART_Rx.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+source UART_Rx.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+source UART_Rx.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+source UART_Rx.tcl
+close_sim

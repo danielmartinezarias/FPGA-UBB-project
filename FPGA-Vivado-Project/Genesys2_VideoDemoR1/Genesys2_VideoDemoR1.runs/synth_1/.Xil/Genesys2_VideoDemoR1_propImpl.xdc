@@ -74,6 +74,8 @@ set_property src_info {type:XDC file:1 line:298 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN D26   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p_01 }]; #IO_L11P_T1_SRCC_16 Sch=fmc_la_p[01]
 set_property src_info {type:XDC file:1 line:304 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H26   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p_04 }]; #IO_L23P_T3_16 Sch=fmc_la_p[04]
+set_property src_info {type:XDC file:1 line:326 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN B23   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p_15 }]; #IO_L1P_T0_16 Sch=fmc_la_p[15]
 set_property src_info {type:XDC file:1 line:330 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN F21   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p_17 }]; #IO_L11P_T1_SRCC_17 Sch=fmc_la_p[17]
 set_property src_info {type:XDC file:1 line:332 export:INPUT save:INPUT read:READ} [current_design]

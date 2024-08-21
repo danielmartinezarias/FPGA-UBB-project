@@ -30,7 +30,7 @@ entity Genesys2_VideoDemoR1 is
     fmc_la_p_17                        : in   std_logic;
     fmc_la_p_18                        : out   std_logic;
     fmc_la_p_24                        : out   std_logic;
-    fmc_la_p_32                        : in   std_logic;
+    fmc_la_p_15                        : in   std_logic;
     fmc_la_p_04                        : out   std_logic;
     
     -- JC PMOD Header
@@ -2050,8 +2050,7 @@ begin
   
 
 -- FMC
-
-  sync_ext   <= fmc_la_p_32;
+  sync_ext   <= fmc_la_p_15;
   det0_in    <= fmc_la_p_01;
   det1_in    <= fmc_la_p_17;
   

@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../Genesys2_VideoDemoR1.ip_user_files/ipstatic" \
+"UART_Rx_func_synth.v" \
+"../../../../../Genesys2_VideoDemoR1.srcs/sim_1/new/Genesys2_VideoDemoR1_TB_Oneshoot.v" \
+"../../../../../Genesys2_VideoDemoR1.srcs/sim_1/new/tb_control_parametros.v" \
+
+# Do not sort compile order
+nosort

@@ -323,7 +323,7 @@ set_property -dict { PACKAGE_PIN H26   IOSTANDARD LVCMOS12 } [get_ports { fmc_la
 #set_property -dict { PACKAGE_PIN B24   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[14] }]; #IO_L8N_T1_16 Sch=fmc_la_n[14]
 #set_property -dict { PACKAGE_PIN C24   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p[14] }]; #IO_L8P_T1_16 Sch=fmc_la_p[14]
 #set_property -dict { PACKAGE_PIN A23   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[15] }]; #IO_L1N_T0_16 Sch=fmc_la_n[15]
-#set_property -dict { PACKAGE_PIN B23   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p[15] }]; #IO_L1P_T0_16 Sch=fmc_la_p[15]
+set_property -dict { PACKAGE_PIN B23   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p_15 }]; #IO_L1P_T0_16 Sch=fmc_la_p[15]
 #set_property -dict { PACKAGE_PIN D23   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[16] }]; #IO_L2N_T0_16 Sch=fmc_la_n[16]
 #set_property -dict { PACKAGE_PIN E23   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p[16] }]; #IO_L2P_T0_16 Sch=fmc_la_p[16]
 #set_property -dict { PACKAGE_PIN E21   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[17] }]; #IO_L11N_T1_SRCC_17 Sch=fmc_la_n[17]

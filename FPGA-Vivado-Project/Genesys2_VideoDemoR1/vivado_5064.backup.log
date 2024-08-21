@@ -1,0 +1,1708 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Aug  5 11:17:39 2024
+# Process ID: 5064
+# Current directory: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17924 C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\Genesys2_VideoDemoR1\Genesys2_VideoDemoR1.xpr
+# Log file: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/vivado.log
+# Journal file: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1\vivado.jou
+# Running On: LAPTOP-RR96MLV1, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 16971 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1'
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/crist/OneDrive/Documentos/Dropbox/PC/Downloads/Genesys2VideoDemo_R1/Genesys2VideoDemo_R1/hdl'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/crist/OneDrive/Documentos/Dropbox/PC/Downloads/Genesys2VideoDemo_R1/Genesys2VideoDemo_R1/hdl'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2023.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1608.613 ; gain = 456.707
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp with file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.dcp
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/MemTx_1/MemTx_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Mon Aug  5 11:20:50 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/runme.log
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'UART_Rx'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DPRAM_W245_R32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'MemTx_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Vivado/2023.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k325tffg900-2
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0.dcp' for cell 'DDR_INF_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.dcp' for cell 'PLL2_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.dcp' for cell 'DPTI_inst/clkwiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.dcp' for cell 'LB_0/rgb_mem_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1.dcp' for cell 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'control_DM_inst/MEM_ADC0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'control_DM_inst/MEM_DAC0'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.410 . Memory (MB): peak = 2123.172 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 895 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2956.500 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 254 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT(x2), INV, OBUFTDS_DCIEN(x2)): 4 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 32 instances
+  OBUFDS => OBUFDS: 4 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 205 instances
+
+open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2972.922 ; gain = 1342.453
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'UART_Rx' in fileset 'sim_1'...
+WARNING: [Vivado 12-12738] Source files contain structural simulation model file(s): 
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_sim_netlist.v
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_sim_netlist.v
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj UART_Rx_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AccCuentas
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32
+INFO: [VRFC 10-311] analyzing module Genesys2_VideoDemoR1
+INFO: [VRFC 10-311] analyzing module MemTx_1
+INFO: [VRFC 10-311] analyzing module OneShoot
+INFO: [VRFC 10-311] analyzing module OneShoot_0
+INFO: [VRFC 10-311] analyzing module OneShoot_1
+INFO: [VRFC 10-311] analyzing module OneShoot_2
+INFO: [VRFC 10-311] analyzing module OneShoot_3
+INFO: [VRFC 10-311] analyzing module OneShoot_4
+INFO: [VRFC 10-311] analyzing module PreProc_Cs
+INFO: [VRFC 10-311] analyzing module PreProc_Cs_7
+INFO: [VRFC 10-311] analyzing module SimpleOneShot
+INFO: [VRFC 10-311] analyzing module SimpleOneShot_9
+INFO: [VRFC 10-311] analyzing module TDMS_encoder
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_5
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_6
+INFO: [VRFC 10-311] analyzing module UART_Rx
+INFO: [VRFC 10-311] analyzing module UART_TX_control
+INFO: [VRFC 10-311] analyzing module UART_Tx
+INFO: [VRFC 10-311] analyzing module VideoLineBuffer_1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module control_DM
+INFO: [VRFC 10-311] analyzing module control_Tx
+INFO: [VRFC 10-311] analyzing module control_parametros
+INFO: [VRFC 10-311] analyzing module counter_ADP
+INFO: [VRFC 10-311] analyzing module counter_ADP_8
+INFO: [VRFC 10-311] analyzing module dcodeNto8
+INFO: [VRFC 10-311] analyzing module display_clocks
+INFO: [VRFC 10-311] analyzing module dpti_clock
+INFO: [VRFC 10-311] analyzing module dpti_clock_clk_wiz
+INFO: [VRFC 10-311] analyzing module dpti_ctrl
+INFO: [VRFC 10-311] analyzing module dvid
+INFO: [VRFC 10-311] analyzing module mig_7series_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_row_col
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_select
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_clk_ibuf
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_col_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_17
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_20
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_calib_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_18
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_21
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_23
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy_wrapper
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0_12
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_13
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_14
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_15
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_16
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_19
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_22
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_24
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_dqs_found_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_init
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_edge
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_lim
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_po_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_samp
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_oclkdelay_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_prbs_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrcal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_prbs_gen
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_infrastructure
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_iodelay_ctrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mem_intfc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_memc_ui_top_std
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_25
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_26
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_meta
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_10
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_11
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_9
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_tap_base
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_7
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_8
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_cmd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_rd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_wr_data
+INFO: [VRFC 10-311] analyzing module modulo_Tx
+INFO: [VRFC 10-311] analyzing module pmodDA2
+INFO: [VRFC 10-311] analyzing module sync_pulse_det_generator
+INFO: [VRFC 10-311] analyzing module tick_generator
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO__parameterized0
+INFO: [VRFC 10-311] analyzing module video_sync_generator
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sim_1/new/Genesys2_VideoDemoR1_TB_Oneshoot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_OneShoot
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2988.594 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '13' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1(INIT=2'b01)
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3(INIT=8'b01111000)
+Compiling module xil_defaultlib.UART_Rx
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot UART_Rx_func_synth
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2988.594 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "UART_Rx_func_synth -key {Post-Synthesis:sim_1:Functional:UART_Rx} -tclbatch {UART_Rx.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source UART_Rx.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'UART_Rx_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 3013.332 ; gain = 1392.715
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp with file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/MemTx_1/MemTx_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Mon Aug  5 11:27:38 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'UART_Rx'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Vivado/2023.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k325tffg900-2
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0.dcp' for cell 'DDR_INF_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.dcp' for cell 'PLL2_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.dcp' for cell 'DPTI_inst/clkwiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.dcp' for cell 'LB_0/rgb_mem_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1.dcp' for cell 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'control_DM_inst/MEM_ADC0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'control_DM_inst/MEM_DAC0'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.372 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 895 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 254 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT(x2), INV, OBUFTDS_DCIEN(x2)): 4 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 32 instances
+  OBUFDS => OBUFDS: 4 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 205 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'UART_Rx' in fileset 'sim_1'...
+WARNING: [Vivado 12-12738] Source files contain structural simulation model file(s): 
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_sim_netlist.v
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_sim_netlist.v
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj UART_Rx_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AccCuentas
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32
+INFO: [VRFC 10-311] analyzing module Genesys2_VideoDemoR1
+INFO: [VRFC 10-311] analyzing module MemTx_1
+INFO: [VRFC 10-311] analyzing module OneShoot
+INFO: [VRFC 10-311] analyzing module OneShoot_0
+INFO: [VRFC 10-311] analyzing module OneShoot_1
+INFO: [VRFC 10-311] analyzing module OneShoot_2
+INFO: [VRFC 10-311] analyzing module OneShoot_3
+INFO: [VRFC 10-311] analyzing module OneShoot_4
+INFO: [VRFC 10-311] analyzing module PreProc_Cs
+INFO: [VRFC 10-311] analyzing module PreProc_Cs_7
+INFO: [VRFC 10-311] analyzing module SimpleOneShot
+INFO: [VRFC 10-311] analyzing module SimpleOneShot_9
+INFO: [VRFC 10-311] analyzing module TDMS_encoder
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_5
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_6
+INFO: [VRFC 10-311] analyzing module UART_Rx
+INFO: [VRFC 10-311] analyzing module UART_TX_control
+INFO: [VRFC 10-311] analyzing module UART_Tx
+INFO: [VRFC 10-311] analyzing module VideoLineBuffer_1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module control_DM
+INFO: [VRFC 10-311] analyzing module control_Tx
+INFO: [VRFC 10-311] analyzing module control_parametros
+INFO: [VRFC 10-311] analyzing module counter_ADP
+INFO: [VRFC 10-311] analyzing module counter_ADP_8
+INFO: [VRFC 10-311] analyzing module dcodeNto8
+INFO: [VRFC 10-311] analyzing module display_clocks
+INFO: [VRFC 10-311] analyzing module dpti_clock
+INFO: [VRFC 10-311] analyzing module dpti_clock_clk_wiz
+INFO: [VRFC 10-311] analyzing module dpti_ctrl
+INFO: [VRFC 10-311] analyzing module dvid
+INFO: [VRFC 10-311] analyzing module mig_7series_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_row_col
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_select
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_clk_ibuf
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_col_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_17
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_20
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_calib_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_18
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_21
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_23
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy_wrapper
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0_12
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_13
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_14
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_15
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_16
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_19
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_22
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_24
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_dqs_found_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_init
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_edge
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_lim
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_po_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_samp
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_oclkdelay_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_prbs_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrcal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_prbs_gen
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_infrastructure
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_iodelay_ctrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mem_intfc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_memc_ui_top_std
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_25
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_26
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_meta
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_10
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_11
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_9
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_tap_base
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_7
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_8
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_cmd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_rd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_wr_data
+INFO: [VRFC 10-311] analyzing module modulo_Tx
+INFO: [VRFC 10-311] analyzing module pmodDA2
+INFO: [VRFC 10-311] analyzing module sync_pulse_det_generator
+INFO: [VRFC 10-311] analyzing module tick_generator
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO__parameterized0
+INFO: [VRFC 10-311] analyzing module video_sync_generator
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sim_1/new/Genesys2_VideoDemoR1_TB_Oneshoot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_OneShoot
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '12' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1(INIT=2'b01)
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3(INIT=8'b01111000)
+Compiling module xil_defaultlib.UART_Rx
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot UART_Rx_func_synth
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "UART_Rx_func_synth -key {Post-Synthesis:sim_1:Functional:UART_Rx} -tclbatch {UART_Rx.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source UART_Rx.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'UART_Rx_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 4082.629 ; gain = 0.000
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp with file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/MemTx_1/MemTx_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Mon Aug  5 11:33:26 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\Genesys2_VideoDemoR1\Genesys2_VideoDemoR1.srcs\sim_1\new\Genesys2_VideoDemoR1_TB_Oneshoot.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\srcs\Genesys2_VideoDemoR1.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'UART_Rx'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Vivado/2023.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k325tffg900-2
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\Genesys2_VideoDemoR1\Genesys2_VideoDemoR1.srcs\sim_1\new\Genesys2_VideoDemoR1_TB_Oneshoot.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\srcs\Genesys2_VideoDemoR1.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0.dcp' for cell 'DDR_INF_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.dcp' for cell 'PLL2_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.dcp' for cell 'DPTI_inst/clkwiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.dcp' for cell 'LB_0/rgb_mem_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1.dcp' for cell 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'control_DM_inst/MEM_ADC0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'control_DM_inst/MEM_DAC0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.379 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 895 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 254 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT(x2), INV, OBUFTDS_DCIEN(x2)): 4 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 32 instances
+  OBUFDS => OBUFDS: 4 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 205 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'UART_Rx' in fileset 'sim_1'...
+WARNING: [Vivado 12-12738] Source files contain structural simulation model file(s): 
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_sim_netlist.v
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_sim_netlist.v
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj UART_Rx_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AccCuentas
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32
+INFO: [VRFC 10-311] analyzing module Genesys2_VideoDemoR1
+INFO: [VRFC 10-311] analyzing module MemTx_1
+INFO: [VRFC 10-311] analyzing module OneShoot
+INFO: [VRFC 10-311] analyzing module OneShoot_0
+INFO: [VRFC 10-311] analyzing module OneShoot_1
+INFO: [VRFC 10-311] analyzing module OneShoot_2
+INFO: [VRFC 10-311] analyzing module OneShoot_3
+INFO: [VRFC 10-311] analyzing module OneShoot_4
+INFO: [VRFC 10-311] analyzing module PreProc_Cs
+INFO: [VRFC 10-311] analyzing module PreProc_Cs_7
+INFO: [VRFC 10-311] analyzing module SimpleOneShot
+INFO: [VRFC 10-311] analyzing module SimpleOneShot_9
+INFO: [VRFC 10-311] analyzing module TDMS_encoder
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_5
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_6
+INFO: [VRFC 10-311] analyzing module UART_Rx
+INFO: [VRFC 10-311] analyzing module UART_TX_control
+INFO: [VRFC 10-311] analyzing module UART_Tx
+INFO: [VRFC 10-311] analyzing module VideoLineBuffer_1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module control_DM
+INFO: [VRFC 10-311] analyzing module control_Tx
+INFO: [VRFC 10-311] analyzing module control_parametros
+INFO: [VRFC 10-311] analyzing module counter_ADP
+INFO: [VRFC 10-311] analyzing module counter_ADP_8
+INFO: [VRFC 10-311] analyzing module dcodeNto8
+INFO: [VRFC 10-311] analyzing module display_clocks
+INFO: [VRFC 10-311] analyzing module dpti_clock
+INFO: [VRFC 10-311] analyzing module dpti_clock_clk_wiz
+INFO: [VRFC 10-311] analyzing module dpti_ctrl
+INFO: [VRFC 10-311] analyzing module dvid
+INFO: [VRFC 10-311] analyzing module mig_7series_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_row_col
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_select
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_clk_ibuf
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_col_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_17
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_20
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_calib_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_18
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_21
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_23
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy_wrapper
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0_12
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_13
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_14
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_15
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_16
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_19
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_22
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_24
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_dqs_found_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_init
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_edge
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_lim
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_po_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_samp
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_oclkdelay_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_prbs_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrcal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_prbs_gen
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_infrastructure
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_iodelay_ctrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mem_intfc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_memc_ui_top_std
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_25
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_26
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_meta
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_10
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_11
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_9
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_tap_base
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_7
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_8
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_cmd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_rd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_wr_data
+INFO: [VRFC 10-311] analyzing module modulo_Tx
+INFO: [VRFC 10-311] analyzing module pmodDA2
+INFO: [VRFC 10-311] analyzing module sync_pulse_det_generator
+INFO: [VRFC 10-311] analyzing module tick_generator
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO__parameterized0
+INFO: [VRFC 10-311] analyzing module video_sync_generator
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sim_1/new/Genesys2_VideoDemoR1_TB_Oneshoot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_OneShoot
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '13' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1(INIT=2'b01)
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3(INIT=8'b01111000)
+Compiling module xil_defaultlib.UART_Rx
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot UART_Rx_func_synth
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "UART_Rx_func_synth -key {Post-Synthesis:sim_1:Functional:UART_Rx} -tclbatch {UART_Rx.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source UART_Rx.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'UART_Rx_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 4082.629 ; gain = 0.000
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp with file C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/MemTx_1/MemTx_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Mon Aug  5 11:37:18 2024] Launched synth_1...
+Run output will be captured here: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\Genesys2_VideoDemoR1\Genesys2_VideoDemoR1.srcs\sim_1\new\Genesys2_VideoDemoR1_TB_Oneshoot.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\srcs\Genesys2_VideoDemoR1.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation  -mode post-synthesis -type functional
+INFO: [Vivado 12-12493] Simulation top is 'UART_Rx'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Vivado/2023.2/tps/boost_1_72_0'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k325tffg900-2
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\Genesys2_VideoDemoR1\Genesys2_VideoDemoR1.srcs\sim_1\new\Genesys2_VideoDemoR1_TB_Oneshoot.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\FPGA-Vivado-Project\srcs\Genesys2_VideoDemoR1.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0.dcp' for cell 'DDR_INF_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.dcp' for cell 'PLL2_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.dcp' for cell 'DPTI_inst/clkwiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.dcp' for cell 'LB_0/rgb_mem_inst'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1.dcp' for cell 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'control_DM_inst/MEM_ADC0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'control_DM_inst/MEM_DAC0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.362 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 895 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'PLL2_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc:54]
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc] for cell 'DPTI_inst/clkwiz_inst/inst'
+Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Finished Parsing XDC File [c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'DDR_INF_inst'
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 254 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT(x2), INV, OBUFTDS_DCIEN(x2)): 4 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 32 instances
+  OBUFDS => OBUFDS: 4 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 205 instances
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'UART_Rx' in fileset 'sim_1'...
+WARNING: [Vivado 12-12738] Source files contain structural simulation model file(s): 
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_sim_netlist.v
+  c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_sim_netlist.v
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj UART_Rx_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim/UART_Rx_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AccCuentas
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32
+INFO: [VRFC 10-311] analyzing module Genesys2_VideoDemoR1
+INFO: [VRFC 10-311] analyzing module MemTx_1
+INFO: [VRFC 10-311] analyzing module OneShoot
+INFO: [VRFC 10-311] analyzing module OneShoot_0
+INFO: [VRFC 10-311] analyzing module OneShoot_1
+INFO: [VRFC 10-311] analyzing module OneShoot_2
+INFO: [VRFC 10-311] analyzing module OneShoot_3
+INFO: [VRFC 10-311] analyzing module OneShoot_4
+INFO: [VRFC 10-311] analyzing module PreProc_Cs
+INFO: [VRFC 10-311] analyzing module PreProc_Cs_7
+INFO: [VRFC 10-311] analyzing module SimpleOneShot
+INFO: [VRFC 10-311] analyzing module SimpleOneShot_9
+INFO: [VRFC 10-311] analyzing module TDMS_encoder
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_5
+INFO: [VRFC 10-311] analyzing module TDMS_encoder_6
+INFO: [VRFC 10-311] analyzing module UART_Rx
+INFO: [VRFC 10-311] analyzing module UART_TX_control
+INFO: [VRFC 10-311] analyzing module UART_Tx
+INFO: [VRFC 10-311] analyzing module VideoLineBuffer_1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module control_DM
+INFO: [VRFC 10-311] analyzing module control_Tx
+INFO: [VRFC 10-311] analyzing module control_parametros
+INFO: [VRFC 10-311] analyzing module counter_ADP
+INFO: [VRFC 10-311] analyzing module counter_ADP_8
+INFO: [VRFC 10-311] analyzing module dcodeNto8
+INFO: [VRFC 10-311] analyzing module display_clocks
+INFO: [VRFC 10-311] analyzing module dpti_clock
+INFO: [VRFC 10-311] analyzing module dpti_clock_clk_wiz
+INFO: [VRFC 10-311] analyzing module dpti_ctrl
+INFO: [VRFC 10-311] analyzing module dvid
+INFO: [VRFC 10-311] analyzing module mig_7series_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_row_col
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_arb_select
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_cntrl__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_compare_6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_queue__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_bank_state__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_clk_ibuf
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_col_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_17
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized0_20
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_group_io__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized2
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized3
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized4
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized5
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_byte_lane__parameterized6
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_calib_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_18
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_21
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_if_post_fifo_23
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_mc_phy_wrapper
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized0_12
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_13
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_14
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_15
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_16
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_19
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_22
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_of_pre_fifo__parameterized1_24
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_4lanes__parameterized0
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_dqs_found_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_init
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_edge
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_lim
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_mux
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_po_cntlr
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_ocd_samp
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_oclkdelay_cal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_prbs_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_rdlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrcal
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_phy_wrlvl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ddr_prbs_gen
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_infrastructure
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_iodelay_ctrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_mem_intfc
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_memc_ui_top_std
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_25
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_edge_store_26
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_meta
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_10
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_11
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_pd_9
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_tap_base
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_poc_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_cntrl
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_common
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_rank_mach
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_7
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_round_robin_arb__parameterized1_8
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_tempmon
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_cmd
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_rd_data
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_top
+INFO: [VRFC 10-311] analyzing module mig_7series_0_mig_7series_v4_2_ui_wr_data
+INFO: [VRFC 10-311] analyzing module modulo_Tx
+INFO: [VRFC 10-311] analyzing module pmodDA2
+INFO: [VRFC 10-311] analyzing module sync_pulse_det_generator
+INFO: [VRFC 10-311] analyzing module tick_generator
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO
+INFO: [VRFC 10-311] analyzing module unimacro_FIFO_DUALCLOCK_MACRO__parameterized0
+INFO: [VRFC 10-311] analyzing module video_sync_generator
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized14
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module DPRAM_W245_R32_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module MemTx_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper__parameterized9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_bindec
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_width__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_prim_wrapper__parameterized6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sim_1/new/Genesys2_VideoDemoR1_TB_Oneshoot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_OneShoot
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 4082.629 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '12' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot UART_Rx_func_synth xil_defaultlib.UART_Rx xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1(INIT=2'b01)
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3(INIT=8'b01111000)
+Compiling module xil_defaultlib.UART_Rx
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot UART_Rx_func_synth
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.sim/sim_1/synth/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "UART_Rx_func_synth -key {Post-Synthesis:sim_1:Functional:UART_Rx} -tclbatch {UART_Rx.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source UART_Rx.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'UART_Rx_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 4082.629 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug  5 11:49:43 2024...
