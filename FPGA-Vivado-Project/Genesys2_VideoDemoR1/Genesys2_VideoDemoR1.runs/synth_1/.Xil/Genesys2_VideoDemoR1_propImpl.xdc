@@ -68,6 +68,8 @@ set_property src_info {type:XDC file:1 line:172 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN AK30  IOSTANDARD LVCMOS33 } [get_ports { jc[6] }]; #IO_L15N_T2_DQS_13 Sch=jc[9]
 set_property src_info {type:XDC file:1 line:173 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN AK28  IOSTANDARD LVCMOS33 } [get_ports { jc[7] }]; #IO_L20N_T3_13 Sch=jc[10]
+set_property src_info {type:XDC file:1 line:295 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C27   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n_00 }]; #IO_L13N_T2_MRCC_16 Sch=fmc_la_n[00]
 set_property src_info {type:XDC file:1 line:296 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN D27   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p_00 }]; #IO_L13P_T2_MRCC_16 Sch=fmc_la_p[00]
 set_property src_info {type:XDC file:1 line:298 export:INPUT save:INPUT read:READ} [current_design]
