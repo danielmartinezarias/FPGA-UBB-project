@@ -133,3 +133,22 @@ C:\Users\danie\Documents\GitHub\FPGAs UBB\FPGA-UBB-project\GUI\SOFTWARE BASE-UAR
 C:\Users\danie\Documents\GitHub\FPGAs UBB\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\es-MX\driver_PM_software.resources.dll
 C:\Users\danie\Documents\GitHub\FPGAs UBB\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.exe
 C:\Users\danie\Documents\GitHub\FPGAs UBB\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.pdb
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\bin\Debug\driver_PM_software.exe.config
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\bin\Debug\driver_PM_software.exe
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\bin\Debug\driver_PM_software.pdb
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\bin\Debug\en-DE\driver_PM_software.resources.dll
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\bin\Debug\en-US\driver_PM_software.resources.dll
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\bin\Debug\es-MX\driver_PM_software.resources.dll
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.csproj.AssemblyReference.cache
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.Form1.resources
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.Properties.Resources.resources
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.Form1.en-DE.resources
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.Form1.en-US.resources
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.Form1.es-MX.resources
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.csproj.GenerateResource.cache
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.csproj.CoreCompileInputs.cache
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\en-DE\driver_PM_software.resources.dll
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\en-US\driver_PM_software.resources.dll
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\es-MX\driver_PM_software.resources.dll
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.exe
+C:\Users\crist\OneDrive\Documentos\GitHub\FPGA-UBB-project\GUI\SOFTWARE BASE-UART\driver_PM_software\obj\Debug\driver_PM_software.pdb
