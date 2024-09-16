@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Wed Aug 21 13:19:13 2024
+| Date             : Mon Sep 16 13:17:47 2024
 | Host             : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 | Command          : report_power -file Genesys2_VideoDemoR1_power_routed.rpt -pb Genesys2_VideoDemoR1_power_summary_routed.pb -rpx Genesys2_VideoDemoR1_power_routed.rpx
 | Design           : Genesys2_VideoDemoR1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.488        |
+| Total On-Chip Power (W)  | 2.485        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.308        |
+| Dynamic (W)              | 2.305        |
 | Device Static (W)        | 0.180        |
 | Effective TJA (C/W)      | 1.8          |
 | Max Ambient (C)          | 80.6         |
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.132 |       47 |       --- |             --- |
-| Slice Logic              |     0.058 |    21800 |       --- |             --- |
-|   LUT as Logic           |     0.053 |     8776 |    203800 |            4.31 |
-|   Register               |     0.002 |     7971 |    407600 |            1.96 |
+| Clocks                   |     0.129 |       47 |       --- |             --- |
+| Slice Logic              |     0.058 |    21795 |       --- |             --- |
+|   LUT as Logic           |     0.053 |     8775 |    203800 |            4.31 |
+|   Register               |     0.002 |     7970 |    407600 |            1.96 |
 |   CARRY4                 |     0.001 |      452 |     50950 |            0.89 |
 |   LUT as Distributed RAM |     0.001 |      796 |     64000 |            1.24 |
 |   F7/F8 Muxes            |    <0.001 |       58 |    203800 |            0.03 |
 |   LUT as Shift Register  |    <0.001 |       23 |     64000 |            0.04 |
 |   Others                 |     0.000 |      461 |       --- |             --- |
-| Signals                  |     0.069 |    17649 |       --- |             --- |
+| Signals                  |     0.069 |    17655 |       --- |             --- |
 | Block RAM                |     0.094 |     66.5 |       445 |           14.94 |
 | MMCM                     |     0.437 |        4 |        10 |           40.00 |
 | PLL                      |     0.243 |        2 |        10 |           20.00 |
@@ -70,7 +70,7 @@ Table of Contents
 | PHASER                   |     0.511 |       28 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.180 |          |           |                 |
-| Total                    |     2.488 |          |           |                 |
+| Total                    |     2.485 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,7 +80,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.598 |       0.515 |      0.083 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.595 |       0.512 |      0.083 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.622 |       0.593 |      0.029 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.045 |       0.044 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -194,18 +194,21 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| Genesys2_VideoDemoR1        |     2.308 |
-|   AccCuentas_inst           |     0.001 |
-|   DDR_INF_inst              |     1.673 |
-|     u_mig_7series_0_mig     |     1.673 |
-|       u_ddr3_infrastructure |     0.249 |
-|       u_iodelay_ctrl        |     0.123 |
-|       u_memc_ui_top_std     |     1.300 |
+| Genesys2_VideoDemoR1        |     2.305 |
+|   AccCuentas_inst           |     0.002 |
+|   DDR_INF_inst              |     1.671 |
+|     u_mig_7series_0_mig     |     1.671 |
+|       u_ddr3_infrastructure |     0.250 |
+|       u_iodelay_ctrl        |     0.124 |
+|       u_memc_ui_top_std     |     1.297 |
 |   DPTI_inst                 |     0.114 |
 |     clkwiz_inst             |     0.111 |
 |       inst                  |     0.111 |
 |     dpti2usr_fifo           |     0.002 |
-|   Inst_dvid                 |     0.019 |
+|   Inst_dvid                 |     0.016 |
+|     TDMS_encoder_blue       |     0.001 |
+|     TDMS_encoder_green      |     0.001 |
+|     TDMS_encoder_red        |     0.001 |
 |   LB_0                      |     0.047 |
 |     rgb_mem_inst            |     0.034 |
 |       U0                    |     0.034 |
@@ -215,11 +218,11 @@ Table of Contents
 |     dcodeNto8_1             |     0.002 |
 |     modulo_Tx_1             |     0.030 |
 |       MemTx_8x65535_2       |     0.029 |
-|   control_DM_inst           |     0.034 |
-|     MEM_ADC0                |     0.012 |
-|       U0                    |     0.012 |
-|     MEM_ADC1                |     0.011 |
+|   control_DM_inst           |     0.035 |
+|     MEM_ADC0                |     0.011 |
 |       U0                    |     0.011 |
+|     MEM_ADC1                |     0.012 |
+|       U0                    |     0.012 |
 |     MEM_DAC0                |     0.009 |
 |       U0                    |     0.009 |
 |   control_parametros_inst   |     0.003 |

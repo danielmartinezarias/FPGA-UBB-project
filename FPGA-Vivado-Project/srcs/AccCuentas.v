@@ -19,7 +19,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module AccCuentas(
-input  wire clk,sclr,En,EnACCCtrl, 
+//input  wire clk,sclr,En,EnACCCtrl, 
+input  wire clk,sclr,EnACCCtrl,
 input  wire EXPIO_P_APD0,
 input  wire EXPIO_P_APD1,
 //input  wire [6:0]EXPIO_P_APD,
@@ -27,6 +28,15 @@ output reg[31:0]APD0,
 output reg[31:0]APD1,
 //output reg[31:0]APD0,APD1,APD2,APD3,APD4,APD5,APD6,
 input wire [7:0] dead_time_APD
+// -------------------Comentarios-------------------------------------------------------------------------------------------------------
+// Señales de entradas:
+// clk señal de reloj, sclr señal de borrado, En señal de habilitacion (si está activada permite el conteo), EnACCCtrl control para
+// acumular cuentas, EXPIO_P_APD0 y EXPIO_P_APD1 señales de entrada para los fotodetectores
+// dead_time_APD tiempo muerto del detector (evito cuentas)
+// Señales de Salidas:
+// APD0 - APD1: Salidas de 32 bits para almacenar las cuentas de EXPIO_P_APD0 y AXPIO_P_APD1
+//--------------------------------------------------------------------------------------------------------------------------------------
+
 //input Trigger_in_APD,gate_4,gate_5,gate_6,gate_7
 //input wire [31:0] width_ID220,delay_ID220,
 //input wire trigger_in_APD,
@@ -36,6 +46,10 @@ input wire [7:0] dead_time_APD
 
 reg rsclr=0;	 
 wire[6:0]oCs0;
+// -------------------Comentarios-------------------------------------------------------------------------------------------------------
+// rsclr: Registro para reiniciar el contador, lo iniciamos en 0
+// oCs0: Bus de 7 biys que almacena los modulos
+//--------------------------------------------------------------------------------------------------------------------------------------
 wire oCs0_ID220;
 //wire gate_ID220;
 PreProc_Cs Pre000 (
@@ -53,6 +67,13 @@ PreProc_Cs Pre001 (
     .Cs(oCs0[1]),
     .dead_time_APD(dead_time_APD)
     );
+
+// -------------------Comentarios-------------------------------------------------------------------------------------------------------
+// Instancias para procesar las señales de entrada EXPIO_P_APD0 y EXPIO_P_APD1
+// Pre000 y Pre001: toman la señal de reloj (clk), la señal de entrada (EXPIO_P_APDX)
+// y el tiempo de muerto (dead_time_APD)
+// Con esto generamos una salida (Cs) que indica que si una cuenta debe ser registrada
+//--------------------------------------------------------------------------------------------------------------------------------------
     
 //PreProc_Cs_ID220 Pre002 (
 //    .clk(clk400MHz), 
@@ -63,6 +84,10 @@ PreProc_Cs Pre001 (
 
 wire[6:0]oCs;
 assign oCs=oCs0;
+// -------------------Comentarios-------------------------------------------------------------------------------------------------------
+// oCs: Bus que toma el valor de oCs0
+//--------------------------------------------------------------------------------------------------------------------------------------
+
 //assign oCs[0]=oCs0[0];
 //assign oCs[1]=oCs0[1];
 //assign oCs[2]=oCs0[2];
@@ -86,7 +111,8 @@ wire[31:0]wAPD0,wAPD1;
 
 counter_ADP counter_ADP_0(
     .clk(clk),
-    .enable(En),
+     .enable(1'b1),
+    //.enable(En),
     .signal(oCs[0]),
 //    .signal(oCs[0]),
     .sclr(rsclr),
@@ -95,11 +121,20 @@ counter_ADP counter_ADP_0(
     
 counter_ADP counter_ADP_1(
     .clk(clk),
-    .enable(En),
+  .enable(1'b1),
+ //   .enable(En),
     .signal(oCs[1]),
     .sclr(rsclr),
     .counter(wAPD1)
     );
+
+// -------------------Comentarios-------------------------------------------------------------------------------------------------------
+// Creamos dos instancias del Modulo counter_APD
+// - counter_APD_0 y counter_APD_1 toman como entrada al reloj clk, la seañl de habilitacion
+// (en), la seañal de conteo (oCs[0]) para counter_APD_0  y oCs[1] pra counter APD_1
+// con la señal de reincio (rsclr)
+// - La salida counter (wAPD0 y wAPD1) es el valor actual del contador para cada entrada
+//--------------------------------------------------------------------------------------------------------------------------------------
 
 //counter_ADP counter_ADP_2(
 //    .clk(clk),
@@ -153,22 +188,44 @@ counter_ADP counter_ADP_1(
 
 
   
-always @(posedge clk)begin
+//always @(posedge clk)begin
 
-    if(sclr)begin
-        rsclr<=1;
-        if(EnACCCtrl)begin
-            APD0<=wAPD0;
-    		APD1<=wAPD1;
-    //		APD2<=wAPD2;
-    //		APD3<=wAPD3;
-    //		APD4<=wAPD4;
-    //		APD5<=wAPD5;
-    //		APD6<=wAPD6;
-        end
+//    if(sclr)begin
+//        rsclr<=1;
+//        if(EnACCCtrl)begin
+//            APD0<=wAPD0;
+//    		APD1<=wAPD1;
+//    //		APD2<=wAPD2;
+//    //		APD3<=wAPD3;
+//    //		APD4<=wAPD4;
+//    //		APD5<=wAPD5;
+//    //		APD6<=wAPD6;
+//        end
+//    end
+//    else
+//    rsclr<=0;
+
+//end
+always @(posedge clk) begin
+    if (sclr) begin
+        rsclr <= 1;
+        // Resetear las cuentas si sclr está activa
+        APD0 <= 0;
+        APD1 <= 0;
+    end else begin
+        rsclr <= 0;
+        // Acumular cuentas en los registros APD0 y APD1
+        APD0 <= wAPD0;
+        APD1 <= wAPD1;
     end
-    else
-    rsclr<=0;
 
 end
+    
 endmodule
+// -------------------Comentarios-------------------------------------------------------------------------------------------------------
+// Este modulo toma el flanco de subida deñ relok
+// - Si rsclr esta acitvo, se estableve en 1 para reiniciar los contadores
+// - Si EnACCCtrl esta activa las cuentas de wAPD0 y wAPD1 se transfieren a los registros de ADP0 y APD1
+// - Si sclr no esta activo, rsclr se coloca en 0, asi los contadores operan de forma normal
+// 
+//--------------------------------------------------------------------------------------------------------------------------------------

@@ -423,7 +423,7 @@ COMPONENT AccCuentas is
 PORT(
         clk       : in std_logic;
         sclr      : in std_logic;--simultaneo con EnACCCtrl
-        En        : in std_logic;--counts enable 
+        --En        : in std_logic;--counts enable 
         EnACCCtrl : in std_logic;-- retrieve data from counter
         EXPIO_P_APD0 : in  std_logic;
         EXPIO_P_APD1 : in  std_logic;
@@ -1131,7 +1131,7 @@ begin
   port map (
             clk             => clk100,
             sclr            => sclrAcc,
-            En              => EnAcc,
+ --           En              => EnAcc,
             EnACCCtrl       => EnACCCtrl,
             EXPIO_P_APD0    => det0_in,
             EXPIO_P_APD1    => det1_in,
