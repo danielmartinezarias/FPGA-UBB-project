@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.tcl"
+  variable script "C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param tcl.statsThreshold 360
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7k325tffg900-2
 
@@ -78,71 +79,74 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.cache/wt [current_project]
-set_property parent.project_path C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.xpr} [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths c:/Users/crist/OneDrive/Documentos/Dropbox/PC/Downloads/Genesys2VideoDemo_R1/Genesys2VideoDemo_R1/hdl [current_project]
+set_property ip_repo_paths c:/Users/danie/Documents/GitHub/Dropbox/PC/Downloads/Genesys2VideoDemo_R1/Genesys2VideoDemo_R1/hdl [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/new/counter_ADP_ID220.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/PreProc_Cs.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/modulo_Tx.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/OneShoot.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Tx.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/counter_ADP_ID220.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/SimpleOneShot.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/counter_ADP.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/new/counter_ADP_ID220.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/PreProc_Cs.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/modulo_Tx.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/OneShoot.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Tx.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/counter_ADP_ID220.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/SimpleOneShot.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/counter_ADP.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/PreProc_Cs_ID220.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/SimpleOneShot_ID220.v}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/ID220.v}
 }
 read_vhdl -library xil_defaultlib {
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd
-  C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd}
+  {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd}
 }
-read_ip -quiet C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
+read_ip -quiet {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32_ooc.xdc}}]
 
-read_ip -quiet C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32.xci
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/DPRAM_W245_R32/DPRAM_W245_R32_ooc.xdc]
+read_ip -quiet {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/MemTx_1/MemTx_1.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1_ooc.xdc}}]
 
-read_ip -quiet C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/MemTx_1/MemTx_1.xci
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/MemTx_1/MemTx_1_ooc.xdc]
+read_ip -quiet {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc}}]
 
-read_ip -quiet C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
+read_ip -quiet {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
 
-read_ip -quiet C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/dpti_clock/dpti_clock.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_ooc.xdc}}]
 
-read_ip -quiet C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/dpti_clock/dpti_clock.xci
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/dpti_clock/dpti_clock_ooc.xdc]
+read_ip -quiet {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc}}]
 
-read_ip -quiet C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
+read_ip -quiet {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -153,17 +157,17 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc
-set_property used_in_implementation false [get_files C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc]
+read_xdc {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc}}]
 
-read_xdc C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc
-set_property used_in_implementation false [get_files C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc]
+read_xdc {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp
+read_checkpoint -auto_incremental -incremental {C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.srcs/utils_1/imports/synth_1/Genesys2_VideoDemoR1.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

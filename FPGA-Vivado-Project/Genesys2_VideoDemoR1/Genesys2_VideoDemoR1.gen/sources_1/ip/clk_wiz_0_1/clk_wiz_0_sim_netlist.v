@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Fri Jan 26 14:32:42 2024
+// Date        : Sun Sep 22 23:35:04 2024
 // Host        : donaufeld running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top clk_wiz_0 -prefix
-//               clk_wiz_0_ clk_wiz_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim {c:/Users/danie/Documents/GitHub/FPGAs
+//               UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_sim_netlist.v}
 // Design      : clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -44,7 +44,7 @@ module clk_wiz_0
   wire locked;
   wire reset;
 
-  clk_wiz_0_clk_wiz_0_clk_wiz inst
+  clk_wiz_0_clk_wiz inst
        (.clk_in1_n(clk_in1_n),
         .clk_in1_p(clk_in1_p),
         .clk_out1(clk_out1),
@@ -56,7 +56,7 @@ module clk_wiz_0
         .reset(reset));
 endmodule
 
-module clk_wiz_0_clk_wiz_0_clk_wiz
+module clk_wiz_0_clk_wiz
    (clk_out1,
     clk_out2,
     clk_out3,
@@ -134,23 +134,23 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT(5),
+    .CLKFBOUT_MULT(6),
     .CLKFBOUT_PHASE(0.000000),
     .CLKIN1_PERIOD(5.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE(5),
+    .CLKOUT0_DIVIDE(6),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
-    .CLKOUT1_DIVIDE(5),
+    .CLKOUT1_DIVIDE(3),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
-    .CLKOUT2_DIVIDE(5),
+    .CLKOUT2_DIVIDE(6),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(180.000000),
-    .CLKOUT3_DIVIDE(10),
+    .CLKOUT3_DIVIDE(12),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
-    .CLKOUT4_DIVIDE(40),
+    .CLKOUT4_DIVIDE(48),
     .CLKOUT4_DUTY_CYCLE(0.500000),
     .CLKOUT4_PHASE(0.000000),
     .CLKOUT5_DIVIDE(1),

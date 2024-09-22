@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Fri Jan 26 14:32:42 2024
+-- Date        : Sun Sep 22 23:35:04 2024
 -- Host        : donaufeld running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top clk_wiz_0 -prefix
---               clk_wiz_0_ clk_wiz_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub {c:/Users/danie/Documents/GitHub/FPGAs
+--               UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_stub.vhdl}
 -- Design      : clk_wiz_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2

@@ -422,6 +422,7 @@ PORT(
 COMPONENT AccCuentas is
 PORT(
         clk       : in std_logic;
+        clk400MHz : in std_logic;
         sclr      : in std_logic;--simultaneo con EnACCCtrl
         --En        : in std_logic;--counts enable 
         EnACCCtrl : in std_logic;-- retrieve data from counter
@@ -429,7 +430,10 @@ PORT(
         EXPIO_P_APD1 : in  std_logic;
         APD0      : out std_logic_vector(31 downto 0);
         APD1      : out std_logic_vector(31 downto 0);
-        dead_time_APD : in std_logic_vector(7 downto 0)
+        dead_time_APD : in std_logic_vector(7 downto 0);
+        width_ID220 : in std_logic_vector(31 downto 0);
+        delay_ID220 : in std_logic_vector(31 downto 0);
+        gate_ID220 : out std_logic
     );
    END COMPONENT;
    
@@ -584,6 +588,7 @@ signal rd_addr_ld             : std_logic;
 
 signal ui_clk                 : std_logic;
 signal clk200                 : std_logic;
+signal clk400                 : std_logic;
 signal wcount                 : std_logic_vector(31 downto 0);
 signal rcount                 : std_logic_vector(31 downto 0);
 signal dcount                 : std_logic_vector(31 downto 0);
@@ -778,6 +783,7 @@ signal APD0          : std_logic_vector(31 downto 0);
 signal APD1          : std_logic_vector(31 downto 0);
 signal EXPIO_P_APD0  : std_logic;
 signal EXPIO_P_APD1  : std_logic;
+signal gate_idqube   : std_logic;
 
 --Modulo UART_TX_control
 signal pin_Tx               : std_logic;
@@ -807,7 +813,7 @@ begin
   PLL2_inst : clk_wiz_0
     port map (
     clk_out1   => clk200,   -- mig_7series_0 sys_clk_i
-    clk_out2   => open,     -- 200 MHz
+    clk_out2   => clk400,     -- 200 MHz
     clk_out3   => open,     -- 200 MHz 180 phase
     clk_out4   => clk100,   -- 100 MHz clock
     clk_out5   => clk25,    -- 25 MHz Pixel clock
@@ -854,14 +860,14 @@ begin
     INIT_4E => X"0000", -- SEQACQ0 - No extra settling time all channels
     INIT_4F => X"0000", -- SEQACQ1 - No extra settling time all channels
     -- INIT_50 - INIT_58, INIT5C: Alarm Limit Registers
-    INIT_50 => X"b5ed", -- Temp upper alarm trigger 85°C
+    INIT_50 => X"b5ed", -- Temp upper alarm trigger 85ï¿½C
     INIT_51 => X"5999", -- Vccint upper alarm limit 1.05V
     INIT_52 => X"A147", -- Vccaux upper alarm limit 1.89V
-    INIT_53 => X"dddd", -- OT upper alarm limit 125°C - see Thermal Management
-    INIT_54 => X"a93a", -- Temp lower alarm reset 60°C
+    INIT_53 => X"dddd", -- OT upper alarm limit 125ï¿½C - see Thermal Management
+    INIT_54 => X"a93a", -- Temp lower alarm reset 60ï¿½C
     INIT_55 => X"5111", -- Vccint lower alarm limit 0.95V
     INIT_56 => X"91Eb", -- Vccaux lower alarm limit 1.71V
-    INIT_57 => X"ae4e", -- OT lower alarm reset 70°C - see Thermal Management
+    INIT_57 => X"ae4e", -- OT lower alarm reset 70ï¿½C - see Thermal Management
     INIT_58 => X"5999", -- VCCBRAM upper alarm limit 1.05V
     INIT_5C => X"5111", -- VCCBRAM lower alarm limit 0.95V
     -- Simulation attributes: Set for proepr simulation behavior
@@ -1130,6 +1136,7 @@ begin
   AccCuentas_inst: AccCuentas
   port map (
             clk             => clk100,
+            clk400MHz       => clk400,
             sclr            => sclrAcc,
  --           En              => EnAcc,
             EnACCCtrl       => EnACCCtrl,
@@ -1137,7 +1144,10 @@ begin
             EXPIO_P_APD1    => det1_in,
             APD0            => APD0,
             APD1            => APD1,
-            dead_time_APD   => dead_time_APD
+            dead_time_APD   => dead_time_APD,
+            width_ID220     => width_det,
+            delay_ID220     => delay_det,
+            gate_ID220      => gate_idqube
   );
     
     --UART_TX_control
@@ -2044,7 +2054,7 @@ begin
   --led(0)  <= led_prueba;
 
   fmc_la_p_00 <=  sync;
-  fmc_la_p_04 <=  gateDet;
+  fmc_la_p_04 <=  gate_idqube; --edit DMA 22-09-24
   fmc_la_p_18 <=  MZI;
   fmc_la_p_24 <=  sync;
   

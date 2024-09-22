@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_control_parametros(
+module tb_control_parametros;
 reg clk;
 reg ReadyRx;
 reg [7:0] bufferRx;
@@ -46,7 +46,7 @@ wire [7:0] controlDM;
 wire [15:0] dataPoints;
 wire pulse_control, CW, AliceBob;
 
-// Instancia del módulo a probar
+// Instancia del mï¿½dulo a probar
 control_parametros uut (
     .clk(clk),
     .ReadyRx(ReadyRx),
@@ -77,18 +77,15 @@ control_parametros uut (
     .AliceBob(AliceBob)
 );
 
-// Inicialización
+// Inicializaciï¿½n
 initial begin
     clk = 0;
     ReadyRx = 0;
     bufferRx = 8'd0;
     #10 ReadyRx = 1; bufferRx = 8'd1;
     #10 ReadyRx = 0;
-    // Continúa con más estímulos según los casos de prueba necesarios
+    // Continï¿½a con mï¿½s estï¿½mulos segï¿½n los casos de prueba necesarios
 end
 
-// Generación de reloj
-always #5 clk = ~clk;
 
-    );
 endmodule

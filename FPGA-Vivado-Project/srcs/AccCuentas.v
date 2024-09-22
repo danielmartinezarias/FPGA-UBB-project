@@ -20,196 +20,110 @@
 //////////////////////////////////////////////////////////////////////////////////
 module AccCuentas(
 //input  wire clk,sclr,En,EnACCCtrl, 
-input  wire clk,sclr,EnACCCtrl,
+input  wire clk,clk400MHz,sclr,EnACCCtrl,
 input  wire EXPIO_P_APD0,
 input  wire EXPIO_P_APD1,
-//input  wire [6:0]EXPIO_P_APD,
+
 output reg[31:0]APD0,
 output reg[31:0]APD1,
-//output reg[31:0]APD0,APD1,APD2,APD3,APD4,APD5,APD6,
-input wire [7:0] dead_time_APD
+
+input wire [7:0] dead_time_APD,
+input wire [31:0] width_ID220,delay_ID220,
+output wire gate_ID220
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// Señales de entradas:
-// clk señal de reloj, sclr señal de borrado, En señal de habilitacion (si está activada permite el conteo), EnACCCtrl control para
-// acumular cuentas, EXPIO_P_APD0 y EXPIO_P_APD1 señales de entrada para los fotodetectores
+// Seï¿½ales de entradas:
+// clk seï¿½al de reloj, sclr seï¿½al de borrado, En seï¿½al de habilitacion (si estï¿½ activada permite el conteo), EnACCCtrl control para
+// acumular cuentas, EXPIO_P_APD0 y EXPIO_P_APD1 seï¿½ales de entrada para los fotodetectores
 // dead_time_APD tiempo muerto del detector (evito cuentas)
-// Señales de Salidas:
+// Seï¿½ales de Salidas:
 // APD0 - APD1: Salidas de 32 bits para almacenar las cuentas de EXPIO_P_APD0 y AXPIO_P_APD1
 //--------------------------------------------------------------------------------------------------------------------------------------
-
-//input Trigger_in_APD,gate_4,gate_5,gate_6,gate_7
-//input wire [31:0] width_ID220,delay_ID220,
-//input wire trigger_in_APD,
-//output wire gate_ID220
 );
  
 
 reg rsclr=0;	 
-wire[6:0]oCs0;
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
 // rsclr: Registro para reiniciar el contador, lo iniciamos en 0
 // oCs0: Bus de 7 biys que almacena los modulos
 //--------------------------------------------------------------------------------------------------------------------------------------
-wire oCs0_ID220;
-//wire gate_ID220;
-PreProc_Cs Pre000 (
-    .clk(clk), 
-    .EXPIO_P_APD(EXPIO_P_APD0), 
-//    .EXPIO_P_APD(EXPIO_P_APD[5:0]), 
-    .Cs(oCs0[0]),
-    .dead_time_APD(dead_time_APD)
-    );
+wire [1:0]oCs0_ID220;
+wire [1:0]gate_ID220;
 
-PreProc_Cs Pre001 (
-    .clk(clk), 
-    .EXPIO_P_APD(EXPIO_P_APD1), 
-//    .EXPIO_P_APD(EXPIO_P_APD[5:0]), 
-    .Cs(oCs0[1]),
-    .dead_time_APD(dead_time_APD)
-    );
 
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// Instancias para procesar las señales de entrada EXPIO_P_APD0 y EXPIO_P_APD1
-// Pre000 y Pre001: toman la señal de reloj (clk), la señal de entrada (EXPIO_P_APDX)
+// Instancias para procesar las seï¿½ales de entrada EXPIO_P_APD0 y EXPIO_P_APD1
+// Pre000 y Pre001: toman la seï¿½al de reloj (clk), la seï¿½al de entrada (EXPIO_P_APDX)
 // y el tiempo de muerto (dead_time_APD)
 // Con esto generamos una salida (Cs) que indica que si una cuenta debe ser registrada
 //--------------------------------------------------------------------------------------------------------------------------------------
     
-//PreProc_Cs_ID220 Pre002 (
-//    .clk(clk400MHz), 
-//    .EXPIO_P_APD(EXPIO_P_APD[6]), 
-//    .Cs(oCs0_ID220),
-//    .dead_time_APD(dead_time_APD)
-//    );
+PreProc_Cs_ID220 Pre000 (
+    .clk(clk400MHz), 
+    .EXPIO_P_APD(EXPIO_P_APD0), 
+    .Cs(oCs0_ID220[0]),
+    .dead_time_APD(dead_time_APD)
+    );
 
-wire[6:0]oCs;
-assign oCs=oCs0;
+PreProc_Cs_ID220 Pre001 (
+    .clk(clk400MHz), 
+    .EXPIO_P_APD(EXPIO_P_APD1), 
+    .Cs(oCs0_ID220[1]),
+    .dead_time_APD(dead_time_APD)
+    );
+
+wire[1:0]oCs;
+assign oCs=oCs0_ID220;
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
 // oCs: Bus que toma el valor de oCs0
 //--------------------------------------------------------------------------------------------------------------------------------------
 
-//assign oCs[0]=oCs0[0];
-//assign oCs[1]=oCs0[1];
-//assign oCs[2]=oCs0[2];
-//assign oCs[3]=oCs0[3];
-//assign oCs[4]=oCs0[4];
-//assign oCs[5]=oCs0[5];
-//assign oCs[6]=oCs0_ID220;
-
-
- 
 	 
 wire[31:0]wAPD0,wAPD1;	 
-//wire[31:0]wAPD0,wAPD1,wAPD2,wAPD3,wAPD4,wAPD5,wAPD6;	 
 
-//counter your_instance_name (
-//  .CLK(clk),    // input wire CLK
-//  .CE(En && oCs[0]),      // input wire CE
-//  .SCLR(rsc),  // input wire SCLR
-//  .Q(wAPD0)        // output wire [31 : 0] Q
-//);
+
 
 counter_ADP counter_ADP_0(
-    .clk(clk),
-     .enable(1'b1),
-    //.enable(En),
-    .signal(oCs[0]),
-//    .signal(oCs[0]),
-    .sclr(rsclr),
-    .counter(wAPD0)
-    );
+   .clk(clk400MHz),//DMA 22-09-24 no estoy seguro si deberia correr a 400 MHz
+   .enable(gate_ID220),
+   .signal(oCs[0]),
+   .sclr(rsclr),
+   .counter(wAPD0)
+   );
     
 counter_ADP counter_ADP_1(
-    .clk(clk),
-  .enable(1'b1),
- //   .enable(En),
-    .signal(oCs[1]),
-    .sclr(rsclr),
-    .counter(wAPD1)
-    );
+   .clk(clk400MHz),//DMA 22-09-24 no estoy seguro si deberia correr a 400 MHz
+   .enable(gate_ID220),
+   .signal(oCs[1]),
+   .sclr(rsclr),
+   .counter(wAPD1)
+   );
 
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
 // Creamos dos instancias del Modulo counter_APD
-// - counter_APD_0 y counter_APD_1 toman como entrada al reloj clk, la seañl de habilitacion
-// (en), la seañal de conteo (oCs[0]) para counter_APD_0  y oCs[1] pra counter APD_1
-// con la señal de reincio (rsclr)
+// - counter_APD_0 y counter_APD_1 toman como entrada al reloj clk, la seaï¿½l de habilitacion
+// (en), la seaï¿½al de conteo (oCs[0]) para counter_APD_0  y oCs[1] pra counter APD_1
+// con la seï¿½al de reincio (rsclr)
 // - La salida counter (wAPD0 y wAPD1) es el valor actual del contador para cada entrada
 //--------------------------------------------------------------------------------------------------------------------------------------
 
-//counter_ADP counter_ADP_2(
-//    .clk(clk),
-//    .enable(En),
-//    .signal(oCs[2]),
-//    .sclr(rsclr),
-//    .counter(wAPD2)
-//    );
+
     
-//counter_ADP counter_ADP_3(
-//    .clk(clk),
-//    .enable(En),
-//    .signal(oCs[3]),
-//    .sclr(rsclr),
-//    .counter(wAPD3)
-//    );
+
     
-//counter_ADP counter_ADP_4(
-//    .clk(clk),
-//    .enable(En),
-//    .signal(oCs[4]),
-//    .sclr(rsclr),
-//    .counter(wAPD4)
-//    );
-    
-//counter_ADP counter_ADP_5(
-//    .clk(clk),
-//    .enable(En),
-//    .signal(oCs[5]),
-//    .sclr(rsclr),
-//    .counter(wAPD5)
-//    );
-    
-//counter_ADP counter_ADP_6(
-//    .clk(clk400MHz),
-//    .enable(En&&gate_ID220),
-//    .signal(oCs[6]),
-//    .sclr(rsclr),
-//    .counter(wAPD6)
-//    );
-    
-//ID220 ID220_0(
-//    .clk400MHz(clk400MHz),
-//    .trigger_in_APD(trigger_in_APD),
-//    .width_ID220(width_ID220),
-//    .delay_ID220(delay_ID220),
-//    .gate_ID220(gate_ID220)
-//    );
+ID220 ID220_0(
+   .clk400MHz(clk400MHz),
+   .trigger_in_APD(trigger_in_APD),
+   .width_ID220({width_ID220[31:4],4'd0}),
+   .delay_ID220({delay_ID220[31:4],4'd0}),
+   .gate_ID220(gate_ID220)
+   );
     
 
 
-
-  
-//always @(posedge clk)begin
-
-//    if(sclr)begin
-//        rsclr<=1;
-//        if(EnACCCtrl)begin
-//            APD0<=wAPD0;
-//    		APD1<=wAPD1;
-//    //		APD2<=wAPD2;
-//    //		APD3<=wAPD3;
-//    //		APD4<=wAPD4;
-//    //		APD5<=wAPD5;
-//    //		APD6<=wAPD6;
-//        end
-//    end
-//    else
-//    rsclr<=0;
-
-//end
 always @(posedge clk) begin
     if (sclr) begin
         rsclr <= 1;
-        // Resetear las cuentas si sclr está activa
+        // Resetear las cuentas si sclr estï¿½ activa
         APD0 <= 0;
         APD1 <= 0;
     end else begin
@@ -223,7 +137,7 @@ end
     
 endmodule
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// Este modulo toma el flanco de subida deñ relok
+// Este modulo toma el flanco de subida deï¿½ relok
 // - Si rsclr esta acitvo, se estableve en 1 para reiniciar los contadores
 // - Si EnACCCtrl esta activa las cuentas de wAPD0 y wAPD1 se transfieren a los registros de ADP0 y APD1
 // - Si sclr no esta activo, rsclr se coloca en 0, asi los contadores operan de forma normal

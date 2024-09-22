@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Wed Jul 31 13:04:15 2024
-// Host        : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_stub.v
+// Date        : Mon Sep 23 00:12:31 2024
+// Host        : donaufeld running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub {c:/Users/danie/Documents/GitHub/FPGAs
+//               UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/mig_7series_0/mig_7series_0_stub.v}
 // Design      : mig_7series_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7k325tffg900-2
