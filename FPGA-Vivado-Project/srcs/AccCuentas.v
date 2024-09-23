@@ -29,6 +29,7 @@ output reg[31:0]APD1,
 
 input wire [7:0] dead_time_APD,
 input wire [31:0] width_ID220,delay_ID220,
+input wire masterSync,
 output wire gate_ID220
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
 // Se�ales de entradas:
@@ -112,9 +113,9 @@ counter_ADP counter_ADP_1(
     
 ID220 ID220_0(
    .clk400MHz(clk400MHz),
-   .trigger_in_APD(trigger_in_APD),
-   .width_ID220({width_ID220[31:4],4'd0}),
-   .delay_ID220({delay_ID220[31:4],4'd0}),
+   .trigger_in_APD(masterSync),
+   .width_ID220(width_ID220),
+   .delay_ID220(delay_ID220),
    .gate_ID220(gate_ID220)
    );
     

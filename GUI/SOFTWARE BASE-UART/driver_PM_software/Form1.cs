@@ -625,7 +625,7 @@ public Form1()
         int delay_det_FPGA;
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
-            delay_det_FPGA = (int)(numericUpDown5.Value * numericUpDown7.Value / 1000);
+            delay_det_FPGA = (int)(numericUpDown5.Value * 2*numericUpDown7.Value / 1000);//edit DMA 23-09 ---------------*2 to match 400MHz
             ObjetoIOP.guardarPropiedades(29, "delay_det_numericUpDown5", numericUpDown5.Value.ToString());
             label1.Text = Convert.ToString(delay_det_FPGA);
             ParametroSerial(29, 32, delay_det_FPGA, 0);
@@ -634,7 +634,7 @@ public Form1()
         int width_det_FPGA;
         private void numericUpDown6_ValueChanged(object sender, EventArgs e)
         {
-            width_det_FPGA = (int)((numericUpDown6.Value)* numericUpDown7.Value / 1000);
+            width_det_FPGA = (int)((numericUpDown6.Value)* 2*numericUpDown7.Value / 1000);//edit DMA 23-09 ---------------*2 to match 400MHz
             ObjetoIOP.guardarPropiedades(30, "width_det_numericUpDown6", numericUpDown6.Value.ToString());
             label1.Text = Convert.ToString(width_det_FPGA);
             ParametroSerial(30, 32, width_det_FPGA, 0);

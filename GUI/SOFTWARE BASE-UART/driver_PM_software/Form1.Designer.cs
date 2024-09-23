@@ -109,6 +109,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.conexiónToolStripMenuItem});
@@ -133,8 +134,8 @@
             // 
             // toolStripComboBox_COMPORTS
             // 
-            this.toolStripComboBox_COMPORTS.Name = "toolStripComboBox_COMPORTS";
             resources.ApplyResources(this.toolStripComboBox_COMPORTS, "toolStripComboBox_COMPORTS");
+            this.toolStripComboBox_COMPORTS.Name = "toolStripComboBox_COMPORTS";
             // 
             // conectarToolStripMenuItem
             // 
@@ -258,10 +259,10 @@
             // 
             resources.ApplyResources(this.numericUpDown5, "numericUpDown5");
             this.numericUpDown5.Increment = new decimal(new int[] {
-            5,
+            25,
             0,
             0,
-            0});
+            65536});
             this.numericUpDown5.Maximum = new decimal(new int[] {
             1410065408,
             2,
@@ -279,10 +280,10 @@
             // 
             resources.ApplyResources(this.numericUpDown6, "numericUpDown6");
             this.numericUpDown6.Increment = new decimal(new int[] {
-            50,
+            25,
             0,
             0,
-            0});
+            65536});
             this.numericUpDown6.Maximum = new decimal(new int[] {
             1000000000,
             0,

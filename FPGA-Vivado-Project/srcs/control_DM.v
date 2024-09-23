@@ -35,7 +35,8 @@ module control_DM(
     output wire [31 : 0] douta1,douta2,
     input wire [7:0] mascara,
     output reg [31:0] mascara_out,
-    output reg sclrAcc, EnAcc, EnACCCtrl
+    output reg sclrAcc, EnAcc, EnACCCtrl,
+    input wire gate_ID220
     );
     
     reg [3:0] control = 0;
@@ -151,10 +152,7 @@ module control_DM(
             end
             
             2:begin//si el detector es free running...
-                if(count32bits<delay_det)begin//entre que preparo el mascara y empiezo a adquirir
-                    count32bits     <= count32bits + 32'd1;
-                end
-                else begin
+                if(gate_ID220)begin//cuando llega el gate del detector
                     EnAcc           <= 1'b1;
                     count32bits     <= 32'd0;
                     count8bits      <= 8'd0;
@@ -162,12 +160,8 @@ module control_DM(
                 end
             end
             
-            3:begin//abro el detector por un tiempo
-                if(count32bits<width_det)begin
-                    //+2 porque trabajo a 100 MHz y el pulse gen a 200 MHz
-                    count32bits         <= count32bits + 32'd2;
-                end
-                else begin//terminamos el muestreo
+            3:begin//cuando termino de adquirir
+                if(~gate_ID220)begin
                     EnAcc               <= 1'b0;//termino la adquisicion
                     sclrAcc             <= 1'b1;//reseto cuentas
                     EnACCCtrl           <= 1'b1;//adquiero registros

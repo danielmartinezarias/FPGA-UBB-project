@@ -433,6 +433,7 @@ PORT(
         dead_time_APD : in std_logic_vector(7 downto 0);
         width_ID220 : in std_logic_vector(31 downto 0);
         delay_ID220 : in std_logic_vector(31 downto 0);
+        masterSync : in std_logic;
         gate_ID220 : out std_logic
     );
    END COMPONENT;
@@ -484,7 +485,8 @@ PORT(
     mascara_out             : out std_logic_vector(31 downto 0);
     sclrAcc                 : out std_logic;
     EnAcc                   : out std_logic;
-    EnACCCtrl               : out std_logic
+    EnACCCtrl               : out std_logic;
+    gate_ID220              : in std_logic
     );
    END COMPONENT;
    
@@ -1147,6 +1149,7 @@ begin
             dead_time_APD   => dead_time_APD,
             width_ID220     => width_det,
             delay_ID220     => delay_det,
+            masterSync      => sync,
             gate_ID220      => gate_idqube
   );
     
@@ -1197,7 +1200,8 @@ begin
     mascara_out             => mascara_out,
     sclrAcc                 => sclrAcc,
     EnAcc                   => EnAcc,
-    EnACCCtrl               => EnACCCtrl
+    EnACCCtrl               => EnACCCtrl,
+    gate_ID220              => gate_idqube
   );
 
   
