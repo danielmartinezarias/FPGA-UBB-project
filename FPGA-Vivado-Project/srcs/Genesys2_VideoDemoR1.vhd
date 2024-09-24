@@ -26,7 +26,7 @@ entity Genesys2_VideoDemoR1 is
 
     -- FMC Header
     fmc_la_p_00                        : out   std_logic;
-    fmc_la_p_01                        : in   std_logic;
+    fmc_la_p_32                        : in   std_logic;
     fmc_la_p_17                        : in   std_logic;
     fmc_la_p_18                        : out   std_logic;
     fmc_la_p_24                        : out   std_logic;
@@ -2065,7 +2065,7 @@ begin
 
 -- FMC
   sync_ext   <= fmc_la_n_00;
-  det0_in    <= fmc_la_p_01;
+  det0_in    <= fmc_la_p_32;
   det1_in    <= fmc_la_p_17;
   
   jc(0) <=  CS_dac;
