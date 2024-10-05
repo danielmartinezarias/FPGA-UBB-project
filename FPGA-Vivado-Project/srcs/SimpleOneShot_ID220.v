@@ -46,7 +46,8 @@ reg [7:0] counter =8'd0;
       
       1:begin
         out         <=0;
-        if(counter<{dead_time_APD[5:0],2'b00})begin
+        //if(counter<{dead_time_APD[5:0],2'b00})begin
+        if(counter<{dead_time_APD})begin
             counter     <= counter + 8'd1;
         end
         else begin

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module AccCuentas(
 //input  wire clk,sclr,En,EnACCCtrl, 
-input  wire clk,clk400MHz,sclr,EnACCCtrl,
+input  wire clk,clk400MHz,sclr,En,EnACCCtrl,
 input  wire EXPIO_P_APD0,
 input  wire EXPIO_P_APD1,
 
@@ -67,13 +67,11 @@ PreProc_Cs_ID220 Pre000 (
 
 PreProc_Cs_ID220 Pre001 (
     .clk(clk400MHz), 
-    .EXPIO_P_APD(EXPIO_P_APD1), 
+    .EXPIO_P_APD(clk), //edit DMA, querio probar que el modulo funcione conectando el reloj aqui
     .Cs(oCs0_ID220[1]),
     .dead_time_APD(dead_time_APD)
     );
 
-wire[1:0]oCs;
-assign oCs=oCs0_ID220;
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
 // oCs: Bus que toma el valor de oCs0
 //--------------------------------------------------------------------------------------------------------------------------------------
@@ -85,16 +83,16 @@ wire[31:0]wAPD0,wAPD1;
 
 counter_ADP counter_ADP_0(
    .clk(clk400MHz),//DMA 22-09-24 no estoy seguro si deberia correr a 400 MHz
-   .enable(gate_ID220),
-   .signal(oCs[0]),
+   .enable(En),
+   .signal(oCs0_ID220[0]),
    .sclr(rsclr),
    .counter(wAPD0)
    );
     
 counter_ADP counter_ADP_1(
    .clk(clk400MHz),//DMA 22-09-24 no estoy seguro si deberia correr a 400 MHz
-   .enable(gate_ID220),
-   .signal(oCs[1]),
+   .enable(En),
+   .signal(oCs0_ID220[1]),
    .sclr(rsclr),
    .counter(wAPD1)
    );
@@ -122,17 +120,15 @@ ID220 ID220_0(
 
 
 always @(posedge clk) begin
-    if (sclr) begin
-        rsclr <= 1;
-        // Resetear las cuentas si sclr est� activa
-        APD0 <= 0;
-        APD1 <= 0;
-    end else begin
-        rsclr <= 0;
-        // Acumular cuentas en los registros APD0 y APD1
-        APD0 <= wAPD0;
-        APD1 <= wAPD1;
+    if(sclr)begin
+        rsclr<=1;
+        if(EnACCCtrl)begin
+            APD0<=wAPD0;
+            APD1<=wAPD1;
+        end
     end
+    else
+        rsclr<=0;
 
 end
     
