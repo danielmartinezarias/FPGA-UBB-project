@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module SimpleOneShot_ID220(
-input clock,
-input in,
+input wire clock,
+input wire in,
 output reg out,
-input [7:0] dead_time_APD
+input wire [7:0] dead_time_APD
     );
 
 reg [1:0]  count=2'b00;

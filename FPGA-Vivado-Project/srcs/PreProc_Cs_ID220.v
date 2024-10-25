@@ -21,10 +21,10 @@
 
 
 module PreProc_Cs_ID220(
-input clk,
-input  EXPIO_P_APD,
-output  Cs,
-input [7:0] dead_time_APD
+input wire clk,
+input wire EXPIO_P_APD,
+output wire Cs,
+input wire [7:0] dead_time_APD
 );
 SimpleOneShot_ID220 o1  (
     .clock(clk), 
