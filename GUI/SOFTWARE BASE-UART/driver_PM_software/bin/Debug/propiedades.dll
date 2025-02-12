@@ -24,11 +24,11 @@ EstadoRx_numericUpDown2	26
 master_clk_numericUpDown7	200
 deadTimeAPD_numericUpDown2	60
 controlDM	1
-freq_sync_numericUpDown1	0.0001
+freq_sync_numericUpDown1	1
 delay_pulse_numericUpDown3	10
-width_pulse_numericUpDown4	20
-controlDM	0
-width_det_numericUpDown6	10000
+width_pulse_numericUpDown4	355
+delay_det_numericUpDown5	10
+width_det_numericUpDown6	355
 	
 	
 	
@@ -39,12 +39,12 @@ width_det_numericUpDown6	10000
 	
 dacA_numericUpDown14	0
 dacB_numericUpDown15	1
-deadTimeAPD_numericUpDown16	1
+deadTimeAPD_numericUpDown16	0
 dataPoints	5
 	
 	
-Norm	375
-AliceBob	Bob
+Norm	3
+AliceBob	Alice
 	
 	
 	
