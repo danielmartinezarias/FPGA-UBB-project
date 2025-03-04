@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conexiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -424,17 +424,17 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
             resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
             // 
             // button1
             // 
@@ -527,17 +527,17 @@
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea6);
+            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend6.Name = "Legend1";
+            this.chart2.Legends.Add(legend6);
             resources.ApplyResources(this.chart2, "chart2");
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart2.Series.Add(series6);
             // 
             // label9
             // 
@@ -587,74 +587,238 @@
             // 
             // buttonSetFreq1
             // 
+            this.buttonSetFreq1.DecimalPlaces = 6;
+            this.buttonSetFreq1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             resources.ApplyResources(this.buttonSetFreq1, "buttonSetFreq1");
+            this.buttonSetFreq1.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.buttonSetFreq1.Name = "buttonSetFreq1";
             this.buttonSetFreq1.ValueChanged += new System.EventHandler(this.buttonSetFreq1_ValueChanged);
             // 
             // buttonSetDelay1
             // 
+            this.buttonSetDelay1.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetDelay1, "buttonSetDelay1");
+            this.buttonSetDelay1.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.buttonSetDelay1.Name = "buttonSetDelay1";
             this.buttonSetDelay1.ValueChanged += new System.EventHandler(this.buttonSetDelay1_ValueChanged);
             // 
             // buttonSetWidth1
             // 
+            this.buttonSetWidth1.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetWidth1, "buttonSetWidth1");
+            this.buttonSetWidth1.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.buttonSetWidth1.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth1.Name = "buttonSetWidth1";
+            this.buttonSetWidth1.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth1.ValueChanged += new System.EventHandler(this.buttonSetWidth1_ValueChanged);
             // 
             // buttonSetWidth2
             // 
+            this.buttonSetWidth2.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetWidth2, "buttonSetWidth2");
+            this.buttonSetWidth2.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.buttonSetWidth2.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth2.Name = "buttonSetWidth2";
+            this.buttonSetWidth2.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth2.ValueChanged += new System.EventHandler(this.buttonSetWidth2_ValueChanged);
             // 
             // buttonSetDelay2
             // 
+            this.buttonSetDelay2.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetDelay2, "buttonSetDelay2");
+            this.buttonSetDelay2.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.buttonSetDelay2.Name = "buttonSetDelay2";
             this.buttonSetDelay2.ValueChanged += new System.EventHandler(this.buttonSetDelay2_ValueChanged);
             // 
             // buttonSetFreq2
             // 
+            this.buttonSetFreq2.DecimalPlaces = 6;
+            this.buttonSetFreq2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             resources.ApplyResources(this.buttonSetFreq2, "buttonSetFreq2");
+            this.buttonSetFreq2.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.buttonSetFreq2.Name = "buttonSetFreq2";
             this.buttonSetFreq2.ValueChanged += new System.EventHandler(this.buttonSetFreq2_ValueChanged);
             // 
             // buttonSetWidth3
             // 
+            this.buttonSetWidth3.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetWidth3, "buttonSetWidth3");
+            this.buttonSetWidth3.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.buttonSetWidth3.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth3.Name = "buttonSetWidth3";
+            this.buttonSetWidth3.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth3.ValueChanged += new System.EventHandler(this.buttonSetWidth3_ValueChanged);
             // 
             // buttonSetDelay3
             // 
+            this.buttonSetDelay3.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetDelay3, "buttonSetDelay3");
+            this.buttonSetDelay3.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.buttonSetDelay3.Name = "buttonSetDelay3";
             this.buttonSetDelay3.ValueChanged += new System.EventHandler(this.buttonSetDelay3_ValueChanged);
             // 
             // buttonSetFreq3
             // 
+            this.buttonSetFreq3.DecimalPlaces = 6;
+            this.buttonSetFreq3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             resources.ApplyResources(this.buttonSetFreq3, "buttonSetFreq3");
+            this.buttonSetFreq3.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.buttonSetFreq3.Name = "buttonSetFreq3";
             this.buttonSetFreq3.ValueChanged += new System.EventHandler(this.buttonSetFreq3_ValueChanged);
             // 
             // buttonSetFreq4
             // 
+            this.buttonSetFreq4.DecimalPlaces = 6;
+            this.buttonSetFreq4.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
             resources.ApplyResources(this.buttonSetFreq4, "buttonSetFreq4");
+            this.buttonSetFreq4.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.buttonSetFreq4.Name = "buttonSetFreq4";
             this.buttonSetFreq4.ValueChanged += new System.EventHandler(this.buttonSetFreq4_ValueChanged);
             // 
             // buttonSetDelay4
             // 
+            this.buttonSetDelay4.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetDelay4, "buttonSetDelay4");
+            this.buttonSetDelay4.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.buttonSetDelay4.Name = "buttonSetDelay4";
             this.buttonSetDelay4.ValueChanged += new System.EventHandler(this.buttonSetDelay4_ValueChanged);
             // 
             // buttonSetWidth4
             // 
+            this.buttonSetWidth4.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             resources.ApplyResources(this.buttonSetWidth4, "buttonSetWidth4");
+            this.buttonSetWidth4.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.buttonSetWidth4.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth4.Name = "buttonSetWidth4";
+            this.buttonSetWidth4.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.buttonSetWidth4.ValueChanged += new System.EventHandler(this.buttonSetWidth4_ValueChanged);
             // 
             // label10
