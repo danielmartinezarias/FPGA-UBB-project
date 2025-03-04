@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Tue Mar  4 16:52:51 2025
+| Date             : Tue Mar  4 17:30:03 2025
 | Host             : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 | Command          : report_power -file Genesys2_VideoDemoR1_power_routed.rpt -pb Genesys2_VideoDemoR1_power_summary_routed.pb -rpx Genesys2_VideoDemoR1_power_routed.rpx
 | Design           : Genesys2_VideoDemoR1
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.138 |       48 |       --- |             --- |
+| Clocks                   |     0.139 |       48 |       --- |             --- |
 | Slice Logic              |     0.059 |    22752 |       --- |             --- |
-|   LUT as Logic           |     0.054 |     9071 |    203800 |            4.45 |
+|   LUT as Logic           |     0.054 |     9074 |    203800 |            4.45 |
 |   Register               |     0.002 |     8443 |    407600 |            2.07 |
 |   CARRY4                 |     0.002 |      508 |     50950 |            1.00 |
 |   LUT as Distributed RAM |     0.001 |      796 |     64000 |            1.24 |
 |   F7/F8 Muxes            |    <0.001 |       58 |    203800 |            0.03 |
 |   LUT as Shift Register  |    <0.001 |       23 |     64000 |            0.04 |
 |   Others                 |     0.000 |      473 |       --- |             --- |
-| Signals                  |     0.071 |    18271 |       --- |             --- |
+| Signals                  |     0.070 |    18277 |       --- |             --- |
 | Block RAM                |     0.094 |     66.5 |       445 |           14.94 |
 | MMCM                     |     0.437 |        4 |        10 |           40.00 |
 | PLL                      |     0.254 |        2 |        10 |           20.00 |
@@ -198,19 +198,19 @@ Table of Contents
 | Genesys2_VideoDemoR1        |     2.328 |
 |   AccCuentas_inst           |     0.009 |
 |     ID220_0                 |     0.004 |
-|     counter_ADP_0           |     0.001 |
+|     counter_ADP_0           |     0.002 |
 |     counter_ADP_1           |     0.002 |
-|   DDR_INF_inst              |     1.671 |
-|     u_mig_7series_0_mig     |     1.671 |
-|       u_ddr3_infrastructure |     0.250 |
-|       u_iodelay_ctrl        |     0.122 |
-|       u_memc_ui_top_std     |     1.298 |
+|   DDR_INF_inst              |     1.670 |
+|     u_mig_7series_0_mig     |     1.670 |
+|       u_ddr3_infrastructure |     0.249 |
+|       u_iodelay_ctrl        |     0.123 |
+|       u_memc_ui_top_std     |     1.297 |
 |   DPTI_inst                 |     0.114 |
 |     clkwiz_inst             |     0.111 |
 |       inst                  |     0.111 |
 |     dpti2usr_fifo           |     0.002 |
-|   Inst_dvid                 |     0.018 |
-|   LB_0                      |     0.042 |
+|   Inst_dvid                 |     0.017 |
+|   LB_0                      |     0.043 |
 |     rgb_mem_inst            |     0.034 |
 |       U0                    |     0.034 |
 |   PLL2_inst                 |     0.116 |
@@ -220,13 +220,13 @@ Table of Contents
 |     modulo_Tx_1             |     0.030 |
 |       MemTx_8x65535_2       |     0.029 |
 |   control_DM_inst           |     0.034 |
-|     MEM_ADC0                |     0.012 |
-|       U0                    |     0.012 |
-|     MEM_ADC1                |     0.011 |
+|     MEM_ADC0                |     0.011 |
 |       U0                    |     0.011 |
+|     MEM_ADC1                |     0.012 |
+|       U0                    |     0.012 |
 |     MEM_DAC0                |     0.009 |
 |       U0                    |     0.009 |
-|   control_parametros_inst   |     0.006 |
+|   control_parametros_inst   |     0.007 |
 |   display_clocks_inst       |     0.108 |
 |   sync_pulse_det_gen_1      |     0.003 |
 |   sync_pulse_det_gen_2      |     0.002 |

@@ -604,14 +604,15 @@
             // 
             // buttonSetDelay1
             // 
+            this.buttonSetDelay1.DecimalPlaces = 6;
             this.buttonSetDelay1.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetDelay1, "buttonSetDelay1");
             this.buttonSetDelay1.Maximum = new decimal(new int[] {
-            1000000000,
+            200,
             0,
             0,
             0});
@@ -620,15 +621,16 @@
             // 
             // buttonSetWidth1
             // 
+            this.buttonSetWidth1.DecimalPlaces = 6;
             this.buttonSetWidth1.Increment = new decimal(new int[] {
-            50,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetWidth1, "buttonSetWidth1");
             this.buttonSetWidth1.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
+            200,
+            0,
             0,
             0});
             this.buttonSetWidth1.Minimum = new decimal(new int[] {
@@ -646,40 +648,32 @@
             // 
             // buttonSetWidth2
             // 
+            this.buttonSetWidth2.DecimalPlaces = 6;
             this.buttonSetWidth2.Increment = new decimal(new int[] {
-            50,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetWidth2, "buttonSetWidth2");
             this.buttonSetWidth2.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.buttonSetWidth2.Minimum = new decimal(new int[] {
-            5,
+            200,
             0,
             0,
             0});
             this.buttonSetWidth2.Name = "buttonSetWidth2";
-            this.buttonSetWidth2.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             this.buttonSetWidth2.ValueChanged += new System.EventHandler(this.buttonSetWidth2_ValueChanged);
             // 
             // buttonSetDelay2
             // 
+            this.buttonSetDelay2.DecimalPlaces = 6;
             this.buttonSetDelay2.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetDelay2, "buttonSetDelay2");
             this.buttonSetDelay2.Maximum = new decimal(new int[] {
-            1000000000,
+            200,
             0,
             0,
             0});
@@ -705,15 +699,16 @@
             // 
             // buttonSetWidth3
             // 
+            this.buttonSetWidth3.DecimalPlaces = 6;
             this.buttonSetWidth3.Increment = new decimal(new int[] {
-            50,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetWidth3, "buttonSetWidth3");
             this.buttonSetWidth3.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
+            200,
+            0,
             0,
             0});
             this.buttonSetWidth3.Minimum = new decimal(new int[] {
@@ -731,14 +726,15 @@
             // 
             // buttonSetDelay3
             // 
+            this.buttonSetDelay3.DecimalPlaces = 6;
             this.buttonSetDelay3.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetDelay3, "buttonSetDelay3");
             this.buttonSetDelay3.Maximum = new decimal(new int[] {
-            1000000000,
+            200,
             0,
             0,
             0});
@@ -781,14 +777,15 @@
             // 
             // buttonSetDelay4
             // 
+            this.buttonSetDelay4.DecimalPlaces = 6;
             this.buttonSetDelay4.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetDelay4, "buttonSetDelay4");
             this.buttonSetDelay4.Maximum = new decimal(new int[] {
-            1000000000,
+            200,
             0,
             0,
             0});
@@ -797,15 +794,16 @@
             // 
             // buttonSetWidth4
             // 
+            this.buttonSetWidth4.DecimalPlaces = 6;
             this.buttonSetWidth4.Increment = new decimal(new int[] {
-            50,
+            1,
             0,
             0,
-            0});
+            327680});
             resources.ApplyResources(this.buttonSetWidth4, "buttonSetWidth4");
             this.buttonSetWidth4.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
+            200,
+            0,
             0,
             0});
             this.buttonSetWidth4.Minimum = new decimal(new int[] {
