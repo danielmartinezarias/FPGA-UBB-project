@@ -26,16 +26,17 @@ entity Genesys2_VideoDemoR1 is
 
     
     -- FMC Header
-    fmc_la_n_00                        : in   std_logic;
+    fmc_la_n_00                        : in    std_logic;
     fmc_la_p_00                        : out   std_logic;
     fmc_la_p_01                        : out   std_logic;
     fmc_la_p_04                        : out   std_logic;
+    fmc_la_p_06                        : out   std_logic;
     fmc_la_p_15                        : out   std_logic;
-    fmc_la_p_17                        : out   std_logic;
+    fmc_la_p_17                        : in   std_logic;
     fmc_la_p_18                        : out   std_logic;
     fmc_la_p_24                        : out   std_logic;
     fmc_la_p_26                        : out   std_logic;
-    fmc_la_p_32                        : in   std_logic;
+    fmc_la_p_32                        : in    std_logic;
     
     
     
@@ -2169,7 +2170,7 @@ port map (
 
 fmc_la_p_01 <= square_wave_1;
 fmc_la_p_15 <= square_wave_2;
-fmc_la_p_17 <= square_wave_3;
+fmc_la_p_06 <= square_wave_3;
 fmc_la_p_26 <= square_wave_4;
 
 

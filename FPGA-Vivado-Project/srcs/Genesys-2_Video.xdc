@@ -305,7 +305,7 @@ set_property -dict { PACKAGE_PIN H26   IOSTANDARD LVCMOS12 } [get_ports { fmc_la
 #set_property -dict { PACKAGE_PIN A30   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[05] }]; #IO_L17N_T2_16 Sch=fmc_la_n[05]
 #set_property -dict { PACKAGE_PIN B30   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p[05] }]; #IO_L17P_T2_16 Sch=fmc_la_p[05]
 #set_property -dict { PACKAGE_PIN C30   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[06] }]; #IO_L16N_T2_16 Sch=fmc_la_n[06]
-#set_property -dict { PACKAGE_PIN D29   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p[06] }]; #IO_L16P_T2_16 Sch=fmc_la_p[06]
+set_property -dict { PACKAGE_PIN D29   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p_06 }]; #IO_L16P_T2_16 Sch=fmc_la_p[06]
 #set_property -dict { PACKAGE_PIN E25   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[07] }]; #IO_L3N_T0_DQS_16 Sch=fmc_la_n[07]
 #set_property -dict { PACKAGE_PIN F25   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_p[07] }]; #IO_L3P_T0_DQS_16 Sch=fmc_la_p[07]
 #set_property -dict { PACKAGE_PIN B29   IOSTANDARD LVCMOS12 } [get_ports { fmc_la_n[08] }]; #IO_L15N_T2_DQS_16 Sch=fmc_la_n[08]
