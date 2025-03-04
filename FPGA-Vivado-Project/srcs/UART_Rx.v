@@ -21,9 +21,9 @@
 
 
 module UART_Rx(
-    input clk,
-	input tick,
-	input PinRx,
+    input wire clk,
+	input wire tick,
+	input wire PinRx,
 	output reg [7:0]bufferRx = 0,
 	output reg ReadyRx=0
     );

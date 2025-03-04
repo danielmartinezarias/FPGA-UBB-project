@@ -44,8 +44,24 @@ module control_parametros(
 	output reg [7:0] dead_time_APD = 8'd10,
 	output reg [7:0] controlDM,
 	output reg [15:0] dataPoints,
-	output reg pulse_control = 1'b1, CW = 1'b0, AliceBob = 1'b1
-    );
+	output reg pulse_control = 1'b1, CW = 1'b0, AliceBob = 1'b1,
+	//Nuevas declaraciones para las señales cuadradas
+	output reg [31:0] freq_1 = 32'd50, 
+    output reg [31:0] delay_1 = 32'd0,
+    output reg [31:0] width_1 = 32'd5,
+
+    output reg [31:0] freq_2 = 32'd50, 
+    output reg [31:0] delay_2 = 32'd0,
+    output reg [31:0] width_2 = 32'd5,
+    
+    output reg [31:0] freq_3 = 32'd50, 
+    output reg [31:0] delay_3 = 32'd0,
+    output reg [31:0] width_3 = 32'd5,
+    
+    output reg [31:0] freq_4 = 32'd50, 
+    output reg [31:0] delay_4 = 32'd0,
+    output reg [31:0] width_4 = 32'd5
+        );
 
 
 wire os_readyRx;
@@ -288,7 +304,66 @@ case (ctrl)
 		AliceBob       			<= d1[0];
 		ctrl					<= 16'd0;
 	end
-	
+	// Nuevas para las señales cuadradas
+	50: begin
+    freq_1 <= {d4, d3, d2, d1};
+    ctrl <= 16'd0;
+    end
+    
+    51: begin
+        delay_1 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    52: begin
+        width_1 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    53: begin
+        freq_2 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    54: begin
+        delay_2 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    55: begin
+        width_2 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    56: begin
+        freq_3 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    57: begin
+        delay_3 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    58: begin
+        width_3 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    59: begin
+        freq_4 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    60: begin
+        delay_4 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    61: begin
+        width_4 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
 	
 
 	default:

@@ -24,14 +24,21 @@ entity Genesys2_VideoDemoR1 is
     cpu_resetn                : in    std_logic; -- '0' when pressed
     led                       : out   std_logic_vector(7 downto 0);  -- '1' lights LEDs
 
+    
     -- FMC Header
+    fmc_la_n_00                        : in   std_logic;
     fmc_la_p_00                        : out   std_logic;
-    fmc_la_p_32                        : in   std_logic;
-    fmc_la_p_17                        : in   std_logic;
+    fmc_la_p_01                        : out   std_logic;
+    fmc_la_p_04                        : out   std_logic;
+    fmc_la_p_15                        : out   std_logic;
+    fmc_la_p_17                        : out   std_logic;
     fmc_la_p_18                        : out   std_logic;
     fmc_la_p_24                        : out   std_logic;
-    fmc_la_n_00                        : in   std_logic;
-    fmc_la_p_04                        : out   std_logic;
+    fmc_la_p_26                        : out   std_logic;
+    fmc_la_p_32                        : in   std_logic;
+    
+    
+    
     
     -- JC PMOD Header
     jc                        : out   std_logic_vector(7 downto 0);
@@ -740,6 +747,25 @@ signal delay_det            : std_logic_vector(31 downto 0);
 signal width_det            : std_logic_vector(31 downto 0);
 signal sync                 : std_logic := '0';
 signal MZI                  : std_logic := '0';
+--------------------------
+signal freq_1        : std_logic_vector(31 downto 0);
+signal delay_1       : std_logic_vector(31 downto 0);
+signal width_1       : std_logic_vector(31 downto 0);
+signal freq_2        : std_logic_vector(31 downto 0);
+signal delay_2       : std_logic_vector(31 downto 0);
+signal width_2       : std_logic_vector(31 downto 0);
+signal freq_3        : std_logic_vector(31 downto 0);
+signal delay_3       : std_logic_vector(31 downto 0);
+signal width_3       : std_logic_vector(31 downto 0);
+signal freq_4        : std_logic_vector(31 downto 0);
+signal delay_4       : std_logic_vector(31 downto 0);
+signal width_4       : std_logic_vector(31 downto 0);
+------Nuevas-------------- CMD
+signal square_wave_1 : std_logic := '0';
+signal square_wave_2 : std_logic := '0';
+signal square_wave_3 : std_logic := '0';
+signal square_wave_4 : std_logic := '0';
+------------------------------
 signal gateDet              : std_logic := '0';
 signal det_sync_pulse_det_gen : std_logic := '0';
 signal det0_in              : std_logic;
@@ -1042,7 +1068,73 @@ begin
             CW          => CW
         );
         
-        
+  sync_pulse_det_gen_2 : sync_pulse_det_generator
+port map (
+    clk         => clk200, 
+    freq_sync   => freq_1,
+    delay_pulse => delay_1,
+    width_pulse => width_1,
+    delay_det   => delay_1,  
+    width_det   => width_1,   
+    sync        => square_wave_1,
+    MZI         => open,
+    det         => open,
+    AliceBob    => '0',
+    sync_ext    => '0',
+    pulse_control => '1', 
+    CW          => '0'
+);
+
+sync_pulse_det_gen_3 : sync_pulse_det_generator
+port map (
+    clk         => clk200, 
+    freq_sync   => freq_2,
+    delay_pulse => delay_2,
+    width_pulse => width_2,
+    delay_det   => delay_2,  
+    width_det   => width_2,   
+    sync        => square_wave_2,
+    MZI         => open,
+    det         => open,
+    AliceBob    => '0',
+    sync_ext    => '0',
+    pulse_control => '1', 
+    CW          => '0'
+);
+
+sync_pulse_det_gen_4 : sync_pulse_det_generator
+port map (
+    clk         => clk200, 
+    freq_sync   => freq_3,
+    delay_pulse => delay_3,
+    width_pulse => width_3,
+    delay_det   => delay_3,  
+    width_det   => width_3,   
+    sync        => square_wave_3,
+    MZI         => open,
+    det         => open,
+    AliceBob    => '0',
+    sync_ext    => '0',
+    pulse_control => '1', 
+    CW          => '0'
+);
+
+sync_pulse_det_gen_5 : sync_pulse_det_generator
+port map (
+    clk         => clk200, 
+    freq_sync   => freq_4,
+    delay_pulse => delay_4,
+    width_pulse => width_4,
+    delay_det   => delay_4,  
+    width_det   => width_4,   
+    sync        => square_wave_4,
+    MZI         => open,
+    det         => open,
+    AliceBob    => '0',
+    sync_ext    => '0',
+    pulse_control => '1', 
+    CW          => '0'
+);     
   --Control_parametros
    control_parametros_inst : control_parametros
    port map (
@@ -2073,7 +2165,12 @@ begin
   jc(2) <=  DIN_B_dac;
   jc(3) <=  clk25;
 
+-- Nuevas
 
+fmc_la_p_01 <= square_wave_1;
+fmc_la_p_15 <= square_wave_2;
+fmc_la_p_17 <= square_wave_3;
+fmc_la_p_26 <= square_wave_4;
 
 
 

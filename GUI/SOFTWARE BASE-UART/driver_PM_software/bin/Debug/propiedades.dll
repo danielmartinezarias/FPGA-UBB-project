@@ -28,7 +28,7 @@ freq_sync_numericUpDown1	0.0001
 delay_pulse_numericUpDown3	10
 width_pulse_numericUpDown4	20
 controlDM	0
-width_det_numericUpDown6	10000
+width_det_numericUpDown6	1000
 	
 	
 	
@@ -44,7 +44,7 @@ dataPoints	5
 	
 	
 Norm	375
-AliceBob	Bob
+AliceBob	Alice
 	
 	
 	

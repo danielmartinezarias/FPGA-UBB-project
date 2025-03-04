@@ -22,7 +22,7 @@
 
 module tick_generator(
 
-    input clk,
+    input wire clk,
 	output reg tick=0
     );
 

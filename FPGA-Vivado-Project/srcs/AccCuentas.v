@@ -30,7 +30,7 @@ output reg[31:0]APD1,
 input wire [7:0] dead_time_APD,
 input wire [31:0] width_ID220,delay_ID220,
 input wire masterSync,
-output wire gate_ID220
+output wire gate_ID220 
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
 // Se�ales de entradas:
 // clk se�al de reloj, sclr se�al de borrado, En se�al de habilitacion (si est� activada permite el conteo), EnACCCtrl control para
@@ -49,7 +49,6 @@ reg rsclr=0;
 //--------------------------------------------------------------------------------------------------------------------------------------
 wire [1:0]oCs0_ID220;
 wire [1:0]gate_ID220;
-
 
 // -------------------Comentarios-------------------------------------------------------------------------------------------------------
 // Instancias para procesar las se�ales de entrada EXPIO_P_APD0 y EXPIO_P_APD1
