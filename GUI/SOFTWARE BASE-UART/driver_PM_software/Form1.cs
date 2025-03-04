@@ -1207,7 +1207,7 @@ public Form1()
 
         private void buttonSetDelay4_ValueChanged(object sender, EventArgs e)
         {
-            int delay_4_FPGA = (int)(buttonSetDelay4.Value * numericUpDown7.Value / 1000);
+            int delay_4_FPGA = (int)(buttonSetDelay4.Value *2* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(60, "delay_4_numericUpDown", buttonSetDelay4.Value.ToString());
             label1.Text = Convert.ToString(delay_4_FPGA);
             ParametroSerial(60, 32, delay_4_FPGA, 0);
@@ -1215,7 +1215,7 @@ public Form1()
 
         private void buttonSetWidth4_ValueChanged(object sender, EventArgs e)
         {
-            int width_4_FPGA = (int)(buttonSetWidth4.Value * numericUpDown7.Value / 1000);
+            int width_4_FPGA = (int)(buttonSetWidth4.Value *2* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(61, "width_4_numericUpDown", buttonSetWidth4.Value.ToString());
             label1.Text = Convert.ToString(width_4_FPGA);
             ParametroSerial(61, 32, width_4_FPGA, 0);
