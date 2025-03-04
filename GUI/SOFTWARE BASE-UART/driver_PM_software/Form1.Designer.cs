@@ -85,6 +85,25 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonSetFreq1 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetDelay1 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetWidth1 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetWidth2 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetDelay2 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetFreq2 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetWidth3 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetDelay3 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetFreq3 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetFreq4 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetDelay4 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetWidth4 = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -105,11 +124,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth4)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.conexiónToolStripMenuItem});
@@ -134,8 +164,8 @@
             // 
             // toolStripComboBox_COMPORTS
             // 
-            resources.ApplyResources(this.toolStripComboBox_COMPORTS, "toolStripComboBox_COMPORTS");
             this.toolStripComboBox_COMPORTS.Name = "toolStripComboBox_COMPORTS";
+            resources.ApplyResources(this.toolStripComboBox_COMPORTS, "toolStripComboBox_COMPORTS");
             // 
             // conectarToolStripMenuItem
             // 
@@ -175,6 +205,7 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // numericUpDown1
             // 
@@ -554,10 +585,139 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // buttonSetFreq1
+            // 
+            resources.ApplyResources(this.buttonSetFreq1, "buttonSetFreq1");
+            this.buttonSetFreq1.Name = "buttonSetFreq1";
+            this.buttonSetFreq1.ValueChanged += new System.EventHandler(this.buttonSetFreq1_ValueChanged);
+            // 
+            // buttonSetDelay1
+            // 
+            resources.ApplyResources(this.buttonSetDelay1, "buttonSetDelay1");
+            this.buttonSetDelay1.Name = "buttonSetDelay1";
+            this.buttonSetDelay1.ValueChanged += new System.EventHandler(this.buttonSetDelay1_ValueChanged);
+            // 
+            // buttonSetWidth1
+            // 
+            resources.ApplyResources(this.buttonSetWidth1, "buttonSetWidth1");
+            this.buttonSetWidth1.Name = "buttonSetWidth1";
+            this.buttonSetWidth1.ValueChanged += new System.EventHandler(this.buttonSetWidth1_ValueChanged);
+            // 
+            // buttonSetWidth2
+            // 
+            resources.ApplyResources(this.buttonSetWidth2, "buttonSetWidth2");
+            this.buttonSetWidth2.Name = "buttonSetWidth2";
+            this.buttonSetWidth2.ValueChanged += new System.EventHandler(this.buttonSetWidth2_ValueChanged);
+            // 
+            // buttonSetDelay2
+            // 
+            resources.ApplyResources(this.buttonSetDelay2, "buttonSetDelay2");
+            this.buttonSetDelay2.Name = "buttonSetDelay2";
+            this.buttonSetDelay2.ValueChanged += new System.EventHandler(this.buttonSetDelay2_ValueChanged);
+            // 
+            // buttonSetFreq2
+            // 
+            resources.ApplyResources(this.buttonSetFreq2, "buttonSetFreq2");
+            this.buttonSetFreq2.Name = "buttonSetFreq2";
+            this.buttonSetFreq2.ValueChanged += new System.EventHandler(this.buttonSetFreq2_ValueChanged);
+            // 
+            // buttonSetWidth3
+            // 
+            resources.ApplyResources(this.buttonSetWidth3, "buttonSetWidth3");
+            this.buttonSetWidth3.Name = "buttonSetWidth3";
+            this.buttonSetWidth3.ValueChanged += new System.EventHandler(this.buttonSetWidth3_ValueChanged);
+            // 
+            // buttonSetDelay3
+            // 
+            resources.ApplyResources(this.buttonSetDelay3, "buttonSetDelay3");
+            this.buttonSetDelay3.Name = "buttonSetDelay3";
+            this.buttonSetDelay3.ValueChanged += new System.EventHandler(this.buttonSetDelay3_ValueChanged);
+            // 
+            // buttonSetFreq3
+            // 
+            resources.ApplyResources(this.buttonSetFreq3, "buttonSetFreq3");
+            this.buttonSetFreq3.Name = "buttonSetFreq3";
+            this.buttonSetFreq3.ValueChanged += new System.EventHandler(this.buttonSetFreq3_ValueChanged);
+            // 
+            // buttonSetFreq4
+            // 
+            resources.ApplyResources(this.buttonSetFreq4, "buttonSetFreq4");
+            this.buttonSetFreq4.Name = "buttonSetFreq4";
+            this.buttonSetFreq4.ValueChanged += new System.EventHandler(this.buttonSetFreq4_ValueChanged);
+            // 
+            // buttonSetDelay4
+            // 
+            resources.ApplyResources(this.buttonSetDelay4, "buttonSetDelay4");
+            this.buttonSetDelay4.Name = "buttonSetDelay4";
+            this.buttonSetDelay4.ValueChanged += new System.EventHandler(this.buttonSetDelay4_ValueChanged);
+            // 
+            // buttonSetWidth4
+            // 
+            resources.ApplyResources(this.buttonSetWidth4, "buttonSetWidth4");
+            this.buttonSetWidth4.Name = "buttonSetWidth4";
+            this.buttonSetWidth4.ValueChanged += new System.EventHandler(this.buttonSetWidth4_ValueChanged);
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.buttonSetWidth4);
+            this.Controls.Add(this.buttonSetDelay4);
+            this.Controls.Add(this.buttonSetFreq4);
+            this.Controls.Add(this.buttonSetWidth3);
+            this.Controls.Add(this.buttonSetDelay3);
+            this.Controls.Add(this.buttonSetFreq3);
+            this.Controls.Add(this.buttonSetWidth2);
+            this.Controls.Add(this.buttonSetDelay2);
+            this.Controls.Add(this.buttonSetFreq2);
+            this.Controls.Add(this.buttonSetWidth1);
+            this.Controls.Add(this.buttonSetDelay1);
+            this.Controls.Add(this.buttonSetFreq1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.numericUpDown9);
@@ -619,6 +779,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,6 +847,25 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.NumericUpDown buttonSetFreq1;
+        private System.Windows.Forms.NumericUpDown buttonSetDelay1;
+        private System.Windows.Forms.NumericUpDown buttonSetWidth1;
+        private System.Windows.Forms.NumericUpDown buttonSetWidth2;
+        private System.Windows.Forms.NumericUpDown buttonSetDelay2;
+        private System.Windows.Forms.NumericUpDown buttonSetFreq2;
+        private System.Windows.Forms.NumericUpDown buttonSetWidth3;
+        private System.Windows.Forms.NumericUpDown buttonSetDelay3;
+        private System.Windows.Forms.NumericUpDown buttonSetFreq3;
+        private System.Windows.Forms.NumericUpDown buttonSetFreq4;
+        private System.Windows.Forms.NumericUpDown buttonSetDelay4;
+        private System.Windows.Forms.NumericUpDown buttonSetWidth4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }
 
