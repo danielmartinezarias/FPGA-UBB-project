@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module UART_TX_control(
-    input wire clk,
-    input wire tick, 
-    output wire pin_Tx,
+    input  clk,
+    input  tick, 
+    output pin_Tx,
     input wire [15:0] Ndata,
     input wire [15:0] data16bits_0,
     input wire [31:0] data32bits_0,data32bits_1,data32bits_2,data32bits_3,data32bits_4,

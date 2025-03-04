@@ -1077,7 +1077,7 @@ begin
             det         => det_sync_pulse_det_gen,
             AliceBob    => AliceBob,
             sync_ext    => sync_ext,
-            pulse_control => pulse_control, 
+            pulse_control => pulse_control,
             CW          => CW
         );
         
@@ -1106,8 +1106,8 @@ port map (
     width_pulse => width_2,
     delay_det   => delay_2,  
     width_det   => width_2,   
-    sync        => square_wave_2,
-    MZI         => open,
+    sync        => open,
+    MZI         => square_wave_2,
     det         => open,
     AliceBob    => '0',
     sync_ext    => '0',
@@ -1123,8 +1123,8 @@ port map (
     width_pulse => width_3,
     delay_det   => delay_3,  
     width_det   => width_3,   
-    sync        => square_wave_3,
-    MZI         => open,
+    sync        => open,
+    MZI         => square_wave_3,
     det         => open,
     AliceBob    => '0',
     sync_ext    => '0',
@@ -1140,8 +1140,8 @@ port map (
     width_pulse => width_4,
     delay_det   => delay_4,  
     width_det   => width_4,   
-    sync        => square_wave_4,
-    MZI         => open,
+    sync        => open,
+    MZI         => square_wave_4,
     det         => open,
     AliceBob    => '0',
     sync_ext    => '0',
@@ -2176,7 +2176,7 @@ port map (
 
   fmc_la_p_00 <=  sync;
   fmc_la_p_04 <=  gate_idqube; --edit DMA 22-09-24
-  fmc_la_p_18 <=  MZI;
+  fmc_la_p_01 <=  MZI;
   fmc_la_p_24 <=  sync;
   
 
@@ -2192,7 +2192,7 @@ port map (
 
 -- Nuevas
 
-fmc_la_p_01 <= square_wave_1;
+fmc_la_p_18 <= square_wave_1;
 fmc_la_p_15 <= square_wave_2;
 fmc_la_p_06 <= square_wave_3;
 fmc_la_p_26 <= square_wave_4;
