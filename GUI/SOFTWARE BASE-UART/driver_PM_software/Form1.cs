@@ -192,21 +192,18 @@ public Form1()
                 numericUpDown15.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[40, 1]);
                 numericUpDown16.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[41, 1]);
                 numericUpDown8.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[42, 1]);
-                buttonSetFreq1.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[50, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result50) ? result50 : 0;
-                buttonSetDelay1.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[51, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result51) ? result51 : 0;
-                buttonSetWidth1.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[52, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result52) ? result52 : 0;
-
-                buttonSetFreq2.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[53, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result53) ? result53 : 0;
-                buttonSetDelay2.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[54, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result54) ? result54 : 0;
-                buttonSetWidth2.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[55, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result55) ? result55 : 5;
-
-                buttonSetFreq3.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[56, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result56) ? result56 : 0;
-                buttonSetDelay3.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[57, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result57) ? result57 : 0;
-                buttonSetWidth3.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[58, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result58) ? result58 : 5;
-
-                buttonSetFreq4.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[59, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result59) ? result59 : 0;
-                buttonSetDelay4.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[60, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result60) ? result60 : 0;
-                buttonSetWidth4.Value = decimal.TryParse(ObjetoIOP.matrixPropiedades[61, 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var result61) ? result61 : 5;
+                buttonSetFreq1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[50, 1]);
+                buttonSetDelay1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[51, 1]);
+                buttonSetWidth1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[52, 1]);
+                buttonSetFreq2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[53, 1]);
+                buttonSetDelay2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[54, 1]);
+                buttonSetWidth2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[55, 1]);
+                buttonSetFreq3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[56, 1]);
+                buttonSetDelay3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[57, 1]);
+                buttonSetWidth3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[58, 1]);
+                buttonSetFreq4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[59, 1]);
+                buttonSetDelay4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[60, 1]);
+                buttonSetWidth4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[61, 1]);
 
 
                 radioButton1.Checked = true;
@@ -1132,98 +1129,98 @@ public Form1()
         {
 
         }
-
+        int freq_1_FPGA;
         private void buttonSetFreq1_ValueChanged(object sender, EventArgs e)
         {
-            int freq_1_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq1.Value);
+            freq_1_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq1.Value);
             ObjetoIOP.guardarPropiedades(50, "freq_1_numericUpDown", buttonSetFreq1.Value.ToString());
             label1.Text = Convert.ToString(freq_1_FPGA);
             ParametroSerial(50, 32, freq_1_FPGA, 0);
         }
-
+        int delay_1_FPGA;
         private void buttonSetDelay1_ValueChanged(object sender, EventArgs e)
         {
-            int delay_1_FPGA = (int)(buttonSetDelay1.Value * numericUpDown7.Value / 1000);
+            delay_1_FPGA = (int)(buttonSetDelay1.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(51, "delay_1_numericUpDown", buttonSetDelay1.Value.ToString());
             label1.Text = Convert.ToString(delay_1_FPGA);
             ParametroSerial(51, 32, delay_1_FPGA, 0);
         }
-
+        int width_1_FPGA;
         private void buttonSetWidth1_ValueChanged(object sender, EventArgs e)
         {
-            int width_1_FPGA = (int)(buttonSetWidth1.Value * numericUpDown7.Value / 1000);
+            width_1_FPGA = (int)(buttonSetWidth1.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(52, "width_1_numericUpDown", buttonSetWidth1.Value.ToString());
             label1.Text = Convert.ToString(width_1_FPGA);
             ParametroSerial(52, 32, width_1_FPGA, 0);
         }
-
+        int freq_2_FPGA;
         private void buttonSetFreq2_ValueChanged(object sender, EventArgs e)
         {
-            int freq_2_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq2.Value);
+            freq_2_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq2.Value);
             ObjetoIOP.guardarPropiedades(53, "freq_2_numericUpDown", buttonSetFreq2.Value.ToString());
             label1.Text = Convert.ToString(freq_2_FPGA);
             ParametroSerial(53, 32, freq_2_FPGA, 0);
         }
-
+        int delay_2_FPGA;
         private void buttonSetDelay2_ValueChanged(object sender, EventArgs e)
         {
-            int delay_2_FPGA = (int)(buttonSetDelay2.Value * numericUpDown7.Value / 1000);
+            delay_2_FPGA = (int)(buttonSetDelay2.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(54, "delay_2_numericUpDown", buttonSetDelay2.Value.ToString());
             label1.Text = Convert.ToString(delay_2_FPGA);
             ParametroSerial(54, 32, delay_2_FPGA, 0);
         }
-
+        int width_2_FPGA;
         private void buttonSetWidth2_ValueChanged(object sender, EventArgs e)
         {
-            int width_2_FPGA = (int)(buttonSetWidth2.Value * numericUpDown7.Value / 1000);
+            width_2_FPGA = (int)(buttonSetWidth2.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(55, "width_2_numericUpDown", buttonSetWidth2.Value.ToString());
             label1.Text = Convert.ToString(width_2_FPGA);
             ParametroSerial(55, 32, width_2_FPGA, 0);
         }
-
+        int freq_3_FPGA;
         private void buttonSetFreq3_ValueChanged(object sender, EventArgs e)
         {
-            int freq_3_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq3.Value);
+            freq_3_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq3.Value);
             ObjetoIOP.guardarPropiedades(56, "freq_3_numericUpDown", buttonSetFreq3.Value.ToString());
             label1.Text = Convert.ToString(freq_3_FPGA);
             ParametroSerial(56, 32, freq_3_FPGA, 0);
         }
-
+        int delay_3_FPGA;
         private void buttonSetDelay3_ValueChanged(object sender, EventArgs e)
         {
-            int delay_3_FPGA = (int)(buttonSetDelay3.Value * numericUpDown7.Value / 1000);
+            delay_3_FPGA = (int)(buttonSetDelay3.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(57, "delay_3_numericUpDown", buttonSetDelay3.Value.ToString());
             label1.Text = Convert.ToString(delay_3_FPGA);
             ParametroSerial(57, 32, delay_3_FPGA, 0);
         }
-
+        int width_3_FPGA;
         private void buttonSetWidth3_ValueChanged(object sender, EventArgs e)
         {
-            int width_3_FPGA = (int)(buttonSetWidth3.Value * numericUpDown7.Value / 1000);
+            width_3_FPGA = (int)(buttonSetWidth3.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(58, "width_3_numericUpDown", buttonSetWidth3.Value.ToString());
             label1.Text = Convert.ToString(width_3_FPGA);
             ParametroSerial(58, 32, width_3_FPGA, 0);
         }
-
+        int freq_4_FPGA;
         private void buttonSetFreq4_ValueChanged(object sender, EventArgs e)
         {
-            int freq_4_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq4.Value);
+            freq_4_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq4.Value);
             ObjetoIOP.guardarPropiedades(59, "freq_4_numericUpDown", buttonSetFreq4.Value.ToString());
             label1.Text = Convert.ToString(freq_4_FPGA);
             ParametroSerial(59, 32, freq_4_FPGA, 0);
         }
-
+        int delay_4_FPGA;
         private void buttonSetDelay4_ValueChanged(object sender, EventArgs e)
         {
-            int delay_4_FPGA = (int)(buttonSetDelay4.Value * numericUpDown7.Value / 1000);
+            delay_4_FPGA = (int)(buttonSetDelay4.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(60, "delay_4_numericUpDown", buttonSetDelay4.Value.ToString());
             label1.Text = Convert.ToString(delay_4_FPGA);
             ParametroSerial(60, 32, delay_4_FPGA, 0);
         }
-
+        int width_4_FPGA;
         private void buttonSetWidth4_ValueChanged(object sender, EventArgs e)
         {
-            int width_4_FPGA = (int)(buttonSetWidth4.Value * numericUpDown7.Value / 1000);
+            width_4_FPGA = (int)(buttonSetWidth4.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(61, "width_4_numericUpDown", buttonSetWidth4.Value.ToString());
             label1.Text = Convert.ToString(width_4_FPGA);
             ParametroSerial(61, 32, width_4_FPGA, 0);

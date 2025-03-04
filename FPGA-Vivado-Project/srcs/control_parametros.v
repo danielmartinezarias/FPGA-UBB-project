@@ -306,8 +306,8 @@ case (ctrl)
 	end
 	// Nuevas para las señales cuadradas
 	50: begin
-    freq_1 <= {d4, d3, d2, d1};
-    ctrl <= 16'd0;
+        freq_1 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
     end
     
     51: begin

@@ -374,6 +374,18 @@ end component;
         width_pulse    : out std_logic_vector(31 downto 0) ;
         delay_det      : out std_logic_vector(31 downto 0) ;
         width_det      : out std_logic_vector(31 downto 0) ;
+        freq_1         : out std_logic_vector(31 downto 0);
+        delay_1        : out std_logic_vector(31 downto 0);
+        width_1        : out std_logic_vector(31 downto 0);
+        freq_2         : out std_logic_vector(31 downto 0);
+        delay_2        : out std_logic_vector(31 downto 0);
+        width_2        : out std_logic_vector(31 downto 0);
+        freq_3         : out std_logic_vector(31 downto 0);
+        delay_3        : out std_logic_vector(31 downto 0);
+        width_3        : out std_logic_vector(31 downto 0);
+        freq_4         : out std_logic_vector(31 downto 0);
+        delay_4        : out std_logic_vector(31 downto 0);
+        width_4        : out std_logic_vector(31 downto 0);
         pixelColor     : out std_logic_vector(63 downto 0) ;
         image_load     : out std_logic;
         image_address  : out std_logic_vector(7 downto 0);
@@ -1077,8 +1089,8 @@ port map (
     width_pulse => width_1,
     delay_det   => delay_1,  
     width_det   => width_1,   
-    sync        => square_wave_1,
-    MZI         => open,
+    sync        => open,
+    MZI         => square_wave_1,
     det         => open,
     AliceBob    => '0',
     sync_ext    => '0',
@@ -1150,6 +1162,18 @@ port map (
             width_pulse   => width_pulse,
             delay_det     => delay_det,
             width_det     => width_det,
+            freq_1      => freq_1,
+            delay_1     => delay_1,
+            width_1     => width_1,
+            freq_2      => freq_2,
+            delay_2     => delay_2,
+            width_2     => width_2,
+            freq_3      => freq_3,
+            delay_3     => delay_3,
+            width_3     => width_3,
+            freq_4      => freq_4,
+            delay_4     => delay_4,
+            width_4     => width_4,
             pixelColor    => pixelColor,
             image_load    => image_load,
             image_address => image_address,
