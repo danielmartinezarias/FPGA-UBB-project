@@ -60,7 +60,15 @@ module control_parametros(
     
     output reg [31:0] freq_4 = 32'd50, 
     output reg [31:0] delay_4 = 32'd0,
-    output reg [31:0] width_4 = 32'd5
+    output reg [31:0] width_4 = 32'd5,
+    
+    output reg [31:0] freq_5 = 32'd50, 
+    output reg [31:0] delay_5 = 32'd0,
+    output reg [31:0] width_5 = 32'd5,
+    
+    output reg [31:0] freq_6 = 32'd50, 
+    output reg [31:0] delay_6 = 32'd0,
+    output reg [31:0] width_6 = 32'd5
         );
 
 
@@ -364,7 +372,36 @@ case (ctrl)
         width_4 <= {d4, d3, d2, d1};
         ctrl <= 16'd0;
     end
-	
+    
+    62: begin
+        freq_5 <= {d4, d3, d2, d1};
+	    ctrl <= 16'd0;
+    end
+    
+    63: begin
+        delay_5 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    64: begin
+        width_5 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    65: begin
+        freq_6 <= {d4, d3, d2, d1};
+	    ctrl <= 16'd0;
+    end
+    
+    66: begin
+        delay_6 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
+    
+    67: begin
+        width_6 <= {d4, d3, d2, d1};
+        ctrl <= 16'd0;
+    end
 
 	default:
 		ctrl					<= 16'd0;

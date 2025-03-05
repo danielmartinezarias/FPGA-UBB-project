@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conexiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,6 +104,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.buttonSetFreq5 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetDelay5 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetWidth5 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetWidth6 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetDelay6 = new System.Windows.Forms.NumericUpDown();
+            this.buttonSetFreq6 = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -136,6 +144,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq6)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -424,17 +438,17 @@
             // 
             // chart1
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart1.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             // 
             // button1
             // 
@@ -527,17 +541,17 @@
             // 
             // chart2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             resources.ApplyResources(this.chart2, "chart2");
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart2.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             // 
             // label9
             // 
@@ -859,10 +873,140 @@
             resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
             // 
+            // buttonSetFreq5
+            // 
+            this.buttonSetFreq5.DecimalPlaces = 6;
+            this.buttonSetFreq5.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            resources.ApplyResources(this.buttonSetFreq5, "buttonSetFreq5");
+            this.buttonSetFreq5.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.buttonSetFreq5.Name = "buttonSetFreq5";
+            // 
+            // buttonSetDelay5
+            // 
+            this.buttonSetDelay5.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.buttonSetDelay5, "buttonSetDelay5");
+            this.buttonSetDelay5.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.buttonSetDelay5.Name = "buttonSetDelay5";
+            // 
+            // buttonSetWidth5
+            // 
+            this.buttonSetWidth5.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.buttonSetWidth5, "buttonSetWidth5");
+            this.buttonSetWidth5.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.buttonSetWidth5.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.buttonSetWidth5.Name = "buttonSetWidth5";
+            this.buttonSetWidth5.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // buttonSetWidth6
+            // 
+            this.buttonSetWidth6.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.buttonSetWidth6, "buttonSetWidth6");
+            this.buttonSetWidth6.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.buttonSetWidth6.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.buttonSetWidth6.Name = "buttonSetWidth6";
+            this.buttonSetWidth6.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // buttonSetDelay6
+            // 
+            this.buttonSetDelay6.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.buttonSetDelay6, "buttonSetDelay6");
+            this.buttonSetDelay6.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.buttonSetDelay6.Name = "buttonSetDelay6";
+            // 
+            // buttonSetFreq6
+            // 
+            this.buttonSetFreq6.DecimalPlaces = 6;
+            this.buttonSetFreq6.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            resources.ApplyResources(this.buttonSetFreq6, "buttonSetFreq6");
+            this.buttonSetFreq6.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.buttonSetFreq6.Name = "buttonSetFreq6";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.buttonSetWidth6);
+            this.Controls.Add(this.buttonSetDelay6);
+            this.Controls.Add(this.buttonSetFreq6);
+            this.Controls.Add(this.buttonSetWidth5);
+            this.Controls.Add(this.buttonSetDelay5);
+            this.Controls.Add(this.buttonSetFreq5);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -955,6 +1099,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1030,6 +1180,14 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.NumericUpDown buttonSetFreq5;
+        private System.Windows.Forms.NumericUpDown buttonSetDelay5;
+        private System.Windows.Forms.NumericUpDown buttonSetWidth5;
+        private System.Windows.Forms.NumericUpDown buttonSetWidth6;
+        private System.Windows.Forms.NumericUpDown buttonSetDelay6;
+        private System.Windows.Forms.NumericUpDown buttonSetFreq6;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }
 

@@ -565,7 +565,8 @@ public Form1()
         public String[] controles = new string[] {
                                                     "numericUpDown1","numericUpDown2","numericUpDown3","numericUpDown4","numericUpDown6","numericUpDown7","numericUpDown5","numericUpDown8",
                                                     "buttonSetFreq1", "buttonSetDelay1", "buttonSetWidth1","buttonSetFreq2", "buttonSetDelay2", "buttonSetWidth2",
-                                                    "buttonSetFreq3", "buttonSetDelay3", "buttonSetWidth3","buttonSetFreq4", "buttonSetDelay4", "buttonSetWidth4"
+                                                    "buttonSetFreq3", "buttonSetDelay3", "buttonSetWidth3","buttonSetFreq4", "buttonSetDelay4", "buttonSetWidth4",
+                                                    "buttonSetFreq5", "buttonSetDelay5", "buttonSetWidth5","buttonSetFreq6", "buttonSetDelay6", "buttonSetWidth6"
                                                 };
 
         public int[] orden = new int[] {
@@ -573,7 +574,9 @@ public Form1()
                                             50, 51, 52, // Para las señales cuadradas 1
                                             53, 54, 55, // Para las señales cuadradas 2
                                             56, 57, 58, // Para las señales cuadradas 3
-                                            59, 60, 61  // Para las señales cuadradas 4
+                                            59, 60, 61, // Para las señales cuadradas 4
+                                            62, 63, 64, // Para las señales cuadradas 5
+                                            65, 66, 67  // Para las señales cuadradas 6
                                         };
 
         int index_medicion = 0;
@@ -1228,6 +1231,60 @@ public Form1()
             label1.Text = Convert.ToString(width_4_FPGA);
             ParametroSerial(61, 32, width_4_FPGA, 0);
         }
+
+        int freq_5_FPGA;
+        private void buttonSetFreq5_ValueChanged(object sender, EventArgs e)
+        {
+            freq_5_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq5.Value);
+            ObjetoIOP.guardarPropiedades(62, "freq_5_numericUpDown", buttonSetFreq5.Value.ToString());
+            label1.Text = Convert.ToString(freq_5_FPGA);
+            ParametroSerial(62, 32, freq_5_FPGA, 0);
+        }
+        int delay_5_FPGA;
+        private void buttonSetDelay5_ValueChanged(object sender, EventArgs e)
+        {
+            delay_5_FPGA = (int)(buttonSetDelay5.Value * numericUpDown7.Value / 1000);
+            ObjetoIOP.guardarPropiedades(63, "delay_5_numericUpDown", buttonSetDelay5.Value.ToString());
+            label1.Text = Convert.ToString(delay_5_FPGA);
+            ParametroSerial(63, 32, delay_5_FPGA, 0);
+        }
+        int width_5_FPGA;
+        private void buttonSetWidth5_ValueChanged(object sender, EventArgs e)
+        {
+            width_5_FPGA = (int)(buttonSetWidth5.Value * numericUpDown7.Value / 1000);
+            ObjetoIOP.guardarPropiedades(64, "width_5_numericUpDown", buttonSetWidth5.Value.ToString());
+            label1.Text = Convert.ToString(width_4_FPGA);
+            ParametroSerial(64, 32, width_4_FPGA, 0);
+        }
+
+        int freq_6_FPGA;
+        private void buttonSetFreq6_ValueChanged(object sender, EventArgs e)
+        {
+            freq_6_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq6.Value);
+            ObjetoIOP.guardarPropiedades(65, "freq_6_numericUpDown", buttonSetFreq6.Value.ToString());
+            label1.Text = Convert.ToString(freq_6_FPGA);
+            ParametroSerial(65, 32, freq_6_FPGA, 0);
+        }
+
+        int delay_6_FPGA;
+        private void buttonSetDelay6_ValueChanged(object sender, EventArgs e)
+        {
+            delay_6_FPGA = (int)(buttonSetDelay6.Value * numericUpDown7.Value / 1000);
+            ObjetoIOP.guardarPropiedades(66, "delay_6_numericUpDown", buttonSetDelay6.Value.ToString());
+            label1.Text = Convert.ToString(delay_6_FPGA);
+            ParametroSerial(66, 32, delay_6_FPGA, 0);
+        }
+
+        int width_6_FPGA;
+        private void buttonSetWidth6_ValueChanged(object sender, EventArgs e)
+        {
+            width_6_FPGA = (int)(buttonSetWidth6.Value * numericUpDown7.Value / 1000);
+            ObjetoIOP.guardarPropiedades(67, "width_6_numericUpDown", buttonSetWidth6.Value.ToString());
+            label1.Text = Convert.ToString(width_6_FPGA);
+            ParametroSerial(67, 32, width_6_FPGA, 0);
+        }
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {

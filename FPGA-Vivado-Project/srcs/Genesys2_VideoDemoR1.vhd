@@ -386,6 +386,12 @@ end component;
         freq_4         : out std_logic_vector(31 downto 0);
         delay_4        : out std_logic_vector(31 downto 0);
         width_4        : out std_logic_vector(31 downto 0);
+        freq_5         : out std_logic_vector(31 downto 0);
+        delay_5        : out std_logic_vector(31 downto 0);
+        width_5        : out std_logic_vector(31 downto 0);
+        freq_6         : out std_logic_vector(31 downto 0);
+        delay_6        : out std_logic_vector(31 downto 0);
+        width_6        : out std_logic_vector(31 downto 0);
         pixelColor     : out std_logic_vector(63 downto 0) ;
         image_load     : out std_logic;
         image_address  : out std_logic_vector(7 downto 0);
@@ -772,11 +778,19 @@ signal width_3       : std_logic_vector(31 downto 0);
 signal freq_4        : std_logic_vector(31 downto 0);
 signal delay_4       : std_logic_vector(31 downto 0);
 signal width_4       : std_logic_vector(31 downto 0);
+signal freq_5        : std_logic_vector(31 downto 0);
+signal delay_5       : std_logic_vector(31 downto 0);
+signal width_5       : std_logic_vector(31 downto 0);
+signal freq_6        : std_logic_vector(31 downto 0);
+signal delay_6       : std_logic_vector(31 downto 0);
+signal width_6       : std_logic_vector(31 downto 0);
 ------Nuevas-------------- CMD
 signal square_wave_1 : std_logic := '0';
 signal square_wave_2 : std_logic := '0';
 signal square_wave_3 : std_logic := '0';
 signal square_wave_4 : std_logic := '0';
+signal square_wave_5 : std_logic := '0';
+signal square_wave_6 : std_logic := '0';
 ------------------------------
 signal gateDet              : std_logic := '0';
 signal det_sync_pulse_det_gen : std_logic := '0';
@@ -1147,7 +1161,41 @@ port map (
     sync_ext    => '0',
     pulse_control => '1', 
     CW          => '0'
-);     
+);
+
+sync_pulse_det_gen_6 : sync_pulse_det_generator
+port map (
+    clk         => clk200, 
+    freq_sync   => freq_5,
+    delay_pulse => delay_5,
+    width_pulse => width_5,
+    delay_det   => delay_5,  
+    width_det   => width_5,   
+    sync        => open,
+    MZI         => square_wave_5,
+    det         => open,
+    AliceBob    => '1',
+    sync_ext    => '0',
+    pulse_control => '1', 
+    CW          => '0'
+);   
+
+sync_pulse_det_gen_7 : sync_pulse_det_generator
+port map (
+    clk         => clk200, 
+    freq_sync   => freq_6,
+    delay_pulse => delay_6,
+    width_pulse => width_6,
+    delay_det   => delay_6,  
+    width_det   => width_6,   
+    sync        => open,
+    MZI         => square_wave_6,
+    det         => open,
+    AliceBob    => '1',
+    sync_ext    => '0',
+    pulse_control => '1', 
+    CW          => '0'
+);        
   --Control_parametros
    control_parametros_inst : control_parametros
    port map (
@@ -1174,6 +1222,12 @@ port map (
             freq_4      => freq_4,
             delay_4     => delay_4,
             width_4     => width_4,
+            freq_5      => freq_5,
+            delay_5     => delay_5,
+            width_5     => width_5,
+            freq_6      => freq_6,
+            delay_6     => delay_6,
+            width_6     => width_6,
             pixelColor    => pixelColor,
             image_load    => image_load,
             image_address => image_address,
@@ -2176,8 +2230,8 @@ port map (
 
   fmc_la_p_00 <=  sync;
   fmc_la_p_04 <=  gate_idqube; --edit DMA 22-09-24
-  fmc_la_p_18 <=  MZI;
-  fmc_la_p_24 <=  sync;
+  --fmc_la_p_18 <=  MZI;
+  --fmc_la_p_24 <=  sync;
   
 
 -- FMC
@@ -2193,10 +2247,10 @@ port map (
 -- Nuevas
 
 fmc_la_p_01 <= square_wave_1;
-fmc_la_p_15 <= square_wave_2;
-fmc_la_p_06 <= square_wave_3;
-fmc_la_p_26 <= square_wave_4;
-
-
+fmc_la_p_06 <= square_wave_2;
+fmc_la_p_15 <= square_wave_3;
+fmc_la_p_18 <= square_wave_4;
+fmc_la_p_26 <= square_wave_5;
+fmc_la_p_24 <= square_wave_6;
 
 end rtl;
