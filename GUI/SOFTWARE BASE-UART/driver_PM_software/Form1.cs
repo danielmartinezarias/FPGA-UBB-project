@@ -566,11 +566,17 @@ public Form1()
         ////////////////////////////////////////////////////////////////////////////////////////
 
         public String[] controles = new string[] {
-                                                    "numericUpDown1","numericUpDown2","numericUpDown3","numericUpDown4","numericUpDown6","numericUpDown7","numericUpDown5","numericUpDown8"
+                                                    "numericUpDown1","numericUpDown2","numericUpDown3","numericUpDown4","numericUpDown6","numericUpDown7","numericUpDown5","numericUpDown8",
+                                                    "buttonSetFreq1", "buttonSetDelay1", "buttonSetWidth1","buttonSetFreq2", "buttonSetDelay2", "buttonSetWidth2",
+                                                    "buttonSetFreq3", "buttonSetDelay3", "buttonSetWidth3","buttonSetFreq4", "buttonSetDelay4", "buttonSetWidth4"
                                                 };
 
         public int[] orden = new int[] {
-                                            1,2,3,4,5,6,7,8
+                                            1,2,3,4,5,6,7,8,
+                                            50, 51, 52, // Para las señales cuadradas 1
+                                            53, 54, 55, // Para las señales cuadradas 2
+                                            56, 57, 58, // Para las señales cuadradas 3
+                                            59, 60, 61  // Para las señales cuadradas 4
                                         };
 
         int index_medicion = 0;

@@ -1095,7 +1095,7 @@ port map (
     AliceBob    => '0',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '0'
+    CW          => '1'
 );
 
 sync_pulse_det_gen_3 : sync_pulse_det_generator
@@ -1112,7 +1112,7 @@ port map (
     AliceBob    => '0',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '0'
+    CW          => '1'
 );
 
 sync_pulse_det_gen_4 : sync_pulse_det_generator
@@ -1129,7 +1129,7 @@ port map (
     AliceBob    => '0',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '0'
+    CW          => '1'
 );
 
 sync_pulse_det_gen_5 : sync_pulse_det_generator
@@ -1146,7 +1146,7 @@ port map (
     AliceBob    => '0',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '0'
+    CW          => '1'
 );     
   --Control_parametros
    control_parametros_inst : control_parametros
