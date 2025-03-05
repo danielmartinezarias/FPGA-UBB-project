@@ -26,18 +26,22 @@ entity Genesys2_VideoDemoR1 is
 
     
     -- FMC Header
-    fmc_la_n_00                        : in    std_logic;
+    --fmc_la_n_00                        : in    std_logic --sync
+    fmc_la_n_00                        : out    std_logic;
     fmc_la_p_00                        : out   std_logic;
     fmc_la_p_01                        : out   std_logic;
     fmc_la_p_04                        : out   std_logic;
     fmc_la_p_06                        : out   std_logic;
     fmc_la_p_15                        : out   std_logic;
-    fmc_la_p_17                        : in   std_logic;
+    fmc_la_p_17                        : out   std_logic;
+    fmc_la_n_17                        : out   std_logic;
     fmc_la_p_18                        : out   std_logic;
+    fmc_la_n_18                        : out   std_logic;
+    fmc_la_n_24                        : out   std_logic;
     fmc_la_p_24                        : out   std_logic;
     fmc_la_p_26                        : out   std_logic;
-    fmc_la_p_32                        : in    std_logic;
-    
+    fmc_la_p_32                        : out    std_logic;
+    fmc_la_n_32                        : out    std_logic;
     
     
     
@@ -2228,16 +2232,16 @@ port map (
   
   --led(0)  <= led_prueba;
 
-  fmc_la_p_00 <=  sync;
+  --fmc_la_p_00 <=  sync;
   fmc_la_p_04 <=  gate_idqube; --edit DMA 22-09-24
   --fmc_la_p_18 <=  MZI;
   --fmc_la_p_24 <=  sync;
   
 
 -- FMC
-  sync_ext   <= fmc_la_n_00;
-  det0_in    <= fmc_la_p_32;
-  det1_in    <= fmc_la_p_17;
+  --sync_ext   <= fmc_la_n_00;
+  --det0_in    <= fmc_la_p_32;
+  --det1_in    <= fmc_la_p_17;
   
   jc(0) <=  CS_dac;
   jc(1) <=  DIN_A_dac;
@@ -2246,11 +2250,11 @@ port map (
 
 -- Nuevas
 
-fmc_la_p_01 <= square_wave_1;
-fmc_la_p_06 <= square_wave_2;
-fmc_la_p_15 <= square_wave_3;
-fmc_la_p_18 <= square_wave_4;
-fmc_la_p_26 <= square_wave_5;
-fmc_la_p_24 <= square_wave_6;
+ fmc_la_p_00 <= square_wave_1;
+ fmc_la_n_00 <= square_wave_2;
+ fmc_la_p_17 <= square_wave_3;
+ fmc_la_n_17 <= square_wave_4;
+ fmc_la_p_18 <= square_wave_5;
+ fmc_la_n_18 <= square_wave_6;
 
 end rtl;

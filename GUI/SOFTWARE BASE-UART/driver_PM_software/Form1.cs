@@ -177,6 +177,15 @@ public Form1()
             buttonSetDelay4.Enabled = true;
             buttonSetWidth4.Enabled = true;
 
+            buttonSetFreq5.Enabled = true;
+            buttonSetDelay5.Enabled = true;
+            buttonSetWidth5.Enabled = true;
+
+            buttonSetFreq6.Enabled = true;
+            buttonSetDelay6.Enabled = true;
+            buttonSetWidth6.Enabled = true;
+
+
             //numericUpDown11.Enabled = true;
             //numericUpDown13.Enabled = true;
             if (serialPort_FPGA.IsOpen)
@@ -204,7 +213,12 @@ public Form1()
                 //buttonSetFreq4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[59, 1]);
                 //buttonSetDelay4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[60, 1]);
                 //buttonSetWidth4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[61, 1]);
-           
+                //buttonSetFreq5.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[62, 1]);
+                //buttonSetDelay5.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[63, 1]);
+                //buttonSetWidth5.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[64, 1]);
+                //buttonSetFreq6.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[65, 1]);
+                //buttonSetDelay6.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[66, 1]);
+                //buttonSetWidth6.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[67, 1]);
                 radioButton1.Checked = true;
                 radioButton4.Checked = true;
                 numericUpDown9.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[45, 1]);
