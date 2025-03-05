@@ -25,10 +25,10 @@ master_clk_numericUpDown7	200
 deadTimeAPD_numericUpDown2	60
 controlDM	1
 freq_sync_numericUpDown1	0.0001
-delay_pulse_numericUpDown3	200
+delay_pulse_numericUpDown3	0
 width_pulse_numericUpDown4	555
-controlDM	0
-width_det_numericUpDown6	1000
+delay_det_numericUpDown5	0.0
+width_det_numericUpDown6	100
 	
 	
 	
@@ -48,18 +48,18 @@ AliceBob	Alice
 	
 	
 	
-freq_1_numericUpDown	1
+freq_1_numericUpDown	10.000000
+delay_1_numericUpDown	0
+width_1_numericUpDown	55
+freq_2_numericUpDown	0.0001
 	
-width_1_numericUpDown	205
-freq_2_numericUpDown	1
-	
-width_2_numericUpDown	355
-freq_3_numericUpDown	1
-delay_3_numericUpDown	45
-width_3_numericUpDown	755
-freq_4_numericUpDown	1
-	
-width_4_numericUpDown	1205
+width_2_numericUpDown	955
+freq_3_numericUpDown	0.0001
+delay_3_numericUpDown	1
+width_3_numericUpDown	405
+freq_4_numericUpDown	0.0001
+delay_4_numericUpDown	0
+width_4_numericUpDown	955
 	
 	
 	

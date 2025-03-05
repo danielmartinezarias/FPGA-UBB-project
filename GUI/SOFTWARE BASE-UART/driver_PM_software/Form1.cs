@@ -127,7 +127,7 @@ public Form1()
         {
             conectarToolStripMenuItem.Enabled = objetoUtilidades.VerPuertosUSB(20, toolStripComboBox_COMPORTS);
         }
- 
+
 
         private void conectarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -192,24 +192,23 @@ public Form1()
                 numericUpDown15.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[40, 1]);
                 numericUpDown16.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[41, 1]);
                 numericUpDown8.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[42, 1]);
-                buttonSetFreq1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[50, 1]);
-                buttonSetDelay1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[51, 1]);
-                buttonSetWidth1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[52, 1]);
-                buttonSetFreq2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[53, 1]);
-                buttonSetDelay2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[54, 1]);
-                buttonSetWidth2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[55, 1]);
-                buttonSetFreq3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[56, 1]);
-                buttonSetDelay3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[57, 1]);
-                buttonSetWidth3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[58, 1]);
-                buttonSetFreq4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[59, 1]);
-                buttonSetDelay4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[60, 1]);
-                buttonSetWidth4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[61, 1]);
-
-
+                //buttonSetFreq1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[50, 1]);
+                //buttonSetDelay1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[51, 1]);
+                //buttonSetWidth1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[52, 1]);
+                //buttonSetFreq2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[53, 1]);
+                //buttonSetDelay2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[54, 1]);
+                //buttonSetWidth2.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[55, 1]);
+                //buttonSetFreq3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[56, 1]);
+                //buttonSetDelay3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[57, 1]);
+                //buttonSetWidth3.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[58, 1]);
+                //buttonSetFreq4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[59, 1]);
+                //buttonSetDelay4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[60, 1]);
+                //buttonSetWidth4.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[61, 1]);
+           
                 radioButton1.Checked = true;
                 radioButton4.Checked = true;
                 numericUpDown9.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[45, 1]);
-                if(ObjetoIOP.matrixPropiedades[46, 1] == "Alice") { radioButton6.Checked = true;}
+                if (ObjetoIOP.matrixPropiedades[46, 1] == "Alice") { radioButton6.Checked = true; }
                 if (ObjetoIOP.matrixPropiedades[46, 1] == "Bob") { radioButton7.Checked = true; }
 
             }
@@ -218,8 +217,6 @@ public Form1()
                 MessageBox.Show("Conectar COM");
             }
         }
-
-
         ////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////

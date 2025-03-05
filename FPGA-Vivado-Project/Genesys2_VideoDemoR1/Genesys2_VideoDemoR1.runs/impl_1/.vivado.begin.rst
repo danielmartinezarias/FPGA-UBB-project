@@ -13,3 +13,28 @@
     <Process Command="vivado.bat" Owner="crist" Host="LAPTOP-RR96MLV1" Pid="10452" HostCore="8" HostMemory="016971386880">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="crist" Host="LAPTOP-RR96MLV1" Pid="17456" HostCore="8" HostMemory="016971386880">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="crist" Host="LAPTOP-RR96MLV1" Pid="1364" HostCore="8" HostMemory="016971386880">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="crist" Host="LAPTOP-RR96MLV1" Pid="2640" HostCore="8" HostMemory="016971386880">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="crist" Host="LAPTOP-RR96MLV1" Pid="19748" HostCore="8" HostMemory="016971386880">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="crist" Host="LAPTOP-RR96MLV1" Pid="25388" HostCore="8" HostMemory="016971386880">
+    </Process>
+</ProcessHandle>

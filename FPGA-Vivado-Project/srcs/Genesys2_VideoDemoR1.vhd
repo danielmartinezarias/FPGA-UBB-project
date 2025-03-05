@@ -674,7 +674,6 @@ signal clk_dvi              : std_logic := '0';
 signal clk_dvin             : std_logic := '0';
 signal clk_vga              : std_logic := '0';
 signal reset                : std_logic;
-
 signal red                  : std_logic_vector(7 downto 0) := (others => '0');
 signal green                : std_logic_vector(7 downto 0) := (others => '0');
 signal blue                 : std_logic_vector(7 downto 0) := (others => '0');
@@ -1081,21 +1080,22 @@ begin
             CW          => CW
         );
         
+       
   sync_pulse_det_gen_2 : sync_pulse_det_generator
 port map (
     clk         => clk200, 
     freq_sync   => freq_1,
     delay_pulse => delay_1,
     width_pulse => width_1,
-    delay_det   => delay_det,  
-    width_det   => width_det,   
+    delay_det   => delay_1,  
+    width_det   => width_1,   
     sync        => open,
     MZI         => square_wave_1,
     det         => open,
-    AliceBob    => '0',
+    AliceBob    => '1',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '1'
+    CW          => '0'
 );
 
 sync_pulse_det_gen_3 : sync_pulse_det_generator
@@ -1104,15 +1104,15 @@ port map (
     freq_sync   => freq_2,
     delay_pulse => delay_2,
     width_pulse => width_2,
-    delay_det   => delay_det,  
-    width_det   => width_det,   
+    delay_det   => delay_2,  
+    width_det   => width_2,   
     sync        => open,
     MZI         => square_wave_2,
     det         => open,
-    AliceBob    => '0',
+    AliceBob    => '1',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '1'
+    CW          => '0'
 );
 
 sync_pulse_det_gen_4 : sync_pulse_det_generator
@@ -1121,15 +1121,15 @@ port map (
     freq_sync   => freq_3,
     delay_pulse => delay_3,
     width_pulse => width_3,
-    delay_det   => delay_det,  
-    width_det   => width_det,   
+    delay_det   => delay_3,  
+    width_det   => width_3,   
     sync        => open,
     MZI         => square_wave_3,
     det         => open,
-    AliceBob    => '0',
+    AliceBob    => '1',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '1'
+    CW          => '0'
 );
 
 sync_pulse_det_gen_5 : sync_pulse_det_generator
@@ -1138,15 +1138,15 @@ port map (
     freq_sync   => freq_4,
     delay_pulse => delay_4,
     width_pulse => width_4,
-    delay_det   => delay_det,  
-    width_det   => width_det,   
+    delay_det   => delay_4,  
+    width_det   => width_4,   
     sync        => open,
     MZI         => square_wave_4,
     det         => open,
-    AliceBob    => '0',
+    AliceBob    => '1',
     sync_ext    => '0',
     pulse_control => '1', 
-    CW          => '1'
+    CW          => '0'
 );     
   --Control_parametros
    control_parametros_inst : control_parametros
