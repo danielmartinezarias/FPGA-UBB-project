@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conexiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -438,17 +438,17 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea9.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea9);
+            legend9.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend9.Name = "Legend1";
+            this.chart1.Legends.Add(legend9);
             resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chart1.Series.Add(series9);
             // 
             // button1
             // 
@@ -541,17 +541,17 @@
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea10.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea10);
+            legend10.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend10.Name = "Legend1";
+            this.chart2.Legends.Add(legend10);
             resources.ApplyResources(this.chart2, "chart2");
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chart2.Series.Add(series10);
             // 
             // label9
             // 
@@ -888,6 +888,7 @@
             0,
             0});
             this.buttonSetFreq5.Name = "buttonSetFreq5";
+            this.buttonSetFreq5.ValueChanged += new System.EventHandler(this.buttonSetFreq5_ValueChanged_1);
             // 
             // buttonSetDelay5
             // 
@@ -903,6 +904,7 @@
             0,
             0});
             this.buttonSetDelay5.Name = "buttonSetDelay5";
+            this.buttonSetDelay5.ValueChanged += new System.EventHandler(this.buttonSetDelay5_ValueChanged);
             // 
             // buttonSetWidth5
             // 
@@ -928,6 +930,7 @@
             0,
             0,
             0});
+            this.buttonSetWidth5.ValueChanged += new System.EventHandler(this.buttonSetWidth5_ValueChanged);
             // 
             // buttonSetWidth6
             // 
@@ -953,6 +956,7 @@
             0,
             0,
             0});
+            this.buttonSetWidth6.ValueChanged += new System.EventHandler(this.buttonSetWidth6_ValueChanged);
             // 
             // buttonSetDelay6
             // 
@@ -968,6 +972,7 @@
             0,
             0});
             this.buttonSetDelay6.Name = "buttonSetDelay6";
+            this.buttonSetDelay6.ValueChanged += new System.EventHandler(this.buttonSetDelay6_ValueChanged);
             // 
             // buttonSetFreq6
             // 
@@ -984,6 +989,7 @@
             0,
             0});
             this.buttonSetFreq6.Name = "buttonSetFreq6";
+            this.buttonSetFreq6.ValueChanged += new System.EventHandler(this.buttonSetFreq6_ValueChanged);
             // 
             // label20
             // 

@@ -1246,8 +1246,31 @@ public Form1()
             ParametroSerial(61, 32, width_4_FPGA, 0);
         }
 
+
+
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
         int freq_5_FPGA;
-        private void buttonSetFreq5_ValueChanged(object sender, EventArgs e)
+        private void buttonSetFreq5_ValueChanged_1(object sender, EventArgs e)
         {
             freq_5_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq5.Value);
             ObjetoIOP.guardarPropiedades(62, "freq_5_numericUpDown", buttonSetFreq5.Value.ToString());
@@ -1270,8 +1293,7 @@ public Form1()
             label1.Text = Convert.ToString(width_5_FPGA);
             ParametroSerial(64, 32, width_5_FPGA, 0);
         }
-
-        int freq_6_FPGA;
+        int freq_6_FPGA; 
         private void buttonSetFreq6_ValueChanged(object sender, EventArgs e)
         {
             freq_6_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq6.Value);
@@ -1279,7 +1301,6 @@ public Form1()
             label1.Text = Convert.ToString(freq_6_FPGA);
             ParametroSerial(65, 32, freq_6_FPGA, 0);
         }
-
         int delay_6_FPGA;
         private void buttonSetDelay6_ValueChanged(object sender, EventArgs e)
         {
@@ -1288,7 +1309,6 @@ public Form1()
             label1.Text = Convert.ToString(delay_6_FPGA);
             ParametroSerial(66, 32, delay_6_FPGA, 0);
         }
-
         int width_6_FPGA;
         private void buttonSetWidth6_ValueChanged(object sender, EventArgs e)
         {
@@ -1296,28 +1316,6 @@ public Form1()
             ObjetoIOP.guardarPropiedades(67, "width_6_numericUpDown", buttonSetWidth6.Value.ToString());
             label1.Text = Convert.ToString(width_6_FPGA);
             ParametroSerial(67, 32, width_6_FPGA, 0);
-        }
-
-
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
