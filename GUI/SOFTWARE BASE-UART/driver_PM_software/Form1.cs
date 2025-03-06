@@ -1267,8 +1267,8 @@ public Form1()
         {
             width_5_FPGA = (int)(buttonSetWidth5.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(64, "width_5_numericUpDown", buttonSetWidth5.Value.ToString());
-            label1.Text = Convert.ToString(width_4_FPGA);
-            ParametroSerial(64, 32, width_4_FPGA, 0);
+            label1.Text = Convert.ToString(width_5_FPGA);
+            ParametroSerial(64, 32, width_5_FPGA, 0);
         }
 
         int freq_6_FPGA;
