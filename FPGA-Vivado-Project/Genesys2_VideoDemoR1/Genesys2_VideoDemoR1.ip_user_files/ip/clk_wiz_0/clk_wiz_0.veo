@@ -52,11 +52,11 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__200.00000______0.000______50.0_______98.146_____89.971
-// clk_out2__200.00000______0.000______50.0_______98.146_____89.971
-// clk_out3__200.00000____180.000______50.0_______98.146_____89.971
-// clk_out4__100.00000______0.000______50.0______112.316_____89.971
-// clk_out5__25.00000______0.000______50.0______148.629_____89.971
+// clk_out1__200.00000______0.000______50.0______100.010_____97.786
+// clk_out2__400.00000______0.000______50.0_______87.396_____97.786
+// clk_out3__200.00000______0.000______50.0______100.010_____97.786
+// clk_out4__100.00000______0.000______50.0______114.523_____97.786
+// clk_out5__25.00000______0.000______50.0______151.619_____97.786
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -77,6 +77,11 @@
     .clk_out3(clk_out3),     // output clk_out3
     .clk_out4(clk_out4),     // output clk_out4
     .clk_out5(clk_out5),     // output clk_out5
+    // Dynamic phase shift ports
+    .psclk(psclk), // input psclk
+    .psen(psen), // input psen
+    .psincdec(psincdec),     // input psincdec
+    .psdone(psdone),       // output psdone
     // Status and control signals
     .reset(reset), // input reset
     .locked(locked),       // output locked

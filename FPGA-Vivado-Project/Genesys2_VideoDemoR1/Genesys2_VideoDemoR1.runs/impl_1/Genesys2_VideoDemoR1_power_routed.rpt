@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Wed Mar  5 16:57:12 2025
+| Date             : Mon Mar 10 16:52:35 2025
 | Host             : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 | Command          : report_power -file Genesys2_VideoDemoR1_power_routed.rpt -pb Genesys2_VideoDemoR1_power_summary_routed.pb -rpx Genesys2_VideoDemoR1_power_routed.rpx
 | Design           : Genesys2_VideoDemoR1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.515        |
+| Total On-Chip Power (W)  | 2.526        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.335        |
+| Dynamic (W)              | 2.346        |
 | Device Static (W)        | 0.180        |
 | Effective TJA (C/W)      | 1.8          |
 | Max Ambient (C)          | 80.5         |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.145 |       48 |       --- |             --- |
-| Slice Logic              |     0.061 |    23794 |       --- |             --- |
-|   LUT as Logic           |     0.056 |     9446 |    203800 |            4.63 |
-|   Register               |     0.002 |     8910 |    407600 |            2.19 |
+| Clocks                   |     0.147 |       49 |       --- |             --- |
+| Slice Logic              |     0.061 |    23793 |       --- |             --- |
+|   LUT as Logic           |     0.056 |     9454 |    203800 |            4.64 |
+|   Register               |     0.002 |     8908 |    407600 |            2.19 |
 |   CARRY4                 |     0.002 |      586 |     50950 |            1.15 |
 |   LUT as Distributed RAM |     0.001 |      796 |     64000 |            1.24 |
 |   F7/F8 Muxes            |    <0.001 |       58 |    203800 |            0.03 |
 |   LUT as Shift Register  |    <0.001 |       23 |     64000 |            0.04 |
-|   Others                 |     0.000 |      483 |       --- |             --- |
-| Signals                  |     0.071 |    18867 |       --- |             --- |
+|   Others                 |     0.000 |      484 |       --- |             --- |
+| Signals                  |     0.072 |    18851 |       --- |             --- |
 | Block RAM                |     0.094 |     66.5 |       445 |           14.94 |
-| MMCM                     |     0.437 |        4 |        10 |           40.00 |
-| PLL                      |     0.254 |        2 |        10 |           20.00 |
+| MMCM                     |     0.553 |        5 |        10 |           50.00 |
+| PLL                      |     0.144 |        1 |        10 |           10.00 |
 | DSPs                     |    <0.001 |        2 |       840 |            0.24 |
 | I/O                      |     0.759 |      131 |       500 |           26.20 |
 | PHASER                   |     0.511 |       28 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.180 |          |           |                 |
-| Total                    |     2.515 |          |           |                 |
+| Total                    |     2.526 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,8 +80,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.617 |       0.534 |      0.083 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.627 |       0.599 |      0.029 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.618 |       0.534 |      0.083 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.633 |       0.604 |      0.029 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.045 |       0.044 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,6 +144,7 @@ Table of Contents
 | clk_out1_dpti_clock                                                                                                                                       | DPTI_inst/clkwiz_inst/inst/clk_out1_dpti_clock                                                                                                                                                           |            16.7 |
 | clk_out2_clk_wiz_0                                                                                                                                        | PLL2_inst/inst/clk_out2_clk_wiz_0                                                                                                                                                                        |             2.5 |
 | clk_out2_dpti_clock                                                                                                                                       | DPTI_inst/clkwiz_inst/inst/clk_out2_dpti_clock                                                                                                                                                           |            16.7 |
+| clk_out3_clk_wiz_0                                                                                                                                        | PLL2_inst/inst/clk_out3_clk_wiz_0                                                                                                                                                                        |             5.0 |
 | clk_out4_clk_wiz_0                                                                                                                                        | PLL2_inst/inst/clk_out4_clk_wiz_0                                                                                                                                                                        |            10.0 |
 | clk_out5_clk_wiz_0                                                                                                                                        | PLL2_inst/inst/clk_out5_clk_wiz_0                                                                                                                                                                        |            40.0 |
 | clk_pll_i                                                                                                                                                 | DDR_INF_inst/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                         |             4.4 |
@@ -195,30 +196,32 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| Genesys2_VideoDemoR1        |     2.335 |
-|   AccCuentas_inst           |     0.008 |
-|     ID220_0                 |     0.005 |
+| Genesys2_VideoDemoR1        |     2.346 |
+|   AccCuentas_inst           |     0.011 |
+|     ID220_0                 |     0.007 |
+|     Pre001                  |     0.001 |
+|       o1                    |     0.001 |
 |     counter_ADP_1           |     0.002 |
-|   DDR_INF_inst              |     1.673 |
-|     u_mig_7series_0_mig     |     1.673 |
-|       u_ddr3_infrastructure |     0.249 |
+|   DDR_INF_inst              |     1.675 |
+|     u_mig_7series_0_mig     |     1.675 |
+|       u_ddr3_infrastructure |     0.250 |
 |       u_iodelay_ctrl        |     0.123 |
-|       u_memc_ui_top_std     |     1.300 |
+|       u_memc_ui_top_std     |     1.302 |
 |   DPTI_inst                 |     0.114 |
 |     clkwiz_inst             |     0.111 |
 |       inst                  |     0.111 |
 |     dpti2usr_fifo           |     0.002 |
-|   Inst_dvid                 |     0.019 |
-|   LB_0                      |     0.042 |
+|   Inst_dvid                 |     0.015 |
+|   LB_0                      |     0.043 |
 |     rgb_mem_inst            |     0.034 |
 |       U0                    |     0.034 |
-|   PLL2_inst                 |     0.116 |
-|     inst                    |     0.116 |
+|   PLL2_inst                 |     0.123 |
+|     inst                    |     0.123 |
 |   UART_TX_control_inst      |     0.032 |
 |     dcodeNto8_1             |     0.001 |
 |     modulo_Tx_1             |     0.030 |
 |       MemTx_8x65535_2       |     0.029 |
-|   control_DM_inst           |     0.034 |
+|   control_DM_inst           |     0.033 |
 |     MEM_ADC0                |     0.012 |
 |       U0                    |     0.012 |
 |     MEM_ADC1                |     0.011 |
@@ -227,6 +230,7 @@ Table of Contents
 |       U0                    |     0.009 |
 |   control_parametros_inst   |     0.009 |
 |   display_clocks_inst       |     0.108 |
+|   sync_pulse_det_gen_1      |     0.004 |
 |   sync_pulse_det_gen_2      |     0.002 |
 |   sync_pulse_det_gen_3      |     0.002 |
 |   sync_pulse_det_gen_4      |     0.002 |

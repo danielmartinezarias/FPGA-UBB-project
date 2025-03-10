@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Sun Sep 22 23:35:04 2024
--- Host        : donaufeld running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {c:/Users/danie/Documents/GitHub/FPGAs
---               UBB/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_sim_netlist.vhdl}
+-- Date        : Mon Mar 10 16:40:23 2025
+-- Host        : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_sim_netlist.vhdl
 -- Design      : clk_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,10 @@ entity clk_wiz_0_clk_wiz is
     clk_out3 : out STD_LOGIC;
     clk_out4 : out STD_LOGIC;
     clk_out5 : out STD_LOGIC;
+    psclk : in STD_LOGIC;
+    psen : in STD_LOGIC;
+    psincdec : in STD_LOGIC;
+    psdone : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1_p : in STD_LOGIC;
@@ -38,9 +42,17 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz is
   signal clk_out5_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_buf_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_clk_wiz_0 : STD_LOGIC;
-  signal NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
-  signal NLW_plle2_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
-  signal NLW_plle2_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of clkf_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkin1_ibufgds : label is "PRIMITIVE";
@@ -55,7 +67,7 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz is
   attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout4_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout5_buf : label is "PRIMITIVE";
-  attribute BOX_TYPE of plle2_adv_inst : label is "PRIMITIVE";
+  attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
      port map (
@@ -96,60 +108,89 @@ clkout5_buf: unisim.vcomponents.BUFG
       I => clk_out5_clk_wiz_0,
       O => clk_out5
     );
-plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
+mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT => 6,
+      CLKFBOUT_MULT_F => 4.000000,
       CLKFBOUT_PHASE => 0.000000,
+      CLKFBOUT_USE_FINE_PS => false,
       CLKIN1_PERIOD => 5.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE => 6,
+      CLKOUT0_DIVIDE_F => 4.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
-      CLKOUT1_DIVIDE => 3,
+      CLKOUT0_USE_FINE_PS => false,
+      CLKOUT1_DIVIDE => 2,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
-      CLKOUT2_DIVIDE => 6,
+      CLKOUT1_USE_FINE_PS => false,
+      CLKOUT2_DIVIDE => 4,
       CLKOUT2_DUTY_CYCLE => 0.500000,
-      CLKOUT2_PHASE => 180.000000,
-      CLKOUT3_DIVIDE => 12,
+      CLKOUT2_PHASE => 0.000000,
+      CLKOUT2_USE_FINE_PS => true,
+      CLKOUT3_DIVIDE => 8,
       CLKOUT3_DUTY_CYCLE => 0.500000,
       CLKOUT3_PHASE => 0.000000,
-      CLKOUT4_DIVIDE => 48,
+      CLKOUT3_USE_FINE_PS => false,
+      CLKOUT4_CASCADE => false,
+      CLKOUT4_DIVIDE => 32,
       CLKOUT4_DUTY_CYCLE => 0.500000,
       CLKOUT4_PHASE => 0.000000,
+      CLKOUT4_USE_FINE_PS => false,
       CLKOUT5_DIVIDE => 1,
       CLKOUT5_DUTY_CYCLE => 0.500000,
       CLKOUT5_PHASE => 0.000000,
+      CLKOUT5_USE_FINE_PS => false,
+      CLKOUT6_DIVIDE => 1,
+      CLKOUT6_DUTY_CYCLE => 0.500000,
+      CLKOUT6_PHASE => 0.000000,
+      CLKOUT6_USE_FINE_PS => false,
       COMPENSATION => "ZHOLD",
       DIVCLK_DIVIDE => 1,
       IS_CLKINSEL_INVERTED => '0',
+      IS_PSEN_INVERTED => '0',
+      IS_PSINCDEC_INVERTED => '0',
       IS_PWRDWN_INVERTED => '0',
       IS_RST_INVERTED => '0',
       REF_JITTER1 => 0.010000,
       REF_JITTER2 => 0.010000,
-      STARTUP_WAIT => "FALSE"
+      SS_EN => "FALSE",
+      SS_MODE => "CENTER_HIGH",
+      SS_MOD_PERIOD => 10000,
+      STARTUP_WAIT => false
     )
         port map (
       CLKFBIN => clkfbout_buf_clk_wiz_0,
       CLKFBOUT => clkfbout_clk_wiz_0,
+      CLKFBOUTB => NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED,
+      CLKFBSTOPPED => NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED,
       CLKIN1 => clk_in1_clk_wiz_0,
       CLKIN2 => '0',
       CLKINSEL => '1',
+      CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
       CLKOUT0 => clk_out1_clk_wiz_0,
+      CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
       CLKOUT1 => clk_out2_clk_wiz_0,
+      CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
       CLKOUT2 => clk_out3_clk_wiz_0,
+      CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
       CLKOUT3 => clk_out4_clk_wiz_0,
+      CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
       CLKOUT4 => clk_out5_clk_wiz_0,
-      CLKOUT5 => NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED,
+      CLKOUT5 => NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED,
+      CLKOUT6 => NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED,
       DADDR(6 downto 0) => B"0000000",
       DCLK => '0',
       DEN => '0',
       DI(15 downto 0) => B"0000000000000000",
-      DO(15 downto 0) => NLW_plle2_adv_inst_DO_UNCONNECTED(15 downto 0),
-      DRDY => NLW_plle2_adv_inst_DRDY_UNCONNECTED,
+      DO(15 downto 0) => NLW_mmcm_adv_inst_DO_UNCONNECTED(15 downto 0),
+      DRDY => NLW_mmcm_adv_inst_DRDY_UNCONNECTED,
       DWE => '0',
       LOCKED => locked,
+      PSCLK => psclk,
+      PSDONE => psdone,
+      PSEN => psen,
+      PSINCDEC => psincdec,
       PWRDWN => '0',
       RST => reset
     );
@@ -165,6 +206,10 @@ entity clk_wiz_0 is
     clk_out3 : out STD_LOGIC;
     clk_out4 : out STD_LOGIC;
     clk_out5 : out STD_LOGIC;
+    psclk : in STD_LOGIC;
+    psen : in STD_LOGIC;
+    psincdec : in STD_LOGIC;
+    psdone : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1_p : in STD_LOGIC;
@@ -186,6 +231,10 @@ inst: entity work.clk_wiz_0_clk_wiz
       clk_out4 => clk_out4,
       clk_out5 => clk_out5,
       locked => locked,
+      psclk => psclk,
+      psdone => psdone,
+      psen => psen,
+      psincdec => psincdec,
       reset => reset
     );
 end STRUCTURE;

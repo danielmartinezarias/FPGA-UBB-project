@@ -1160,10 +1160,10 @@ public Form1()
         int delay_1_FPGA;
         private void buttonSetDelay1_ValueChanged(object sender, EventArgs e)
         {
-            delay_1_FPGA = (int)(buttonSetDelay1.Value * numericUpDown7.Value / 1000);
+            delay_1_FPGA = (int)(buttonSetDelay1.Value *2*numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(51, "delay_1_numericUpDown", buttonSetDelay1.Value.ToString());
             label1.Text = Convert.ToString(delay_1_FPGA);
-            ParametroSerial(51, 32, delay_1_FPGA, 0);
+            ParametroSerial(51, 32, (int)delay_1_FPGA, 0);
         }
         int width_1_FPGA;
         private void buttonSetWidth1_ValueChanged(object sender, EventArgs e)
@@ -1184,7 +1184,7 @@ public Form1()
         int delay_2_FPGA;
         private void buttonSetDelay2_ValueChanged(object sender, EventArgs e)
         {
-            delay_2_FPGA = (int)(buttonSetDelay2.Value * numericUpDown7.Value / 1000);
+            delay_2_FPGA = (int)(buttonSetDelay2.Value *2* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(54, "delay_2_numericUpDown", buttonSetDelay2.Value.ToString());
             label1.Text = Convert.ToString(delay_2_FPGA);
             ParametroSerial(54, 32, delay_2_FPGA, 0);
@@ -1208,7 +1208,7 @@ public Form1()
         int delay_3_FPGA;
         private void buttonSetDelay3_ValueChanged(object sender, EventArgs e)
         {
-            delay_3_FPGA = (int)(buttonSetDelay3.Value * numericUpDown7.Value / 1000);
+            delay_3_FPGA = (int)(buttonSetDelay3.Value *2* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(57, "delay_3_numericUpDown", buttonSetDelay3.Value.ToString());
             label1.Text = Convert.ToString(delay_3_FPGA);
             ParametroSerial(57, 32, delay_3_FPGA, 0);
@@ -1232,7 +1232,7 @@ public Form1()
         int delay_4_FPGA;
         private void buttonSetDelay4_ValueChanged(object sender, EventArgs e)
         {
-            delay_4_FPGA = (int)(buttonSetDelay4.Value * numericUpDown7.Value / 1000);
+            delay_4_FPGA = (int)(buttonSetDelay4.Value *2* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(60, "delay_4_numericUpDown", buttonSetDelay4.Value.ToString());
             label1.Text = Convert.ToString(delay_4_FPGA);
             ParametroSerial(60, 32, delay_4_FPGA, 0);
@@ -1280,7 +1280,7 @@ public Form1()
         int delay_5_FPGA;
         private void buttonSetDelay5_ValueChanged(object sender, EventArgs e)
         {
-            delay_5_FPGA = (int)(buttonSetDelay5.Value * numericUpDown7.Value / 1000);
+            delay_5_FPGA = (int)(buttonSetDelay5.Value *2* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(63, "delay_5_numericUpDown", buttonSetDelay5.Value.ToString());
             label1.Text = Convert.ToString(delay_5_FPGA);
             ParametroSerial(63, 32, delay_5_FPGA, 0);
@@ -1304,7 +1304,7 @@ public Form1()
         int delay_6_FPGA;
         private void buttonSetDelay6_ValueChanged(object sender, EventArgs e)
         {
-            delay_6_FPGA = (int)(buttonSetDelay6.Value * numericUpDown7.Value / 1000);
+            delay_6_FPGA = (int)(buttonSetDelay6.Value *2* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(66, "delay_6_numericUpDown", buttonSetDelay6.Value.ToString());
             label1.Text = Convert.ToString(delay_6_FPGA);
             ParametroSerial(66, 32, delay_6_FPGA, 0);

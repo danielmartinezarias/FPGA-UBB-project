@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conexiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -438,17 +438,17 @@
             // 
             // chart1
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea9);
-            legend9.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend9.Name = "Legend1";
-            this.chart1.Legends.Add(legend9);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chart1.Series.Add(series9);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             // 
             // button1
             // 
@@ -541,17 +541,17 @@
             // 
             // chart2
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea10);
-            legend10.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend10.Name = "Legend1";
-            this.chart2.Legends.Add(legend10);
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
             resources.ApplyResources(this.chart2, "chart2");
             this.chart2.Name = "chart2";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart2.Series.Add(series10);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart2.Series.Add(series4);
             // 
             // label9
             // 
@@ -618,11 +618,12 @@
             // 
             // buttonSetDelay1
             // 
+            this.buttonSetDelay1.DecimalPlaces = 1;
             this.buttonSetDelay1.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            65536});
             resources.ApplyResources(this.buttonSetDelay1, "buttonSetDelay1");
             this.buttonSetDelay1.Maximum = new decimal(new int[] {
             1000000000,
@@ -686,11 +687,12 @@
             // 
             // buttonSetDelay2
             // 
+            this.buttonSetDelay2.DecimalPlaces = 1;
             this.buttonSetDelay2.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            65536});
             resources.ApplyResources(this.buttonSetDelay2, "buttonSetDelay2");
             this.buttonSetDelay2.Maximum = new decimal(new int[] {
             1000000000,
@@ -745,11 +747,12 @@
             // 
             // buttonSetDelay3
             // 
+            this.buttonSetDelay3.DecimalPlaces = 1;
             this.buttonSetDelay3.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            65536});
             resources.ApplyResources(this.buttonSetDelay3, "buttonSetDelay3");
             this.buttonSetDelay3.Maximum = new decimal(new int[] {
             1000000000,
@@ -795,11 +798,12 @@
             // 
             // buttonSetDelay4
             // 
+            this.buttonSetDelay4.DecimalPlaces = 1;
             this.buttonSetDelay4.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            65536});
             resources.ApplyResources(this.buttonSetDelay4, "buttonSetDelay4");
             this.buttonSetDelay4.Maximum = new decimal(new int[] {
             1000000000,
@@ -892,11 +896,12 @@
             // 
             // buttonSetDelay5
             // 
+            this.buttonSetDelay5.DecimalPlaces = 1;
             this.buttonSetDelay5.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            65536});
             resources.ApplyResources(this.buttonSetDelay5, "buttonSetDelay5");
             this.buttonSetDelay5.Maximum = new decimal(new int[] {
             1000000000,
@@ -960,11 +965,12 @@
             // 
             // buttonSetDelay6
             // 
+            this.buttonSetDelay6.DecimalPlaces = 1;
             this.buttonSetDelay6.Increment = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            0});
+            65536});
             resources.ApplyResources(this.buttonSetDelay6, "buttonSetDelay6");
             this.buttonSetDelay6.Maximum = new decimal(new int[] {
             1000000000,

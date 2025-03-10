@@ -146,7 +146,7 @@ end component;
 -- PLL input is 200 MHz Differential clock-capable pin
 -- output 1 is 200 MHz, 50% Duty Cycle, 0 phase, BUFG
 -- output 2 is 200 MHz, 50% Duty Cycle, 0 phase, BUFG
--- output 3 is 200 MHz, 50% Duty Cycle, 180 phase, BUFG
+-- output 3 is 800 MHz, 50% Duty Cycle, 0 phase, BUFG
 -- output 4 is 100 MHz, 50% Duty Cycle, 0 phase, BUFG
 -- output 5 is  40 MHz, 50% Duty Cycle, 0 phase, BUFG
 -- All other settings are Clocking Wizard defaults
@@ -621,6 +621,7 @@ signal rd_addr_ld             : std_logic;
 signal ui_clk                 : std_logic;
 signal clk200                 : std_logic;
 signal clk400                 : std_logic;
+signal clk533                 : std_logic;
 signal wcount                 : std_logic_vector(31 downto 0);
 signal rcount                 : std_logic_vector(31 downto 0);
 signal dcount                 : std_logic_vector(31 downto 0);
@@ -872,7 +873,7 @@ begin
     port map (
     clk_out1   => clk200,   -- mig_7series_0 sys_clk_i
     clk_out2   => clk400,     -- 200 MHz
-    clk_out3   => open,     -- 200 MHz 180 phase
+    clk_out3   => clk533,     -- 533 MHz 180 phase
     clk_out4   => clk100,   -- 100 MHz clock
     clk_out5   => clk25,    -- 25 MHz Pixel clock
     reset      => '0',
@@ -1101,7 +1102,7 @@ begin
        
   sync_pulse_det_gen_2 : sync_pulse_det_generator
 port map (
-    clk         => clk200, 
+    clk         => clk533, 
     freq_sync   => freq_1,
     delay_pulse => delay_1,
     width_pulse => width_1,
@@ -1118,7 +1119,7 @@ port map (
 
 sync_pulse_det_gen_3 : sync_pulse_det_generator
 port map (
-    clk         => clk200, 
+    clk         => clk533, 
     freq_sync   => freq_2,
     delay_pulse => delay_2,
     width_pulse => width_2,
@@ -1135,7 +1136,7 @@ port map (
 
 sync_pulse_det_gen_4 : sync_pulse_det_generator
 port map (
-    clk         => clk200, 
+    clk         => clk533, 
     freq_sync   => freq_3,
     delay_pulse => delay_3,
     width_pulse => width_3,
@@ -1152,7 +1153,7 @@ port map (
 
 sync_pulse_det_gen_5 : sync_pulse_det_generator
 port map (
-    clk         => clk200, 
+    clk         => clk533, 
     freq_sync   => freq_4,
     delay_pulse => delay_4,
     width_pulse => width_4,
@@ -1169,7 +1170,7 @@ port map (
 
 sync_pulse_det_gen_6 : sync_pulse_det_generator
 port map (
-    clk         => clk200, 
+    clk         => clk533, 
     freq_sync   => freq_5,
     delay_pulse => delay_5,
     width_pulse => width_5,
@@ -1186,7 +1187,7 @@ port map (
 
 sync_pulse_det_gen_7 : sync_pulse_det_generator
 port map (
-    clk         => clk200, 
+    clk         => clk533, 
     freq_sync   => freq_6,
     delay_pulse => delay_6,
     width_pulse => width_6,
