@@ -114,6 +114,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/PreProc_Cs_ID220.v
   C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/SimpleOneShot_ID220.v
   C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/ID220.v
+  C:/Users/crist/Downloads/control_phase.v
 }
 read_vhdl -library xil_defaultlib {
   C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd

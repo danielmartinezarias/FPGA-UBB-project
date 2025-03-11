@@ -58,6 +58,7 @@
 // clk_out3__200.00000______0.000______50.0______100.010_____97.786
 // clk_out4__100.00000______0.000______50.0______114.523_____97.786
 // clk_out5__25.00000______0.000______50.0______151.619_____97.786
+// clk_out6__10.00000______0.000______50.0______181.846_____97.786
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -75,6 +76,7 @@ module clk_wiz_0_clk_wiz
   output        clk_out3,
   output        clk_out4,
   output        clk_out5,
+  output        clk_out6,
   // Dynamic phase shift ports
   input         psclk,
   input         psen,
@@ -123,7 +125,6 @@ wire clk_in2_clk_wiz_0;
    wire clkout1b_unused;
    wire clkout2b_unused;
    wire clkout3b_unused;
-  wire        clkout5_unused;
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
   wire        clkinstopped_unused;
@@ -158,6 +159,10 @@ wire clk_in2_clk_wiz_0;
     .CLKOUT4_PHASE        (0.000),
     .CLKOUT4_DUTY_CYCLE   (0.500),
     .CLKOUT4_USE_FINE_PS  ("FALSE"),
+    .CLKOUT5_DIVIDE       (80),
+    .CLKOUT5_PHASE        (0.000),
+    .CLKOUT5_DUTY_CYCLE   (0.500),
+    .CLKOUT5_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (5.000))
   mmcm_adv_inst
     // Output clocks
@@ -173,7 +178,7 @@ wire clk_in2_clk_wiz_0;
     .CLKOUT3             (clk_out4_clk_wiz_0),
     .CLKOUT3B            (clkout3b_unused),
     .CLKOUT4             (clk_out5_clk_wiz_0),
-    .CLKOUT5             (clkout5_unused),
+    .CLKOUT5             (clk_out6_clk_wiz_0),
     .CLKOUT6             (clkout6_unused),
      // Input clock control
     .CLKFBIN             (clkfbout_buf_clk_wiz_0),
@@ -237,6 +242,10 @@ wire clk_in2_clk_wiz_0;
   BUFG clkout5_buf
    (.O   (clk_out5),
     .I   (clk_out5_clk_wiz_0));
+
+  BUFG clkout6_buf
+   (.O   (clk_out6),
+    .I   (clk_out6_clk_wiz_0));
 
 
 

@@ -57,6 +57,7 @@
 // clk_out3__200.00000______0.000______50.0______100.010_____97.786
 // clk_out4__100.00000______0.000______50.0______114.523_____97.786
 // clk_out5__25.00000______0.000______50.0______151.619_____97.786
+// clk_out6__10.00000______0.000______50.0______181.846_____97.786
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -77,6 +78,7 @@
     .clk_out3(clk_out3),     // output clk_out3
     .clk_out4(clk_out4),     // output clk_out4
     .clk_out5(clk_out5),     // output clk_out5
+    .clk_out6(clk_out6),     // output clk_out6
     // Dynamic phase shift ports
     .psclk(psclk), // input psclk
     .psen(psen), // input psen

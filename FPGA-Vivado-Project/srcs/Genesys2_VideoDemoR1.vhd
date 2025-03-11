@@ -88,9 +88,6 @@ entity Genesys2_VideoDemoR1 is
     hdmi_tx_n                 : out  STD_LOGIC_VECTOR(2 downto 0);
     hdmi_tx_clk_p             : out  std_logic;
     hdmi_tx_clk_n             : out  std_logic
-    
-    --
-    
     -- FMC
 --    fmc_clk0_m2c_n            : out std_logic
   );
@@ -159,11 +156,16 @@ port
   clk_out3          : out    std_logic;
   clk_out4          : out    std_logic;
   clk_out5          : out    std_logic;
+  clk_out6          : out    std_logic;
   -- Status and control signals
   reset             : in     std_logic;
   locked            : out    std_logic;
   clk_in1_p         : in     std_logic;
-  clk_in1_n         : in     std_logic
+  clk_in1_n         : in     std_logic;
+  psclk             : in     std_logic;
+  psen              : in     std_logic;
+  psincdec          : in     std_logic;
+  psdone            : out    std_logic
  );
 end component;
 component dpti_ctrl
@@ -363,7 +365,7 @@ end component;
             CW          : in std_logic
      );
   END COMPONENT;
-  
+
   --Modulo Control_parametros
   COMPONENT control_parametros is
   PORT(
@@ -519,8 +521,18 @@ PORT(
     gate_ID220              : in std_logic
     );
    END COMPONENT;
-   
-
+--Control Phase
+component control_phase is
+    port(
+        clk100MHz : in std_logic;
+        clk_slow  : in std_logic;
+        N         : in std_logic_vector(15 downto 0);
+        start     : in std_logic;
+        psdone    : in std_logic;
+        psen      : out std_logic;
+        psincdec  : out std_logic
+);
+end component;
 
 -------------------------------------------------------------------------------
 --  Type Declarations
@@ -572,6 +584,7 @@ signal tstate                : t_states;
 signal ustate                : u_states;
 signal clk100                : std_logic;
 signal clk25                 : std_logic;
+signal clk10                 : std_logic;
 signal areset                : std_logic;
 signal arstn                 : std_logic;
 signal pll_islocked          : std_logic;
@@ -858,8 +871,14 @@ signal douta2               : std_logic_vector(31 downto 0);
 signal controlDM            : std_logic_vector(7 downto 0);
 signal dataPoints           : std_logic_vector(15 downto 0); 
 
-
-
+--Modulo Control Phase
+signal clk_slow    : std_logic;
+signal N           : std_logic_vector(15 downto 0);
+signal start       : std_logic;
+signal psdone      : std_logic;
+signal psen        : std_logic := '0';
+signal start_phase       : std_logic;
+signal psincdec         : std_logic;
 
 
 
@@ -871,16 +890,22 @@ begin
 -- Main Clock Generator for 800x600 Display
   PLL2_inst : clk_wiz_0
     port map (
-    clk_out1   => clk200,   -- mig_7series_0 sys_clk_i
-    clk_out2   => clk400,     -- 200 MHz
-    clk_out3   => clk533,     -- 533 MHz 180 phase
-    clk_out4   => clk100,   -- 100 MHz clock
-    clk_out5   => clk25,    -- 25 MHz Pixel clock
-    reset      => '0',
-    locked     => pll_islocked,
-    clk_in1_p  => sysclk_p,
-    clk_in1_n  => sysclk_n
- );
+        clk_out1   => clk200,
+        clk_out2   => clk400,
+        clk_out3   => clk533,     
+        clk_out4   => clk100,
+        clk_out5   => clk25,
+        clk_out6   => clk10,
+        reset      => '0',
+        locked     => pll_islocked,
+        clk_in1_p  => sysclk_p,
+        clk_in1_n  => sysclk_n,
+        -- DPS signals:
+        psen       => psen,
+        psclk      => clk10, --10 Mhz
+        psincdec   => psincdec,
+        psdone     => psdone
+    );
 
 --  Cascaded 148.5 MHz Pixel Clocking
   display_clocks_inst : display_clocks
@@ -1078,7 +1103,17 @@ begin
       vsync_out     => dly_vSync,
       blank_out     => dly_blank
     );
-
+-- Control Phase
+control_phase_inst : control_phase
+    port map(
+        clk100MHz => clk100,
+        clk_slow  => clk10,
+        N         => N,                
+        start     => start_phase,      
+        psdone    => psdone,   
+        psen      => psen,
+        psincdec  => psincdec   
+    );
 
  --Sync pulse det generator
 
@@ -1200,7 +1235,8 @@ port map (
     sync_ext    => '0',
     pulse_control => '1', 
     CW          => '0'
-);        
+);
+
   --Control_parametros
    control_parametros_inst : control_parametros
    port map (
