@@ -49,10 +49,10 @@ AliceBob	Alice
 	
 	
 freq_1_numericUpDown	1.000000
-delay_1_numericUpDown	16.3
+delay_1_numericUpDown	5.00
 width_1_numericUpDown	200
 freq_2_numericUpDown	1.000000
-delay_2_numericUpDown	3.7
+delay_2_numericUpDown	4.8
 width_2_numericUpDown	200
 freq_3_numericUpDown	1.000000
 delay_3_numericUpDown	0

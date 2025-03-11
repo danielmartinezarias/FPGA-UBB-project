@@ -1157,10 +1157,11 @@ public Form1()
             label1.Text = Convert.ToString(freq_1_FPGA);
             ParametroSerial(50, 32, freq_1_FPGA, 0);
         }
-        int delay_1_FPGA;
+        long delay_1_FPGA;
         private void buttonSetDelay1_ValueChanged(object sender, EventArgs e)
         {
-            delay_1_FPGA = (int)(buttonSetDelay1.Value *numericUpDown7.Value / 1000);
+            //delay_1_FPGA = (int)(buttonSetDelay1.Value *numericUpDown7.Value / 1000);
+            delay_1_FPGA = (long)(buttonSetDelay1.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(51, "delay_1_numericUpDown", buttonSetDelay1.Value.ToString());
             label1.Text = Convert.ToString(delay_1_FPGA);
             ParametroSerial(51, 32, (int)delay_1_FPGA, 0);

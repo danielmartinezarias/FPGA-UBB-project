@@ -12,7 +12,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Genesys2_VideoDemoR1.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 555.707 ; gain = 179.844
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 553.539 ; gain = 178.875
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/crist/OneDrive/Documentos/Dropbox/PC/Downloads/Genesys2VideoDemo_R1/Genesys2VideoDemo_R1/hdl'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
@@ -32,22 +32,22 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17632
+INFO: [Synth 8-7075] Helper process launched with PID 29412
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1482.395 ; gain = 439.895
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1482.910 ; gain = 441.129
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'gate_ID220' is not allowed [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:51]
 WARNING: [Synth 8-8984] 'gate_ID220' was previously declared without a range [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:51]
 INFO: [Synth 8-638] synthesizing module 'Genesys2_VideoDemoR1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:96]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6' bound to instance 'PLL2_inst' of component 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:891]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6' bound to instance 'PLL2_inst' of component 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:893]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/clk_wiz_0_stub.v:6]
 	Parameter MULT_MASTER bound to: 37.125000 - type: double 
 	Parameter DIV_MASTER bound to: 5.000000 - type: double 
 	Parameter DIV_5X bound to: 1.000000 - type: double 
 	Parameter DIV_1X bound to: 5.000000 - type: double 
 	Parameter IN_PERIOD bound to: 10.000000 - type: double 
-INFO: [Synth 8-3491] module 'display_clocks' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v:10' bound to instance 'display_clocks_inst' of component 'display_clocks' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:911]
+INFO: [Synth 8-3491] module 'display_clocks' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v:10' bound to instance 'display_clocks_inst' of component 'display_clocks' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:912]
 INFO: [Synth 8-6157] synthesizing module 'display_clocks' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/display_clocks.v:10]
 	Parameter MULT_MASTER bound to: 37.125000 - type: double 
 	Parameter DIV_MASTER bound to: 5.000000 - type: double 
@@ -111,12 +111,12 @@ INFO: [Synth 8-6155] done synthesizing module 'display_clocks' (0#1) [C:/Users/c
 	Parameter INIT_5C bound to: 16'b0101000100010001 
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter SIM_MONITOR_FILE bound to: design.txt - type: string 
-INFO: [Synth 8-113] binding component instance 'XADC_inst' to cell 'XADC' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:931]
-INFO: [Synth 8-3491] module 'dpti_ctrl' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:39' bound to instance 'DPTI_inst' of component 'dpti_ctrl' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:996]
+INFO: [Synth 8-113] binding component instance 'XADC_inst' to cell 'XADC' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:932]
+INFO: [Synth 8-3491] module 'dpti_ctrl' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:39' bound to instance 'DPTI_inst' of component 'dpti_ctrl' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:997]
 INFO: [Synth 8-638] synthesizing module 'dpti_ctrl' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:74]
-INFO: [Synth 8-3491] module 'dpti_clock' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6' bound to instance 'clkwiz_inst' of component 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:183]
-INFO: [Synth 8-6157] synthesizing module 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dpti_clock' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
+INFO: [Synth 8-3491] module 'dpti_clock' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6' bound to instance 'clkwiz_inst' of component 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:183]
+INFO: [Synth 8-6157] synthesizing module 'dpti_clock' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dpti_clock' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/dpti_clock_stub.v:6]
 	Parameter DRIVE bound to: 16 - type: integer 
 	Parameter SLEW bound to: FAST - type: string 
 INFO: [Synth 8-113] binding component instance 'IOBUF_inst' to cell 'IOBUF' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:245]
@@ -200,10 +200,10 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO__paramete
 INFO: [Synth 8-113] binding component instance 'fifo_36_bl' to cell 'FIFO36E1' [D:/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:843]
 INFO: [Synth 8-256] done synthesizing module 'unimacro_FIFO_DUALCLOCK_MACRO__parameterized0' (0#1) [D:/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:70]
 INFO: [Synth 8-256] done synthesizing module 'dpti_ctrl' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dpti_ctrl.vhd:74]
-INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6' bound to instance 'DDR_INF_inst' of component 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1027]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
-INFO: [Synth 8-3491] module 'dvid' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:15' bound to instance 'Inst_dvid' of component 'dvid' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1070]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6' bound to instance 'DDR_INF_inst' of component 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1028]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/mig_7series_0_stub.v:6]
+INFO: [Synth 8-3491] module 'dvid' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:15' bound to instance 'Inst_dvid' of component 'dvid' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1071]
 INFO: [Synth 8-638] synthesizing module 'dvid' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:31]
 INFO: [Synth 8-3491] module 'TDMS_encoder' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:14' bound to instance 'TDMS_encoder_red' of component 'TDMS_encoder' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:56]
 INFO: [Synth 8-638] synthesizing module 'TDMS_encoder' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/TMDS_encoder.vhd:22]
@@ -228,47 +228,47 @@ INFO: [Synth 8-113] binding component instance 'ODDR2_blue' to cell 'ODDR2' [C:/
 INFO: [Synth 8-113] binding component instance 'ODDR2_clock' to cell 'ODDR2' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:69]
 INFO: [Synth 8-256] done synthesizing module 'dvid' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dvid.vhd:31]
 	Parameter H_PIXELS bound to: 1920 - type: integer 
-INFO: [Synth 8-3491] module 'VideoLineBuffer_1' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:81' bound to instance 'LB_0' of component 'VideoLineBuffer_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1088]
+INFO: [Synth 8-3491] module 'VideoLineBuffer_1' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:81' bound to instance 'LB_0' of component 'VideoLineBuffer_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1089]
 INFO: [Synth 8-638] synthesizing module 'VideoLineBuffer_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:108]
 	Parameter H_PIXELS bound to: 1920 - type: integer 
-INFO: [Synth 8-3491] module 'DPRAM_W245_R32' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6' bound to instance 'rgb_mem_inst' of component 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:186]
-INFO: [Synth 8-6157] synthesizing module 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DPRAM_W245_R32' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
+INFO: [Synth 8-3491] module 'DPRAM_W245_R32' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6' bound to instance 'rgb_mem_inst' of component 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:186]
+INFO: [Synth 8-6157] synthesizing module 'DPRAM_W245_R32' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DPRAM_W245_R32' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/DPRAM_W245_R32_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'VideoLineBuffer_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/VideoLineBuffer_1.vhd:108]
-INFO: [Synth 8-3491] module 'control_phase' declared at 'C:/Users/crist/Downloads/control_phase.v:23' bound to instance 'control_phase_inst' of component 'control_phase' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1107]
+INFO: [Synth 8-3491] module 'control_phase' declared at 'C:/Users/crist/Downloads/control_phase.v:23' bound to instance 'control_phase_inst' of component 'control_phase' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1108]
 INFO: [Synth 8-6157] synthesizing module 'control_phase' [C:/Users/crist/Downloads/control_phase.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/Downloads/control_phase.v:71]
 INFO: [Synth 8-6155] done synthesizing module 'control_phase' (0#1) [C:/Users/crist/Downloads/control_phase.v:23]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_1' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1120]
+INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_1' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1121]
 INFO: [Synth 8-6157] synthesizing module 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23]
 INFO: [Synth 8-6157] synthesizing module 'OneShoot' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/OneShoot.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'OneShoot' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/OneShoot.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:88]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:124]
 INFO: [Synth 8-6155] done synthesizing module 'sync_pulse_det_generator' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_2' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1138]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_3' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1155]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_4' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1172]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_5' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1189]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_6' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1206]
-INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_7' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1223]
-INFO: [Synth 8-3491] module 'control_parametros' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v:23' bound to instance 'control_parametros_inst' of component 'control_parametros' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1241]
+INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_2' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1139]
+INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_3' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1156]
+INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_4' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1173]
+INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_5' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1190]
+INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_6' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1207]
+INFO: [Synth 8-3491] module 'sync_pulse_det_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/sync_pulse_det_generator.v:23' bound to instance 'sync_pulse_det_gen_7' of component 'sync_pulse_det_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1224]
+INFO: [Synth 8-3491] module 'control_parametros' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v:23' bound to instance 'control_parametros_inst' of component 'control_parametros' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1242]
 INFO: [Synth 8-6157] synthesizing module 'control_parametros' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'control_parametros' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_parametros.v:23]
-INFO: [Synth 8-3491] module 'pmodDA2' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:23' bound to instance 'pmodDA2_inst' of component 'pmodDA2' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1291]
+INFO: [Synth 8-3491] module 'pmodDA2' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:23' bound to instance 'pmodDA2_inst' of component 'pmodDA2' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1292]
 INFO: [Synth 8-6157] synthesizing module 'pmodDA2' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:34]
 INFO: [Synth 8-6155] done synthesizing module 'pmodDA2' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/pmodDA2.v:23]
-INFO: [Synth 8-3491] module 'UART_Rx' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v:23' bound to instance 'UART_Rx_inst' of component 'UART_Rx' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1304]
+INFO: [Synth 8-3491] module 'UART_Rx' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v:23' bound to instance 'UART_Rx_inst' of component 'UART_Rx' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1305]
 INFO: [Synth 8-6157] synthesizing module 'UART_Rx' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'UART_Rx' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_Rx.v:23]
-INFO: [Synth 8-3491] module 'tick_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v:23' bound to instance 'tick_generator_inst' of component 'tick_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1314]
+INFO: [Synth 8-3491] module 'tick_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v:23' bound to instance 'tick_generator_inst' of component 'tick_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1315]
 INFO: [Synth 8-6157] synthesizing module 'tick_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'tick_generator' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/tick_generator.v:23]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_blue' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1320]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_red' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1321]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_green' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1322]
-INFO: [Synth 8-113] binding component instance 'OBUFDS_clock' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1323]
+INFO: [Synth 8-113] binding component instance 'OBUFDS_blue' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1321]
+INFO: [Synth 8-113] binding component instance 'OBUFDS_red' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1322]
+INFO: [Synth 8-113] binding component instance 'OBUFDS_green' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1323]
+INFO: [Synth 8-113] binding component instance 'OBUFDS_clock' to cell 'OBUFDS' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1324]
 	Parameter hori_line bound to: 2200 - type: integer 
 	Parameter hori_back bound to: 148 - type: integer 
 	Parameter hori_front bound to: 88 - type: integer 
@@ -277,7 +277,7 @@ INFO: [Synth 8-113] binding component instance 'OBUFDS_clock' to cell 'OBUFDS' [
 	Parameter vert_front bound to: 4 - type: integer 
 	Parameter H_sync_cycle bound to: 44 - type: integer 
 	Parameter V_sync_cycle bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'video_sync_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v:1' bound to instance 'vga_gen_inst' of component 'video_sync_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1328]
+INFO: [Synth 8-3491] module 'video_sync_generator' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v:1' bound to instance 'vga_gen_inst' of component 'video_sync_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1329]
 INFO: [Synth 8-6157] synthesizing module 'video_sync_generator' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v:1]
 	Parameter hori_line bound to: 2200 - type: integer 
 	Parameter hori_back bound to: 148 - type: integer 
@@ -288,7 +288,7 @@ INFO: [Synth 8-6157] synthesizing module 'video_sync_generator' [C:/Users/crist/
 	Parameter H_sync_cycle bound to: 44 - type: integer 
 	Parameter V_sync_cycle bound to: 5 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'video_sync_generator' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/video_sync_generator.v:1]
-INFO: [Synth 8-3491] module 'AccCuentas' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:21' bound to instance 'AccCuentas_inst' of component 'AccCuentas' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1350]
+INFO: [Synth 8-3491] module 'AccCuentas' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:21' bound to instance 'AccCuentas_inst' of component 'AccCuentas' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1351]
 INFO: [Synth 8-6157] synthesizing module 'AccCuentas' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:21]
 INFO: [Synth 8-6157] synthesizing module 'PreProc_Cs_ID220' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/PreProc_Cs_ID220.v:23]
 INFO: [Synth 8-6157] synthesizing module 'SimpleOneShot_ID220' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/SimpleOneShot_ID220.v:21]
@@ -300,15 +300,15 @@ INFO: [Synth 8-6157] synthesizing module 'ID220' [C:/Users/crist/OneDrive/Docume
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/ID220.v:44]
 INFO: [Synth 8-6155] done synthesizing module 'ID220' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/ID220.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'AccCuentas' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/AccCuentas.v:21]
-INFO: [Synth 8-3491] module 'UART_TX_control' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22' bound to instance 'UART_TX_control_inst' of component 'UART_TX_control' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1369]
+INFO: [Synth 8-3491] module 'UART_TX_control' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22' bound to instance 'UART_TX_control_inst' of component 'UART_TX_control' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1370]
 INFO: [Synth 8-6157] synthesizing module 'UART_TX_control' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22]
 INFO: [Synth 8-6157] synthesizing module 'dcodeNto8' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:59]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:40]
 INFO: [Synth 8-6155] done synthesizing module 'dcodeNto8' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/dcodeNto8.v:23]
 INFO: [Synth 8-6157] synthesizing module 'modulo_Tx' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/modulo_Tx.v:21]
-INFO: [Synth 8-6157] synthesizing module 'MemTx_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MemTx_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MemTx_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MemTx_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/MemTx_1_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'control_Tx' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:21]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'control_Tx' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_Tx.v:21]
@@ -318,31 +318,31 @@ INFO: [Synth 8-6155] done synthesizing module 'UART_Tx' (0#1) [C:/Users/crist/On
 INFO: [Synth 8-6155] done synthesizing module 'modulo_Tx' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/modulo_Tx.v:21]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:82]
 INFO: [Synth 8-6155] done synthesizing module 'UART_TX_control' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/UART_TX_control.v:22]
-INFO: [Synth 8-3491] module 'control_DM' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22' bound to instance 'control_DM_inst' of component 'control_DM' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1392]
+INFO: [Synth 8-3491] module 'control_DM' declared at 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22' bound to instance 'control_DM_inst' of component 'control_DM' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1393]
 INFO: [Synth 8-6157] synthesizing module 'control_DM' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-24724-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/.Xil/Vivado-27916-LAPTOP-RR96MLV1/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:203]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:105]
 INFO: [Synth 8-6155] done synthesizing module 'control_DM' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:22]
-WARNING: [Synth 8-614] signal 'reset_DDR3' is read in the process but is not in the sensitivity list [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1629]
-INFO: [Synth 8-226] default block is never used [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1805]
+WARNING: [Synth 8-614] signal 'reset_DDR3' is read in the process but is not in the sensitivity list [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1630]
+INFO: [Synth 8-226] default block is never used [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1806]
 INFO: [Synth 8-256] done synthesizing module 'Genesys2_VideoDemoR1' (0#1) [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:96]
 WARNING: [Synth 8-3848] Net dip_pattern in module/entity unimacro_FIFO_DUALCLOCK_MACRO does not have driver. [D:/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:590]
 WARNING: [Synth 8-3848] Net dip_pattern in module/entity unimacro_FIFO_DUALCLOCK_MACRO__parameterized0 does not have driver. [D:/Vivado/2023.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:590]
 WARNING: [Synth 8-6014] Unused sequential element count32bits_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/control_DM.v:129]
-WARNING: [Synth 8-6014] Unused sequential element xadc_rd_reg_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1475]
-WARNING: [Synth 8-6014] Unused sequential element ureg_3_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1668]
-WARNING: [Synth 8-6014] Unused sequential element wreqcnt_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1753]
-WARNING: [Synth 8-6014] Unused sequential element wtimer_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1931]
-WARNING: [Synth 8-6014] Unused sequential element rtimer_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1932]
-WARNING: [Synth 8-6014] Unused sequential element dpti_ui_wr_data_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2046]
-WARNING: [Synth 8-6014] Unused sequential element test_state_dgb_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1458]
-WARNING: [Synth 8-6014] Unused sequential element test_state_dgb_1_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1457]
-WARNING: [Synth 8-6014] Unused sequential element app_rd_data_valid_r_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2247]
-WARNING: [Synth 8-6014] Unused sequential element ts_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2258]
+WARNING: [Synth 8-6014] Unused sequential element xadc_rd_reg_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1476]
+WARNING: [Synth 8-6014] Unused sequential element ureg_3_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1669]
+WARNING: [Synth 8-6014] Unused sequential element wreqcnt_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1754]
+WARNING: [Synth 8-6014] Unused sequential element wtimer_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1932]
+WARNING: [Synth 8-6014] Unused sequential element rtimer_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1933]
+WARNING: [Synth 8-6014] Unused sequential element dpti_ui_wr_data_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2047]
+WARNING: [Synth 8-6014] Unused sequential element test_state_dgb_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1459]
+WARNING: [Synth 8-6014] Unused sequential element test_state_dgb_1_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:1458]
+WARNING: [Synth 8-6014] Unused sequential element app_rd_data_valid_r_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2248]
+WARNING: [Synth 8-6014] Unused sequential element ts_reg was removed.  [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:2259]
 WARNING: [Synth 8-3848] Net fmc_la_p_01 in module/entity Genesys2_VideoDemoR1 does not have driver. [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:32]
 WARNING: [Synth 8-3848] Net fmc_la_p_06 in module/entity Genesys2_VideoDemoR1 does not have driver. [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:34]
 WARNING: [Synth 8-3848] Net fmc_la_p_15 in module/entity Genesys2_VideoDemoR1 does not have driver. [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys2_VideoDemoR1.vhd:35]
@@ -451,18 +451,18 @@ WARNING: [Synth 8-7129] Port btnl in module Genesys2_VideoDemoR1 is either uncon
 WARNING: [Synth 8-7129] Port btnr in module Genesys2_VideoDemoR1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btnu in module Genesys2_VideoDemoR1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1630.176 ; gain = 587.676
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1630.562 ; gain = 588.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1630.176 ; gain = 587.676
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1630.562 ; gain = 588.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1630.176 ; gain = 587.676
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1630.562 ; gain = 588.781
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1630.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1630.562 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_blue' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_clock' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'clk_n' that is connected to this pin will not be connected to the replacement instance.
@@ -504,7 +504,7 @@ Finished Parsing XDC File [C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-pr
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1740.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1736.207 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 8 instances
@@ -513,7 +513,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   ODDR2 => ODDR: 4 instances
 
 El sistema no puede encontrar la ruta especificada.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1740.957 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1736.207 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'LB_0/rgb_mem_inst' at clock pin 'clka' is different from the actual clock period '6.734', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'UART_TX_control_inst/modulo_Tx_1/MemTx_8x65535_2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'control_DM_inst/MEM_ADC0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
@@ -522,14 +522,14 @@ WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context s
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -691,7 +691,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for DPTI_inst/clkwiz_inst. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_INF_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for PLL2_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'stPtiCur_reg' in module 'dpti_ctrl'
 INFO: [Synth 8-802] inferred FSM for state register 'control2_reg' in module 'control_phase'
@@ -831,7 +831,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'd_state_reg' using encoding 'one-hot' in module 'Genesys2_VideoDemoR1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -994,7 +994,7 @@ WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control2_reg[2]) is unuse
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control2_reg[1]) is unused and will be removed from module sync_pulse_det_generator__1.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_control2_reg[0]) is unused and will be removed from module sync_pulse_det_generator__1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:40 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
  Sort Area is  mascara_out0_0 : 0 0 : 388 388 : Used 1 time 0
  Sort Area is  mascara_out_2 : 0 0 : 388 388 : Used 1 time 0
@@ -1018,19 +1018,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:50 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:51 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:48 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:54 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:51 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1048,37 +1048,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:59 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:57 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:59 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:57 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1161,13 +1161,13 @@ Report Cell Usage:
 |34    |OBUFT          |    12|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1736.207 ; gain = 694.426
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 102 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:56 . Memory (MB): peak = 1740.957 ; gain = 587.676
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:01:00 . Memory (MB): peak = 1740.957 ; gain = 698.457
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:54 . Memory (MB): peak = 1736.207 ; gain = 588.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:58 . Memory (MB): peak = 1736.207 ; gain = 694.426
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1740.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1736.207 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 322 Unisim elements for replacement
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_blue' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'o_clk_5x_n' that is connected to this pin will not be connected to the replacement instance.
 WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_clock' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'o_clk_5x_n' that is connected to this pin will not be connected to the replacement instance.
@@ -1176,7 +1176,7 @@ WARNING: [Netlist 29-151] Pin 'C1' on instance 'Inst_dvid/ODDR2_red' of cell typ
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1740.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1736.207 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 8 instances
@@ -1185,12 +1185,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   ODDR2 => ODDR: 4 instances
 
 El sistema no puede encontrar la ruta especificada.
-Synth Design complete | Checksum: e247208b
+Synth Design complete | Checksum: f0dc8ab7
 INFO: [Common 17-83] Releasing license: Synthesis
 187 Infos, 176 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:01:08 . Memory (MB): peak = 1740.957 ; gain = 1151.441
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1740.957 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:01:06 . Memory (MB): peak = 1736.207 ; gain = 1147.508
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1736.207 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.runs/synth_1/Genesys2_VideoDemoR1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Genesys2_VideoDemoR1_utilization_synth.rpt -pb Genesys2_VideoDemoR1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 11 14:36:29 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 11 15:13:46 2025...

@@ -877,9 +877,11 @@ signal N           : std_logic_vector(15 downto 0);
 signal start       : std_logic;
 signal psdone      : std_logic;
 signal psen        : std_logic := '0';
-signal start_phase       : std_logic;
-signal psincdec         : std_logic;
-
+signal start_phase  : std_logic;
+signal psincdec     : std_logic;
+signal psen_sig     : std_logic;
+signal psincdec_sig : std_logic;
+signal psdone_sig   : std_logic;
 
 
 begin
@@ -889,7 +891,7 @@ begin
 
 -- Main Clock Generator for 800x600 Display
   PLL2_inst : clk_wiz_0
-    port map (
+  port map (
         clk_out1   => clk200,
         clk_out2   => clk400,
         clk_out3   => clk533,     
@@ -900,11 +902,10 @@ begin
         locked     => pll_islocked,
         clk_in1_p  => sysclk_p,
         clk_in1_n  => sysclk_n,
-        -- DPS signals:
-        psen       => psen,
-        psclk      => clk10, --10 Mhz
-        psincdec   => psincdec,
-        psdone     => psdone
+        psen       => psen_sig,
+        psincdec   => psincdec_sig,
+        psclk      => clk10,
+        psdone     => psdone_sig
     );
 
 --  Cascaded 148.5 MHz Pixel Clocking
@@ -1110,9 +1111,9 @@ control_phase_inst : control_phase
         clk_slow  => clk10,
         N         => N,                
         start     => start_phase,      
-        psdone    => psdone,   
-        psen      => psen,
-        psincdec  => psincdec   
+        psdone    => psdone_sig,   
+        psen      => psen_sig,
+        psincdec  => psincdec_sig 
     );
 
  --Sync pulse det generator
