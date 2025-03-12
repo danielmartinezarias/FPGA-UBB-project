@@ -1318,5 +1318,28 @@ public Form1()
             label1.Text = Convert.ToString(width_6_FPGA);
             ParametroSerial(67, 32, width_6_FPGA, 0);
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {    //Para llamar inc_dec_0; 1 para incrementar
+            ParametroSerial(70, 8, 1, 0);
+            //Para empezar el control phase
+            ParametroSerial(69, 8, 1, 0);
+        }
+
+        int N_ps ;
+        private void numericUpDown10_ValueChanged(object sender, EventArgs e)
+        {
+            //N_ps = (int)(numericUpDown7.Value);
+            N_ps = (int)(numericUpDown10.Value);
+            ParametroSerial(68, 16, N_ps, 0);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Para llamar inc_dec_0; 0 para Disminuir
+            ParametroSerial(70, 8, 0, 0);
+            //Para empezar el control phase
+            ParametroSerial(69, 8, 1, 0);
+        }
     }
 }

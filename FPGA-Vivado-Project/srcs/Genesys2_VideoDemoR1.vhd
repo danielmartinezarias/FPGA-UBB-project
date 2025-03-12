@@ -157,6 +157,7 @@ port
   clk_out4          : out    std_logic;
   clk_out5          : out    std_logic;
   clk_out6          : out    std_logic;
+  clk_out7          : out    std_logic;
   -- Status and control signals
   reset             : in     std_logic;
   locked            : out    std_logic;
@@ -413,7 +414,10 @@ end component;
         dataPoints     : out std_logic_vector(15 downto 0);
         pulse_control  : out std_logic;
         CW             : out std_logic;
-        AliceBob       : out std_logic
+        AliceBob       : out std_logic;
+        start          : out std_logic;
+        N              : out std_logic_vector(15 downto 0);
+        inc_dec0       : out std_logic
      );
   END COMPONENT;
 
@@ -529,8 +533,7 @@ component control_phase is
         N         : in std_logic_vector(15 downto 0);
         start     : in std_logic;
         psdone    : in std_logic;
-        psen      : out std_logic;
-        psincdec  : out std_logic
+        psen      : out std_logic
 );
 end component;
 
@@ -585,6 +588,7 @@ signal ustate                : u_states;
 signal clk100                : std_logic;
 signal clk25                 : std_logic;
 signal clk10                 : std_logic;
+signal clk_7_10                 : std_logic;
 signal areset                : std_logic;
 signal arstn                 : std_logic;
 signal pll_islocked          : std_logic;
@@ -872,16 +876,16 @@ signal controlDM            : std_logic_vector(7 downto 0);
 signal dataPoints           : std_logic_vector(15 downto 0); 
 
 --Modulo Control Phase
-signal clk_slow    : std_logic;
-signal N           : std_logic_vector(15 downto 0);
-signal start       : std_logic;
-signal psdone      : std_logic;
-signal psen        : std_logic := '0';
-signal start_phase  : std_logic;
-signal psincdec     : std_logic;
-signal psen_sig     : std_logic;
-signal psincdec_sig : std_logic;
-signal psdone_sig   : std_logic;
+signal clk_slow             : std_logic;
+signal N_ps                 : std_logic_vector(15 downto 0);
+signal start_ps             : std_logic;
+signal psdone               : std_logic;
+signal psen                 : std_logic := '0';
+signal start_phase          : std_logic;
+signal psincdec             : std_logic;
+signal psen_sig             : std_logic;
+signal psincdec_sig         : std_logic;
+signal psdone_sig           : std_logic;
 
 
 begin
@@ -898,12 +902,13 @@ begin
         clk_out4   => clk100,
         clk_out5   => clk25,
         clk_out6   => clk10,
+        clk_out7   => clk_7_10,
         reset      => '0',
         locked     => pll_islocked,
         clk_in1_p  => sysclk_p,
         clk_in1_n  => sysclk_n,
         psen       => psen_sig,
-        psincdec   => psincdec_sig,
+        psincdec   => psincdec,
         psclk      => clk10,
         psdone     => psdone_sig
     );
@@ -1109,11 +1114,10 @@ control_phase_inst : control_phase
     port map(
         clk100MHz => clk100,
         clk_slow  => clk10,
-        N         => N,                
-        start     => start_phase,      
+        N         => N_ps,                
+        start     => start_ps,      
         psdone    => psdone_sig,   
-        psen      => psen_sig,
-        psincdec  => psincdec_sig 
+        psen      => psen_sig
     );
 
  --Sync pulse det generator
@@ -1136,7 +1140,7 @@ control_phase_inst : control_phase
         );
         
        
-  sync_pulse_det_gen_2 : sync_pulse_det_generator
+ sync_pulse_det_gen_2 : sync_pulse_det_generator
 port map (
     clk         => clk533, 
     freq_sync   => freq_1,
@@ -1285,7 +1289,10 @@ port map (
             dataPoints    => dataPoints,
             pulse_control => pulse_control,
             CW            => CW,
-            AliceBob      => AliceBob
+            AliceBob      => AliceBob,
+            start         => start_ps,
+            N             => N_ps,
+            inc_dec0      => psincdec
      );
      
     --Modulo pmodDA2
@@ -2288,8 +2295,8 @@ port map (
 
 -- Nuevas
 
- fmc_la_p_00 <= square_wave_1;
- fmc_la_n_00 <= square_wave_2;
+ fmc_la_p_00 <= clk_7_10;
+ fmc_la_n_00 <= clk533;
  fmc_la_p_17 <= square_wave_3;
  fmc_la_n_17 <= square_wave_4;
  fmc_la_p_18 <= square_wave_5;

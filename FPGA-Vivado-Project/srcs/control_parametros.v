@@ -49,26 +49,25 @@ module control_parametros(
 	output reg [31:0] freq_1 = 32'd50, 
     output reg [31:0] delay_1 = 32'd0,
     output reg [31:0] width_1 = 32'd5,
-
     output reg [31:0] freq_2 = 32'd50, 
     output reg [31:0] delay_2 = 32'd0,
     output reg [31:0] width_2 = 32'd5,
-    
     output reg [31:0] freq_3 = 32'd50, 
     output reg [31:0] delay_3 = 32'd0,
     output reg [31:0] width_3 = 32'd5,
-    
     output reg [31:0] freq_4 = 32'd50, 
     output reg [31:0] delay_4 = 32'd0,
     output reg [31:0] width_4 = 32'd5,
-    
     output reg [31:0] freq_5 = 32'd50, 
     output reg [31:0] delay_5 = 32'd0,
     output reg [31:0] width_5 = 32'd5,
-    
     output reg [31:0] freq_6 = 32'd50, 
     output reg [31:0] delay_6 = 32'd0,
-    output reg [31:0] width_6 = 32'd5
+    output reg [31:0] width_6 = 32'd5,
+    // Phase Shifting
+    output reg start = 1'b0,
+    output reg [15:0] N = 16'd1,
+    output reg inc_dec0 = 1'b0
         );
 
 
@@ -99,9 +98,10 @@ always @(posedge clk) begin
 
 case (ctrl)
 	0: begin
-	   ready_Tx_PC    			<= 1'b0;
+	   ready_Tx_PC    		   <= 1'b0;
 	   new_pixClr              <= 1'd0;
 	   reset_DDR3              <= 1'b0;
+	   start                   <= 1'b0;
 		if(os_readyRx)begin
 			ctrl				<= {8'd0,bufferRx};
 		end
@@ -402,6 +402,21 @@ case (ctrl)
         width_6 <= {d4, d3, d2, d1};
         ctrl <= 16'd0;
     end
+    
+    68: begin
+		N <= {d2, d1};
+		ctrl <= 16'd0;
+	end
+	
+	69: begin
+		start <= 1'b1;
+		ctrl <= 16'd0;
+	end
+	
+	70: begin
+		inc_dec0    			<= {d1[0]};
+		ctrl					<= 16'd0;
+	end
 
 	default:
 		ctrl					<= 16'd0;

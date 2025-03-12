@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Tue Mar 11 14:30:42 2025
+-- Date        : Wed Mar 12 15:35:51 2025
 -- Host        : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/Genesys2_VideoDemoR1/Genesys2_VideoDemoR1.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_sim_netlist.vhdl
@@ -23,6 +23,7 @@ entity clk_wiz_0_clk_wiz is
     clk_out4 : out STD_LOGIC;
     clk_out5 : out STD_LOGIC;
     clk_out6 : out STD_LOGIC;
+    clk_out7 : out STD_LOGIC;
     psclk : in STD_LOGIC;
     psen : in STD_LOGIC;
     psincdec : in STD_LOGIC;
@@ -42,6 +43,7 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz is
   signal clk_out4_clk_wiz_0 : STD_LOGIC;
   signal clk_out5_clk_wiz_0 : STD_LOGIC;
   signal clk_out6_clk_wiz_0 : STD_LOGIC;
+  signal clk_out7_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_buf_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_clk_wiz_0 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
@@ -51,7 +53,6 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz is
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
@@ -69,6 +70,7 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz is
   attribute BOX_TYPE of clkout4_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout5_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout6_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout7_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -115,6 +117,11 @@ clkout6_buf: unisim.vcomponents.BUFG
       I => clk_out6_clk_wiz_0,
       O => clk_out6
     );
+clkout7_buf: unisim.vcomponents.BUFG
+     port map (
+      I => clk_out7_clk_wiz_0,
+      O => clk_out7
+    );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
@@ -131,7 +138,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
-      CLKOUT2_DIVIDE => 4,
+      CLKOUT2_DIVIDE => 80,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT2_USE_FINE_PS => true,
@@ -148,7 +155,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT5_DUTY_CYCLE => 0.500000,
       CLKOUT5_PHASE => 0.000000,
       CLKOUT5_USE_FINE_PS => false,
-      CLKOUT6_DIVIDE => 1,
+      CLKOUT6_DIVIDE => 80,
       CLKOUT6_DUTY_CYCLE => 0.500000,
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => false,
@@ -185,7 +192,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
       CLKOUT4 => clk_out5_clk_wiz_0,
       CLKOUT5 => clk_out6_clk_wiz_0,
-      CLKOUT6 => NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED,
+      CLKOUT6 => clk_out7_clk_wiz_0,
       DADDR(6 downto 0) => B"0000000",
       DCLK => '0',
       DEN => '0',
@@ -214,6 +221,7 @@ entity clk_wiz_0 is
     clk_out4 : out STD_LOGIC;
     clk_out5 : out STD_LOGIC;
     clk_out6 : out STD_LOGIC;
+    clk_out7 : out STD_LOGIC;
     psclk : in STD_LOGIC;
     psen : in STD_LOGIC;
     psincdec : in STD_LOGIC;
@@ -239,6 +247,7 @@ inst: entity work.clk_wiz_0_clk_wiz
       clk_out4 => clk_out4,
       clk_out5 => clk_out5,
       clk_out6 => clk_out6,
+      clk_out7 => clk_out7,
       locked => locked,
       psclk => psclk,
       psdone => psdone,

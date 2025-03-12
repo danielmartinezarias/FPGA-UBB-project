@@ -112,6 +112,10 @@
             this.buttonSetFreq6 = new System.Windows.Forms.NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -150,6 +154,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1007,10 +1012,39 @@
             resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
             // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // numericUpDown10
+            // 
+            resources.ApplyResources(this.numericUpDown10, "numericUpDown10");
+            this.numericUpDown10.Name = "numericUpDown10";
+            this.numericUpDown10.ValueChanged += new System.EventHandler(this.numericUpDown10_ValueChanged);
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.numericUpDown10);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.buttonSetWidth6);
@@ -1117,6 +1151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetWidth6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1200,6 +1235,10 @@
         private System.Windows.Forms.NumericUpDown buttonSetFreq6;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label22;
     }
 }
 
