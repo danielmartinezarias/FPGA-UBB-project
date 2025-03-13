@@ -159,7 +159,6 @@ port
   clk_out6          : out    std_logic;
   clk_out7          : out    std_logic;
   -- Status and control signals
-  reset             : in     std_logic;
   locked            : out    std_logic;
   clk_in1_p         : in     std_logic;
   clk_in1_n         : in     std_logic;
@@ -416,6 +415,7 @@ end component;
         CW             : out std_logic;
         AliceBob       : out std_logic;
         start          : out std_logic;
+        reset          : out std_logic;
         N              : out std_logic_vector(15 downto 0);
         inc_dec0       : out std_logic
      );
@@ -886,7 +886,7 @@ signal psincdec             : std_logic;
 signal psen_sig             : std_logic;
 signal psincdec_sig         : std_logic;
 signal psdone_sig           : std_logic;
-
+signal reset_clk            : std_logic;
 
 begin
 -------------------------------------------------------------------------------
@@ -903,7 +903,6 @@ begin
         clk_out5   => clk25,
         clk_out6   => clk10,
         clk_out7   => clk_7_10,
-        reset      => '0',
         locked     => pll_islocked,
         clk_in1_p  => sysclk_p,
         clk_in1_n  => sysclk_n,

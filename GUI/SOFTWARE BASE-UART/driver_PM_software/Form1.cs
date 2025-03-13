@@ -558,12 +558,7 @@ public Form1()
 
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            if (serialPort_FPGA.IsOpen)
-            {
-                //ParametroSerial(97 + 10, 8, 0);
-                serialPort_FPGA.Close();
-            }
-            System.Windows.Forms.Application.Exit();
+
         }
 
 
@@ -1319,14 +1314,19 @@ public Form1()
             ParametroSerial(67, 32, width_6_FPGA, 0);
         }
 
+        double label23_N = 0;
         private void button2_Click_1(object sender, EventArgs e)
         {    //Para llamar inc_dec_0; 1 para incrementar
             ParametroSerial(70, 8, 1, 0);
             //Para empezar el control phase
             ParametroSerial(69, 8, 1, 0);
+            label23_N = label23_N + N_ps * ps_step;
+            label23.Text = "Total delay" + label23_N.ToString() + "in ps";
+
         }
 
         int N_ps ;
+        double ps_step = 22.32;
         private void numericUpDown10_ValueChanged(object sender, EventArgs e)
         {
             //N_ps = (int)(numericUpDown7.Value);
@@ -1340,6 +1340,8 @@ public Form1()
             ParametroSerial(70, 8, 0, 0);
             //Para empezar el control phase
             ParametroSerial(69, 8, 1, 0);
+            label23_N = label23_N - N_ps*ps_step;
+            label23.Text = "Total delay" + label23_N.ToString() + "in ps";
         }
     }
 }

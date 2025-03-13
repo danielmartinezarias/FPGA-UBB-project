@@ -66,9 +66,11 @@ module control_parametros(
     output reg [31:0] width_6 = 32'd5,
     // Phase Shifting
     output reg start = 1'b0,
+    output wire reset,
     output reg [15:0] N = 16'd1,
     output reg inc_dec0 = 1'b0
         );
+
 
 
 wire os_readyRx;
@@ -417,6 +419,8 @@ case (ctrl)
 		inc_dec0    			<= {d1[0]};
 		ctrl					<= 16'd0;
 	end
+	
+    
 
 	default:
 		ctrl					<= 16'd0;

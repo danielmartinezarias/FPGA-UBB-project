@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Wed Mar 12 16:15:24 2025
+| Date             : Thu Mar 13 14:46:10 2025
 | Host             : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 | Command          : report_power -file Genesys2_VideoDemoR1_power_routed.rpt -pb Genesys2_VideoDemoR1_power_summary_routed.pb -rpx Genesys2_VideoDemoR1_power_routed.rpx
 | Design           : Genesys2_VideoDemoR1
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.134 |       51 |       --- |             --- |
-| Slice Logic              |     0.056 |    23140 |       --- |             --- |
+| Slice Logic              |     0.056 |    23141 |       --- |             --- |
 |   LUT as Logic           |     0.052 |     9228 |    203800 |            4.53 |
 |   Register               |     0.002 |     8613 |    407600 |            2.11 |
 |   CARRY4                 |     0.002 |      536 |     50950 |            1.05 |
 |   LUT as Distributed RAM |     0.001 |      796 |     64000 |            1.24 |
 |   F7/F8 Muxes            |    <0.001 |       58 |    203800 |            0.03 |
 |   LUT as Shift Register  |    <0.001 |       23 |     64000 |            0.04 |
-|   Others                 |     0.000 |      477 |       --- |             --- |
+|   Others                 |     0.000 |      478 |       --- |             --- |
 | Signals                  |     0.068 |    18457 |       --- |             --- |
 | Block RAM                |     0.094 |     66.5 |       445 |           14.94 |
 | MMCM                     |     0.535 |        5 |        10 |           50.00 |
