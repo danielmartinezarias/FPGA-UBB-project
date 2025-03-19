@@ -26,21 +26,21 @@ entity Genesys2_VideoDemoR1 is
 
     
     -- FMC Header
-    --fmc_la_n_00                        : in    std_logic --sync
-    fmc_la_n_00                        : out    std_logic;
+    fmc_la_n_00                        : in    std_logic; --sync
+    --fmc_la_n_00                        : out    std_logic;
     fmc_la_p_00                        : out   std_logic;
     fmc_la_p_01                        : out   std_logic;
     fmc_la_p_04                        : out   std_logic;
     fmc_la_p_06                        : out   std_logic;
     fmc_la_p_15                        : out   std_logic;
-    fmc_la_p_17                        : out   std_logic;
+    fmc_la_p_17                        : in   std_logic;
     fmc_la_n_17                        : out   std_logic;
     fmc_la_p_18                        : out   std_logic;
     fmc_la_n_18                        : out   std_logic;
     fmc_la_n_24                        : out   std_logic;
     fmc_la_p_24                        : out   std_logic;
     fmc_la_p_26                        : out   std_logic;
-    fmc_la_p_32                        : out    std_logic;
+    fmc_la_p_32                        : in    std_logic;
     fmc_la_n_32                        : out    std_logic;
     
     
@@ -1139,107 +1139,107 @@ control_phase_inst : control_phase
         );
         
        
- sync_pulse_det_gen_2 : sync_pulse_det_generator
-port map (
-    clk         => clk533, 
-    freq_sync   => freq_1,
-    delay_pulse => delay_1,
-    width_pulse => width_1,
-    delay_det   => delay_1,  
-    width_det   => width_1,   
-    sync        => open,
-    MZI         => square_wave_1,
-    det         => open,
-    AliceBob    => '1',
-    sync_ext    => '0',
-    pulse_control => '1', 
-    CW          => '0'
-);
+--sync_pulse_det_gen_2 : sync_pulse_det_generator
+--port map (
+--    clk         => clk533, 
+--    freq_sync   => freq_1,
+--    delay_pulse => delay_1,
+--    width_pulse => width_1,
+--    delay_det   => delay_1,  
+--    width_det   => width_1,   
+--    sync        => open,
+--    MZI         => square_wave_1,
+--    det         => open,
+--    AliceBob    => '1',
+--    sync_ext    => '0',
+--    pulse_control => '1', 
+--    CW          => '0'
+--);
 
-sync_pulse_det_gen_3 : sync_pulse_det_generator
-port map (
-    clk         => clk533, 
-    freq_sync   => freq_2,
-    delay_pulse => delay_2,
-    width_pulse => width_2,
-    delay_det   => delay_2,  
-    width_det   => width_2,   
-    sync        => open,
-    MZI         => square_wave_2,
-    det         => open,
-    AliceBob    => '1',
-    sync_ext    => '0',
-    pulse_control => '1', 
-    CW          => '0'
-);
+--sync_pulse_det_gen_3 : sync_pulse_det_generator
+--port map (
+--    clk         => clk533, 
+--    freq_sync   => freq_2,
+--    delay_pulse => delay_2,
+--    width_pulse => width_2,
+--    delay_det   => delay_2,  
+--    width_det   => width_2,   
+--    sync        => open,
+--    MZI         => square_wave_2,
+--    det         => open,
+--    AliceBob    => '1',
+--    sync_ext    => '0',
+--    pulse_control => '1', 
+--    CW          => '0'
+--);
 
-sync_pulse_det_gen_4 : sync_pulse_det_generator
-port map (
-    clk         => clk533, 
-    freq_sync   => freq_3,
-    delay_pulse => delay_3,
-    width_pulse => width_3,
-    delay_det   => delay_3,  
-    width_det   => width_3,   
-    sync        => open,
-    MZI         => square_wave_3,
-    det         => open,
-    AliceBob    => '1',
-    sync_ext    => '0',
-    pulse_control => '1', 
-    CW          => '0'
-);
+--sync_pulse_det_gen_4 : sync_pulse_det_generator
+--port map (
+--    clk         => clk533, 
+--    freq_sync   => freq_3,
+--    delay_pulse => delay_3,
+--    width_pulse => width_3,
+--    delay_det   => delay_3,  
+--    width_det   => width_3,   
+--    sync        => open,
+--    MZI         => square_wave_3,
+--    det         => open,
+--    AliceBob    => '1',
+--    sync_ext    => '0',
+--    pulse_control => '1', 
+--    CW          => '0'
+--);
 
-sync_pulse_det_gen_5 : sync_pulse_det_generator
-port map (
-    clk         => clk533, 
-    freq_sync   => freq_4,
-    delay_pulse => delay_4,
-    width_pulse => width_4,
-    delay_det   => delay_4,  
-    width_det   => width_4,   
-    sync        => open,
-    MZI         => square_wave_4,
-    det         => open,
-    AliceBob    => '1',
-    sync_ext    => '0',
-    pulse_control => '1', 
-    CW          => '0'
-);
+--sync_pulse_det_gen_5 : sync_pulse_det_generator
+--port map (
+--    clk         => clk533, 
+--    freq_sync   => freq_4,
+--    delay_pulse => delay_4,
+--    width_pulse => width_4,
+--    delay_det   => delay_4,  
+--    width_det   => width_4,   
+--    sync        => open,
+--    MZI         => square_wave_4,
+--    det         => open,
+--    AliceBob    => '1',
+--    sync_ext    => '0',
+--    pulse_control => '1', 
+--    CW          => '0'
+--);
 
-sync_pulse_det_gen_6 : sync_pulse_det_generator
-port map (
-    clk         => clk533, 
-    freq_sync   => freq_5,
-    delay_pulse => delay_5,
-    width_pulse => width_5,
-    delay_det   => delay_5,  
-    width_det   => width_5,   
-    sync        => open,
-    MZI         => square_wave_5,
-    det         => open,
-    AliceBob    => '1',
-    sync_ext    => '0',
-    pulse_control => '1', 
-    CW          => '0'
-);   
+--sync_pulse_det_gen_6 : sync_pulse_det_generator
+--port map (
+--    clk         => clk533, 
+--    freq_sync   => freq_5,
+--    delay_pulse => delay_5,
+--    width_pulse => width_5,
+--    delay_det   => delay_5,  
+--    width_det   => width_5,   
+--    sync        => open,
+--    MZI         => square_wave_5,
+--    det         => open,
+--    AliceBob    => '1',
+--    sync_ext    => '0',
+--    pulse_control => '1', 
+--    CW          => '0'
+--);   
 
-sync_pulse_det_gen_7 : sync_pulse_det_generator
-port map (
-    clk         => clk533, 
-    freq_sync   => freq_6,
-    delay_pulse => delay_6,
-    width_pulse => width_6,
-    delay_det   => delay_6,  
-    width_det   => width_6,   
-    sync        => open,
-    MZI         => square_wave_6,
-    det         => open,
-    AliceBob    => '1',
-    sync_ext    => '0',
-    pulse_control => '1', 
-    CW          => '0'
-);
+--sync_pulse_det_gen_7 : sync_pulse_det_generator
+--port map (
+--    clk         => clk533, 
+--    freq_sync   => freq_6,
+--    delay_pulse => delay_6,
+--    width_pulse => width_6,
+--    delay_det   => delay_6,  
+--    width_det   => width_6,   
+--    sync        => open,
+--    MZI         => square_wave_6,
+--    det         => open,
+--    AliceBob    => '1',
+--    sync_ext    => '0',
+--    pulse_control => '1', 
+--    CW          => '0'
+--);
 
   --Control_parametros
    control_parametros_inst : control_parametros
@@ -2276,16 +2276,16 @@ port map (
   
   --led(0)  <= led_prueba;
 
-  --fmc_la_p_00 <=  sync;
+  fmc_la_p_00 <=  sync;
   fmc_la_p_04 <=  gate_idqube; --edit DMA 22-09-24
-  --fmc_la_p_18 <=  MZI;
-  --fmc_la_p_24 <=  sync;
+  fmc_la_p_18 <=  MZI;
+  fmc_la_p_24 <=  sync;
   
 
 -- FMC
-  --sync_ext   <= fmc_la_n_00;
-  --det0_in    <= fmc_la_p_32;
-  --det1_in    <= fmc_la_p_17;
+  sync_ext   <= fmc_la_n_00;
+  det0_in    <= fmc_la_p_32;
+  det1_in    <= fmc_la_p_17;
   
   jc(0) <=  CS_dac;
   jc(1) <=  DIN_A_dac;
@@ -2294,11 +2294,11 @@ port map (
 
 -- Nuevas
 
- fmc_la_p_00 <= clk_7_10;
- fmc_la_n_00 <= clk533;
- fmc_la_p_17 <= square_wave_3;
- fmc_la_n_17 <= square_wave_4;
- fmc_la_p_18 <= square_wave_5;
- fmc_la_n_18 <= square_wave_6;
+-- fmc_la_p_00 <= clk_7_10;
+-- fmc_la_n_00 <= clk533;
+-- fmc_la_p_17 <= square_wave_3;
+-- fmc_la_n_17 <= square_wave_4;
+-- fmc_la_p_18 <= square_wave_5;
+-- fmc_la_n_18 <= square_wave_6;
 
 end rtl;

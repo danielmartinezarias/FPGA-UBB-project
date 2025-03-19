@@ -31,31 +31,12 @@ input wire [7:0] dead_time_APD,
 input wire [31:0] width_ID220,delay_ID220,
 input wire masterSync,
 output wire gate_ID220 
-// -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// Se�ales de entradas:
-// clk se�al de reloj, sclr se�al de borrado, En se�al de habilitacion (si est� activada permite el conteo), EnACCCtrl control para
-// acumular cuentas, EXPIO_P_APD0 y EXPIO_P_APD1 se�ales de entrada para los fotodetectores
-// dead_time_APD tiempo muerto del detector (evito cuentas)
-// Se�ales de Salidas:
-// APD0 - APD1: Salidas de 32 bits para almacenar las cuentas de EXPIO_P_APD0 y AXPIO_P_APD1
-//--------------------------------------------------------------------------------------------------------------------------------------
 );
  
 
 reg rsclr=0;	 
-// -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// rsclr: Registro para reiniciar el contador, lo iniciamos en 0
-// oCs0: Bus de 7 biys que almacena los modulos
-//--------------------------------------------------------------------------------------------------------------------------------------
 wire [1:0]oCs0_ID220;
 wire [1:0]gate_ID220;
-
-// -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// Instancias para procesar las se�ales de entrada EXPIO_P_APD0 y EXPIO_P_APD1
-// Pre000 y Pre001: toman la se�al de reloj (clk), la se�al de entrada (EXPIO_P_APDX)
-// y el tiempo de muerto (dead_time_APD)
-// Con esto generamos una salida (Cs) que indica que si una cuenta debe ser registrada
-//--------------------------------------------------------------------------------------------------------------------------------------
     
 PreProc_Cs_ID220 Pre000 (
     .clk(clk400MHz), 
@@ -70,14 +51,8 @@ PreProc_Cs_ID220 Pre001 (
     .Cs(oCs0_ID220[1]),
     .dead_time_APD(dead_time_APD)
     );
-
-// -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// oCs: Bus que toma el valor de oCs0
-//--------------------------------------------------------------------------------------------------------------------------------------
-
-	 
+ 
 wire[31:0]wAPD0,wAPD1;	 
-
 
 
 counter_ADP counter_ADP_0(
@@ -95,18 +70,6 @@ counter_ADP counter_ADP_1(
    .sclr(rsclr),
    .counter(wAPD1)
    );
-
-// -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// Creamos dos instancias del Modulo counter_APD
-// - counter_APD_0 y counter_APD_1 toman como entrada al reloj clk, la sea�l de habilitacion
-// (en), la sea�al de conteo (oCs[0]) para counter_APD_0  y oCs[1] pra counter APD_1
-// con la se�al de reincio (rsclr)
-// - La salida counter (wAPD0 y wAPD1) es el valor actual del contador para cada entrada
-//--------------------------------------------------------------------------------------------------------------------------------------
-
-
-    
-
     
 ID220 ID220_0(
    .clk400MHz(clk400MHz),
@@ -130,12 +93,20 @@ always @(posedge clk) begin
         rsclr<=0;
 
 end
+
+//always @(posedge clk) begin
+//    if (sclr) begin
+//        rsclr <= 1;
+//    end else begin
+//        rsclr <= 0;
+//    end
+//end
+
+//always @(posedge clk) begin
+//    if (EnACCCtrl) begin
+//        APD0 <= wAPD0;
+//        APD1 <= wAPD1;
+//    end
+//end
     
 endmodule
-// -------------------Comentarios-------------------------------------------------------------------------------------------------------
-// Este modulo toma el flanco de subida de� relok
-// - Si rsclr esta acitvo, se estableve en 1 para reiniciar los contadores
-// - Si EnACCCtrl esta activa las cuentas de wAPD0 y wAPD1 se transfieren a los registros de ADP0 y APD1
-// - Si sclr no esta activo, rsclr se coloca en 0, asi los contadores operan de forma normal
-// 
-//--------------------------------------------------------------------------------------------------------------------------------------
