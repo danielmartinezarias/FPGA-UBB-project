@@ -30,14 +30,16 @@ output reg[31:0]APD1,
 input wire [7:0] dead_time_APD,
 input wire [31:0] width_ID220,delay_ID220,
 input wire masterSync,
-output wire gate_ID220 
+output wire gate_ID220
+
 );
  
 
 reg rsclr=0;	 
 wire [1:0]oCs0_ID220;
-wire [1:0]gate_ID220;
-    
+//wire [1:0]gate_ID220;
+//wire enable_counter = 1;
+
 PreProc_Cs_ID220 Pre000 (
     .clk(clk400MHz), 
     .EXPIO_P_APD(EXPIO_P_APD0), 
@@ -47,7 +49,7 @@ PreProc_Cs_ID220 Pre000 (
 
 PreProc_Cs_ID220 Pre001 (
     .clk(clk400MHz), 
-    .EXPIO_P_APD(clk), //edit DMA, querio probar que el modulo funcione conectando el reloj aqui
+    .EXPIO_P_APD(EXPIO_P_APD1), //edit DMA, querio probar que el modulo funcione conectando el reloj aqui
     .Cs(oCs0_ID220[1]),
     .dead_time_APD(dead_time_APD)
     );
@@ -79,8 +81,6 @@ ID220 ID220_0(
    .gate_ID220(gate_ID220)
    );
     
-
-
 always @(posedge clk) begin
     if(sclr)begin
         rsclr<=1;
@@ -94,19 +94,4 @@ always @(posedge clk) begin
 
 end
 
-//always @(posedge clk) begin
-//    if (sclr) begin
-//        rsclr <= 1;
-//    end else begin
-//        rsclr <= 0;
-//    end
-//end
-
-//always @(posedge clk) begin
-//    if (EnACCCtrl) begin
-//        APD0 <= wAPD0;
-//        APD1 <= wAPD1;
-//    end
-//end
-    
 endmodule

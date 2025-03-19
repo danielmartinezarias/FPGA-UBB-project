@@ -5,14 +5,14 @@
 
 # XDC: C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc
 
-# IP: ip/DPRAM_W245_R32/DPRAM_W245_R32.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==DPRAM_W245_R32 || ORIG_REF_NAME==DPRAM_W245_R32} -quiet] -quiet
-
-# IP: ip/MemTx_1/MemTx_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MemTx_1 || ORIG_REF_NAME==MemTx_1} -quiet] -quiet
+# IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
 
 # IP: ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blk_mem_gen_1 || ORIG_REF_NAME==blk_mem_gen_1} -quiet] -quiet
 
-# IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
+# IP: ip/MemTx_1/MemTx_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MemTx_1 || ORIG_REF_NAME==MemTx_1} -quiet] -quiet
+
+# IP: ip/DPRAM_W245_R32/DPRAM_W245_R32.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==DPRAM_W245_R32 || ORIG_REF_NAME==DPRAM_W245_R32} -quiet] -quiet

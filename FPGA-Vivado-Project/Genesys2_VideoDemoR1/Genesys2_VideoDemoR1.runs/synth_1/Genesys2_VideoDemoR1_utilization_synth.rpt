@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Mar 19 10:19:05 2025
+| Date         : Wed Mar 19 15:17:24 2025
 | Host         : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Genesys2_VideoDemoR1_utilization_synth.rpt -pb Genesys2_VideoDemoR1_utilization_synth.pb
 | Design       : Genesys2_VideoDemoR1
@@ -167,9 +167,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 | LUT3       |  248 |                 LUT |
 | CARRY4     |  160 |          CarryLogic |
 | LUT1       |   45 |                 LUT |
-| OBUF       |   21 |                  IO |
 | OBUFT      |   20 |                  IO |
-| IBUF       |   15 |                  IO |
+| OBUF       |   20 |                  IO |
+| IBUF       |   16 |                  IO |
 | OBUFDS     |    8 |                  IO |
 | FDSE       |    5 |        Flop & Latch |
 | FDPE       |    5 |        Flop & Latch |
