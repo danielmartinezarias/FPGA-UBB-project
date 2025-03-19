@@ -95,13 +95,10 @@ module control_DM(
     .trigger(masterSync)
     );
 
-    
-
-
     always@(posedge clk)begin//100MHz
         //cada mascara ocupa 2073600 bits de memoria DDR3
         mascara_out         <= {24'd0,mascara_aux}*32'd2073600;
-        
+      
         case(control2)
             0:begin//IDLE state
                 if(buttonStartTx)begin//boton GUI
