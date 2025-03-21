@@ -54,6 +54,12 @@ module sync_pulse_det_generator(
     .signal(sync_internal_MZI), 
     .trigger(os_sync)
     );
+
+    OneShoot o2 (
+    .clk(clk), 
+    .signal(sync), 
+    .trigger(os_syncMaster)
+    );
     
     always@(posedge clk)begin
         case (control)
@@ -86,31 +92,38 @@ module sync_pulse_det_generator(
     reg [1:0] control4 = 2'b0;
     reg [31:0] counter4 = 32'd0;
     always@(posedge clk)begin
-        case (control4)
+        if(os_syncMaster)begin
+            control4     <= 1'd0;
+            counter4     <= 32'd0;
+        end
+        else begin
+            case (control4)
             
-            0:begin
-                if(counter4 < freq_MZI_det) begin
-                    counter4     <=  counter4 + 32'd1;
+                0:begin
+                    if(counter4 < freq_MZI_det) begin
+                        counter4     <=  counter4 + 32'd1;
+                    end
+                    else begin
+                        counter4     <= 32'd0;
+                        control4     <= 1'd1;
+                    end
                 end
-                else begin
-                    counter4     <= 32'd0;
-                    control4     <= 1'd1;
+                
+                1:begin
+                    if(counter4 < freq_MZI_det) begin
+                        counter4         <=  counter4 + 32'd1;
+                        sync_internal_MZI   <= 1'b1;
+                    end
+                    else begin
+                        counter4         <= 32'd0;
+                        sync_internal_MZI   <= 1'b0;
+                        control4         <= 1'd0;
+                    end
                 end
-            end
-            
-            1:begin
-                if(counter4 < freq_MZI_det) begin
-                    counter4         <=  counter4 + 32'd1;
-                    sync_internal_MZI   <= 1'b1;
-                end
-                else begin
-                    counter4         <= 32'd0;
-                    sync_internal_MZI   <= 1'b0;
-                    control4         <= 1'd0;
-                end
-            end
-            
-        endcase
+                
+            endcase
+        end
+        
     end
     
     
