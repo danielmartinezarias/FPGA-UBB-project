@@ -33,7 +33,7 @@ entity Genesys2_VideoDemoR1 is
     fmc_la_p_04                        : in   std_logic;
     fmc_la_p_06                        : out   std_logic;
     fmc_la_p_15                        : out   std_logic;
-    fmc_la_p_17                        : in   std_logic;
+    fmc_la_p_17                        : out   std_logic;
     fmc_la_n_17                        : out   std_logic;
     fmc_la_p_18                        : out   std_logic;
     fmc_la_n_18                        : out   std_logic;
@@ -2276,7 +2276,7 @@ control_phase_inst : control_phase
   --led(0)  <= led_prueba;
 
   fmc_la_p_00 <=  sync;
-  --fmc_la_p_04 <=  gate_idqube; --edit DMA 22-09-24
+  fmc_la_p_17 <=  gate_idqube; --edit DMA 22-09-24
   fmc_la_p_18 <=  MZI;
   fmc_la_p_24 <=  clk100;
   
@@ -2284,7 +2284,7 @@ control_phase_inst : control_phase
 -- FMC
   sync_ext   <= fmc_la_n_00;
   det0_in    <= fmc_la_p_04;
-  det1_in    <= fmc_la_p_17;
+  --det1_in    <= fmc_la_p_17;
   
   jc(0) <=  CS_dac;
   jc(1) <=  DIN_A_dac;
