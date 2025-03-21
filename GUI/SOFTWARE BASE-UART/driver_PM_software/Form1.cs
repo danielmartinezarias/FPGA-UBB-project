@@ -1346,13 +1346,18 @@ public Form1()
             label23.Text = "Total delay" + label23_N.ToString() + "in ps";
         }
 
-        int freq_MZI_det;
+        int freq_MZI;
         private void numericUpDown11_ValueChanged(object sender, EventArgs e)
         {
-            freq_MZI_det = (int)(numericUpDown11.Value / 2 / numericUpDown1.Value);
+            freq_MZI = (int)(numericUpDown7.Value / 2 / numericUpDown11.Value);
             ObjetoIOP.guardarPropiedades(71, "freq_MZI_det_numericUpDown11", numericUpDown11.Value.ToString());
-            label1.Text = Convert.ToString(freq_MZI_det);
-            ParametroSerial(71, 32, freq_MZI_det, 0);
+            label1.Text = Convert.ToString(freq_MZI);
+            ParametroSerial(71, 32, freq_MZI, 0);
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

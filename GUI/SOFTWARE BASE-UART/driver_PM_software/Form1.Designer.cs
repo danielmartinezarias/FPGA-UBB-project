@@ -163,7 +163,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.conexiónToolStripMenuItem});
@@ -188,8 +187,8 @@
             // 
             // toolStripComboBox_COMPORTS
             // 
-            resources.ApplyResources(this.toolStripComboBox_COMPORTS, "toolStripComboBox_COMPORTS");
             this.toolStripComboBox_COMPORTS.Name = "toolStripComboBox_COMPORTS";
+            resources.ApplyResources(this.toolStripComboBox_COMPORTS, "toolStripComboBox_COMPORTS");
             // 
             // conectarToolStripMenuItem
             // 
@@ -1073,6 +1072,7 @@
             // 
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // Form1
             // 
