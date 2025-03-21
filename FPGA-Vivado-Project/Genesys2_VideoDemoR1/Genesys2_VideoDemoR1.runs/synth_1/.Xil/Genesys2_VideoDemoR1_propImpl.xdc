@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc rfile:../../../../srcs/Genesys-2_Video.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/crist/OneDrive/Documentos/GitHub/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc rfile:../../../../srcs/timing.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/Genesys-2_Video.xdc} rfile:../../../../srcs/Genesys-2_Video.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/danie/Documents/GitHub/FPGAs UBB/FPGA-UBB-project/FPGA-Vivado-Project/srcs/timing.xdc} rfile:../../../../srcs/timing.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN AD11 IOSTANDARD LVDS} [get_ports sysclk_n]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]

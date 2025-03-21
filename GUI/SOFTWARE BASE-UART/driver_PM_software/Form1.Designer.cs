@@ -117,6 +117,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -156,10 +158,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.conexiónToolStripMenuItem});
@@ -184,8 +188,8 @@
             // 
             // toolStripComboBox_COMPORTS
             // 
-            this.toolStripComboBox_COMPORTS.Name = "toolStripComboBox_COMPORTS";
             resources.ApplyResources(this.toolStripComboBox_COMPORTS, "toolStripComboBox_COMPORTS");
+            this.toolStripComboBox_COMPORTS.Name = "toolStripComboBox_COMPORTS";
             // 
             // conectarToolStripMenuItem
             // 
@@ -1043,10 +1047,39 @@
             resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
             // 
+            // numericUpDown11
+            // 
+            this.numericUpDown11.DecimalPlaces = 6;
+            resources.ApplyResources(this.numericUpDown11, "numericUpDown11");
+            this.numericUpDown11.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            this.numericUpDown11.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDown11.Name = "numericUpDown11";
+            this.numericUpDown11.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDown11.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.numericUpDown11);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.button3);
@@ -1159,6 +1192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetDelay6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSetFreq6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1247,6 +1281,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.Label label24;
     }
 }
 

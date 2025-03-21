@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri Mar 21 12:24:04 2025
-| Host         : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
+| Date         : Fri Mar 21 15:06:55 2025
+| Host         : donaufeld running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Genesys2_VideoDemoR1_utilization_synth.rpt -pb Genesys2_VideoDemoR1_utilization_synth.pb
 | Design       : Genesys2_VideoDemoR1
 | Device       : xc7k325tffg900-2
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1355 |     0 |          0 |    203800 |  0.66 |
-|   LUT as Logic             | 1352 |     0 |          0 |    203800 |  0.66 |
+| Slice LUTs*                | 1402 |     0 |          0 |    203800 |  0.69 |
+|   LUT as Logic             | 1399 |     0 |          0 |    203800 |  0.69 |
 |   LUT as Memory            |    3 |     0 |          0 |     64000 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |    3 |     0 |            |           |       |
-| Slice Registers            | 1731 |     0 |          0 |    407600 |  0.42 |
-|   Register as Flip Flop    | 1731 |     0 |          0 |    407600 |  0.42 |
+| Slice Registers            | 1797 |     0 |          0 |    407600 |  0.44 |
+|   Register as Flip Flop    | 1797 |     0 |          0 |    407600 |  0.44 |
 |   Register as Latch        |    0 |     0 |          0 |    407600 |  0.00 |
 | F7 Muxes                   |    3 |     0 |          0 |    101900 | <0.01 |
 | F8 Muxes                   |    1 |     0 |          0 |     50950 | <0.01 |
@@ -61,7 +61,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 5     |          Yes |           - |          Set |
 | 335   |          Yes |           - |        Reset |
 | 5     |          Yes |         Set |            - |
-| 1386  |          Yes |       Reset |            - |
+| 1452  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -158,14 +158,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 1386 |        Flop & Latch |
-| LUT2       |  486 |                 LUT |
-| LUT6       |  377 |                 LUT |
-| LUT4       |  367 |                 LUT |
+| FDRE       | 1452 |        Flop & Latch |
+| LUT2       |  515 |                 LUT |
+| LUT4       |  397 |                 LUT |
+| LUT6       |  381 |                 LUT |
 | FDCE       |  335 |        Flop & Latch |
-| LUT5       |  297 |                 LUT |
-| LUT3       |  244 |                 LUT |
-| CARRY4     |  150 |          CarryLogic |
+| LUT5       |  292 |                 LUT |
+| LUT3       |  247 |                 LUT |
+| CARRY4     |  162 |          CarryLogic |
 | LUT1       |   44 |                 LUT |
 | OBUF       |   21 |                  IO |
 | OBUFT      |   20 |                  IO |

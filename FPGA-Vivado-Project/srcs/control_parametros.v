@@ -45,7 +45,7 @@ module control_parametros(
 	output reg [7:0] controlDM,
 	output reg [15:0] dataPoints,
 	output reg pulse_control = 1'b1, CW = 1'b0, AliceBob = 1'b1,
-	//Nuevas declaraciones para las señales cuadradas
+	//Nuevas declaraciones para las seï¿½ales cuadradas
 	output reg [31:0] freq_1 = 32'd50, 
     output reg [31:0] delay_1 = 32'd0,
     output reg [31:0] width_1 = 32'd5,
@@ -68,7 +68,8 @@ module control_parametros(
     output reg start = 1'b0,
     output wire reset,
     output reg [15:0] N = 16'd1,
-    output reg inc_dec0 = 1'b0
+    output reg inc_dec0 = 1'b0,
+	output reg [31:0] freq_MZI_det = 32'd50
         );
 
 
@@ -314,7 +315,7 @@ case (ctrl)
 		AliceBob       			<= d1[0];
 		ctrl					<= 16'd0;
 	end
-	// Nuevas para las señales cuadradas
+	// Nuevas para las seï¿½ales cuadradas
 	50: begin
         freq_1 <= {d4, d3, d2, d1};
         ctrl <= 16'd0;
@@ -419,7 +420,11 @@ case (ctrl)
 		inc_dec0    			<= {d1[0]};
 		ctrl					<= 16'd0;
 	end
-	
+
+	71: begin
+		freq_MZI_det   			<= {d4,d3,d2,d1};
+		ctrl					<= 16'd0;
+	end
     
 
 	default:

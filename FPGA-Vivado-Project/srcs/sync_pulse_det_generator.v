@@ -33,7 +33,8 @@ module sync_pulse_det_generator(
     input wire AliceBob,
     input wire sync_ext,
     input wire pulse_control, 
-    input wire CW
+    input wire CW,
+    input wire [31:0] freq_MZI_det
     );
     
     reg control = 1'b0;
@@ -41,6 +42,7 @@ module sync_pulse_det_generator(
     reg [31:0] counter = 32'd0;
     wire os_sync;
     reg sync_internal = 1'b0;
+    reg sync_internal_MZI = 1'b0;
     
     //si el SW0 es 1, usa el sync propio, o sea, esa FPGA es Alice
     //si el SW0 es 0, usa el sync de la otra FPGA, o sea es BOB
@@ -49,7 +51,7 @@ module sync_pulse_det_generator(
     
    OneShoot o1 (
     .clk(clk), 
-    .signal(sync), 
+    .signal(sync_internal_MZI), 
     .trigger(os_sync)
     );
     
@@ -75,6 +77,36 @@ module sync_pulse_det_generator(
                     counter         <= 32'd0;
                     sync_internal   <= 1'b0;
                     control         <= 1'd0;
+                end
+            end
+            
+        endcase
+    end
+
+    reg [1:0] control4 = 2'b0;
+    reg [31:0] counter4 = 32'd0;
+    always@(posedge clk)begin
+        case (control4)
+            
+            0:begin
+                if(counter4 < freq_MZI_det) begin
+                    counter4     <=  counter4 + 32'd1;
+                end
+                else begin
+                    counter4     <= 32'd0;
+                    control4     <= 1'd1;
+                end
+            end
+            
+            1:begin
+                if(counter4 < freq_MZI_det) begin
+                    counter4         <=  counter4 + 32'd1;
+                    sync_internal_MZI   <= 1'b1;
+                end
+                else begin
+                    counter4         <= 32'd0;
+                    sync_internal_MZI   <= 1'b0;
+                    control4         <= 1'd0;
                 end
             end
             

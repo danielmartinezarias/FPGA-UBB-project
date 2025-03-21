@@ -362,7 +362,8 @@ end component;
             AliceBob    : in std_logic;
             sync_ext    : in std_logic;
             pulse_control: in std_logic;
-            CW          : in std_logic
+            CW          : in std_logic;
+            freq_MZI_det: in std_logic_vector(31 downto 0)
      );
   END COMPONENT;
 
@@ -417,7 +418,8 @@ end component;
         start          : out std_logic;
         reset          : out std_logic;
         N              : out std_logic_vector(15 downto 0);
-        inc_dec0       : out std_logic
+        inc_dec0       : out std_logic;
+        freq_MZI_det   : out std_logic_vector(31 downto 0)
      );
   END COMPONENT;
 
@@ -837,6 +839,7 @@ signal sync_ext             : std_logic;
  signal pulse_control       : std_logic;
  signal CW                  : std_logic;
  signal AliceBob            : std_logic;
+ signal freq_MZI_det        : std_logic_vector(31 downto 0);
 
 --UART_Rx
 signal tick : std_logic;
@@ -1135,7 +1138,8 @@ control_phase_inst : control_phase
             AliceBob    => AliceBob,
             sync_ext    => sync_ext,
             pulse_control => pulse_control,
-            CW          => CW
+            CW          => CW,
+            freq_MZI_det => freq_MZI_det
         );
         
        
@@ -1291,7 +1295,8 @@ control_phase_inst : control_phase
             AliceBob      => AliceBob,
             start         => start_ps,
             N             => N_ps,
-            inc_dec0      => psincdec
+            inc_dec0      => psincdec,
+            freq_MZI_det  => freq_MZI_det
      );
      
     --Modulo pmodDA2

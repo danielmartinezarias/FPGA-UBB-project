@@ -160,6 +160,7 @@ public Form1()
             numericUpDown16.Enabled = true;
             numericUpDown8.Enabled = true;
             numericUpDown9.Enabled = true;
+            numericUpDown11.Enabled = true;
 
             buttonSetFreq1.Enabled = true;
             buttonSetDelay1.Enabled = true;
@@ -201,6 +202,7 @@ public Form1()
                 numericUpDown15.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[40, 1]);
                 numericUpDown16.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[41, 1]);
                 numericUpDown8.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[42, 1]);
+                numericUpDown11.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[71, 1]);
                 //buttonSetFreq1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[50, 1]);
                 //buttonSetDelay1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[51, 1]);
                 //buttonSetWidth1.Value = Convert.ToDecimal(ObjetoIOP.matrixPropiedades[52, 1]);
@@ -612,7 +614,7 @@ public Form1()
                 {
                     direccion_guardar2 = foldermedicion + @"\FPGA_stored_data_" + DateTime.Now.ToString("yyyy-MM-dd_HH_mm_ss") + ".txt";
                     StreamWriter sw = new StreamWriter(direccion_guardar2);
-                    sw.Write("N\tfreq_sync\tfreq_sync\tdelay_pulse\twidth_pulse\tdelay_det\twidth_det\tmascara\tADC0\tADC1\r\n");
+                    sw.Write("N\tNONE\tfreq_sync\tdelay_pulse\twidth_pulse\tdelay_det\twidth_det\tmascara\tADC0\tADC1\r\n");
                     sw.Close();
                 }
                 checkBox1.Enabled = false;
@@ -1043,7 +1045,7 @@ public Form1()
                         ADC1[k] = Vect_FPGAoutMem[i + 2];
                         chart2.Series["Det1"].Points.AddXY(k, ADC1[k]);
                         chart2.Series["Th1"].Points.AddXY(k, normalization * Convert.ToInt32(matrixTheory[k, 1]));
-                        RxString_txt = RxString_txt + Convert.ToString(k) + "\t" + Convert.ToString(Vect_FPGAoutMem[6]) + "\t" + Convert.ToString(Vect_FPGAoutMem[7]) + "\t" + Convert.ToString(Vect_FPGAoutMem[8]) + "\t" + Convert.ToString(Vect_FPGAoutMem[9]) + "\t" + Convert.ToString(Vect_FPGAoutMem[10]) + "\t" + Convert.ToString(mascara[k]) + "\t" + Convert.ToString(ADC0[k]) + "\t" + Convert.ToString(ADC1[k]) + "\r\n";
+                        RxString_txt = RxString_txt + Convert.ToString(k) + "\t" + Convert.ToString(Vect_FPGAoutMem[6]) + "\t" + Convert.ToString(Vect_FPGAoutMem[7]) + "\t" + Convert.ToString(Vect_FPGAoutMem[8]) + "\t" + Convert.ToString(Vect_FPGAoutMem[9]) + "\t" + Convert.ToString(Vect_FPGAoutMem[10]) + "\t" + Convert.ToString(Vect_FPGAoutMem[11]) + "\t" + Convert.ToString(mascara[k]) + "\t" + Convert.ToString(ADC0[k]) + "\t" + Convert.ToString(ADC1[k]) + "\r\n";
                         k++;
                     }
                     StreamWriter sw = new StreamWriter(direccion_guardar2, true);
@@ -1342,6 +1344,15 @@ public Form1()
             ParametroSerial(69, 8, 1, 0);
             label23_N = label23_N - N_ps*ps_step;
             label23.Text = "Total delay" + label23_N.ToString() + "in ps";
+        }
+
+        int freq_MZI_det;
+        private void numericUpDown11_ValueChanged(object sender, EventArgs e)
+        {
+            freq_MZI_det = (int)(numericUpDown11.Value / 2 / numericUpDown1.Value);
+            ObjetoIOP.guardarPropiedades(71, "freq_MZI_det_numericUpDown11", numericUpDown11.Value.ToString());
+            label1.Text = Convert.ToString(freq_MZI_det);
+            ParametroSerial(71, 32, freq_MZI_det, 0);
         }
     }
 }
