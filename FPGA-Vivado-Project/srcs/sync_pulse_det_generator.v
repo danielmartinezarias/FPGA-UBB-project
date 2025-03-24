@@ -43,6 +43,7 @@ module sync_pulse_det_generator(
     wire os_sync;
     reg sync_internal = 1'b0;
     reg sync_internal_MZI = 1'b0;
+    wire os_syncMaster;
     
     //si el SW0 es 1, usa el sync propio, o sea, esa FPGA es Alice
     //si el SW0 es 0, usa el sync de la otra FPGA, o sea es BOB

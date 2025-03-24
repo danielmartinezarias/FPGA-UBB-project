@@ -18,7 +18,7 @@
 	
 	
 	
-EstadoRx_numericUpDown2	0
+EstadoRx_numericUpDown2	5
 	
 	
 master_clk_numericUpDown7	200.000000
@@ -26,8 +26,8 @@ deadTimeAPD_numericUpDown2	60
 controlDM	1
 freq_sync_numericUpDown1	0.0000300
 delay_pulse_numericUpDown3	0
-width_pulse_numericUpDown4	50
-delay_det_numericUpDown5	17000000
+width_pulse_numericUpDown4	15
+controlDM	0
 width_det_numericUpDown6	1000000
 	
 	
@@ -39,8 +39,8 @@ width_det_numericUpDown6	1000000
 	
 dacA_numericUpDown14	0
 dacB_numericUpDown15	1
-deadTimeAPD_numericUpDown16	2
-dataPoints	5
+deadTimeAPD_numericUpDown16	4
+dataPoints	10
 	
 	
 Norm	1
@@ -69,7 +69,7 @@ width_6_numericUpDown	200
 	
 	
 	
-freq_MZI_det_numericUpDown11	1
+freq_MZI_det_numericUpDown11	1.000000
 	
 	
 	

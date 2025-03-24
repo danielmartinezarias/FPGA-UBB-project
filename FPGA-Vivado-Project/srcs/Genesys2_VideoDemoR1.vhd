@@ -31,6 +31,7 @@ entity Genesys2_VideoDemoR1 is
     fmc_la_p_00                        : out   std_logic;
     fmc_la_p_01                        : out   std_logic;
     fmc_la_p_04                        : in   std_logic;
+    fmc_la_n_04                        : in   std_logic;
     fmc_la_p_06                        : out   std_logic;
     fmc_la_p_15                        : out   std_logic;
     fmc_la_p_17                        : out   std_logic;
@@ -1384,7 +1385,7 @@ control_phase_inst : control_phase
             tick                => tick,
             pin_Tx              => uart_rx_out,
             Ndata               => dataPoints,
-            data16bits_0        => freq_sync(15 downto 0),--listo para agregar otro registro
+            data16bits_0        => freq_MZI_det(15 downto 0),--
             data32bits_0        => freq_sync,
             data32bits_1        => delay_pulse,
             data32bits_2        => width_pulse,
@@ -2289,7 +2290,7 @@ control_phase_inst : control_phase
 -- FMC
   sync_ext   <= fmc_la_n_00;
   det0_in    <= fmc_la_p_04;
-  --det1_in    <= fmc_la_p_17;
+  det1_in    <= fmc_la_n_04;
   
   jc(0) <=  CS_dac;
   jc(1) <=  DIN_A_dac;

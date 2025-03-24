@@ -125,7 +125,7 @@ public Form1()
 
         private void cOMToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
-            conectarToolStripMenuItem.Enabled = objetoUtilidades.VerPuertosUSB(20, toolStripComboBox_COMPORTS);
+            conectarToolStripMenuItem.Enabled = objetoUtilidades.VerPuertosUSB(10, toolStripComboBox_COMPORTS);
         }
 
 
@@ -614,7 +614,7 @@ public Form1()
                 {
                     direccion_guardar2 = foldermedicion + @"\FPGA_stored_data_" + DateTime.Now.ToString("yyyy-MM-dd_HH_mm_ss") + ".txt";
                     StreamWriter sw = new StreamWriter(direccion_guardar2);
-                    sw.Write("N\tNONE\tfreq_sync\tdelay_pulse\twidth_pulse\tdelay_det\twidth_det\tmascara\tADC0\tADC1\r\n");
+                    sw.Write("N\tMZI_f_MHz\tSYNC_f_MHz\tMZI_D_ns\tMZI_W_ns\tDET_D_ns\tDET_W_ns\tState\tD0\tD1\r\n");
                     sw.Close();
                 }
                 checkBox1.Enabled = false;
@@ -648,7 +648,7 @@ public Form1()
         {
             freq_sync_FPGA = (int)(numericUpDown7.Value / 2 / numericUpDown1.Value);
             ObjetoIOP.guardarPropiedades(26, "freq_sync_numericUpDown1", numericUpDown1.Value.ToString());
-            label1.Text = Convert.ToString(freq_sync_FPGA);
+            //label1.Text = Convert.ToString(freq_sync_FPGA);
             ParametroSerial(26, 32, freq_sync_FPGA, 0);
         }
 
@@ -657,7 +657,7 @@ public Form1()
         {
             delay_pulse_FPGA = (int)(numericUpDown3.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(27, "delay_pulse_numericUpDown3", numericUpDown3.Value.ToString());
-            label1.Text = Convert.ToString(delay_pulse_FPGA);
+            //label1.Text = Convert.ToString(delay_pulse_FPGA);
             ParametroSerial(27, 32, delay_pulse_FPGA, 0);
         }
 
@@ -666,7 +666,7 @@ public Form1()
         {
             width_pulse_FPGA = (int)((numericUpDown4.Value)* numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(28, "width_pulse_numericUpDown4", numericUpDown4.Value.ToString());
-            label1.Text = Convert.ToString(width_pulse_FPGA);
+            //label1.Text = Convert.ToString(width_pulse_FPGA);
             ParametroSerial(28, 32, width_pulse_FPGA, 0);
         }
       
@@ -675,7 +675,7 @@ public Form1()
         {
             delay_det_FPGA = (int)(numericUpDown5.Value * 2*numericUpDown7.Value / 1000);//edit DMA 23-09 ---------------*2 to match 400MHz
             ObjetoIOP.guardarPropiedades(29, "delay_det_numericUpDown5", numericUpDown5.Value.ToString());
-            label1.Text = Convert.ToString(delay_det_FPGA);
+            //label1.Text = Convert.ToString(delay_det_FPGA);
             ParametroSerial(29, 32, delay_det_FPGA, 0);
         }
 
@@ -684,18 +684,20 @@ public Form1()
         {
             width_det_FPGA = (int)((numericUpDown6.Value)* 2*numericUpDown7.Value / 1000);//edit DMA 23-09 ---------------*2 to match 400MHz
             ObjetoIOP.guardarPropiedades(30, "width_det_numericUpDown6", numericUpDown6.Value.ToString());
-            label1.Text = Convert.ToString(width_det_FPGA);
+            //label1.Text = Convert.ToString(width_det_FPGA);
             ParametroSerial(30, 32, width_det_FPGA, 0);
         }
 
+        double master_clk = 200;
         private void numericUpDown7_ValueChanged(object sender, EventArgs e)
         {
+            master_clk = (double)numericUpDown7.Value;
             ObjetoIOP.guardarPropiedades(23, "master_clk_numericUpDown7", numericUpDown7.Value.ToString());
         }
 
         Bitmap image1;
-        Bitmap image12;
-        /*private void button2_Click(object sender, EventArgs e)
+        /*Bitmap image12;
+        private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.RestoreDirectory = true;
@@ -1017,7 +1019,7 @@ public Form1()
             }*/
 
             int index_max = 6 + N32 + N16 + 3 * dataPoints;
-            label1.Text = "llego data valida";
+            //label1.Text = "llego data valida";
             //compruebo que la cola del stream de data haya llegado bien
             if (Vect_FPGAoutMem[index_max] == 1 && Vect_FPGAoutMem[index_max + 1] == 254 && Vect_FPGAoutMem[index_max + 2] == 1 && Vect_FPGAoutMem[index_max + 3] == 254)
             {
@@ -1045,7 +1047,23 @@ public Form1()
                         ADC1[k] = Vect_FPGAoutMem[i + 2];
                         chart2.Series["Det1"].Points.AddXY(k, ADC1[k]);
                         chart2.Series["Th1"].Points.AddXY(k, normalization * Convert.ToInt32(matrixTheory[k, 1]));
-                        RxString_txt = RxString_txt + Convert.ToString(k) + "\t" + Convert.ToString(Vect_FPGAoutMem[6]) + "\t" + Convert.ToString(Vect_FPGAoutMem[7]) + "\t" + Convert.ToString(Vect_FPGAoutMem[8]) + "\t" + Convert.ToString(Vect_FPGAoutMem[9]) + "\t" + Convert.ToString(Vect_FPGAoutMem[10]) + "\t" + Convert.ToString(Vect_FPGAoutMem[11]) + "\t" + Convert.ToString(mascara[k]) + "\t" + Convert.ToString(ADC0[k]) + "\t" + Convert.ToString(ADC1[k]) + "\r\n";
+                        double freq_MZI = master_clk / ((double)Vect_FPGAoutMem[6] * 2);
+                        double f_sync_MHz = master_clk / ((double)Vect_FPGAoutMem[7] * 2);
+                        double MZI_D_ns = 1000 * (double)Vect_FPGAoutMem[8] / master_clk;
+                        double MZI_W_ns = 1000 * (double)Vect_FPGAoutMem[9] / master_clk;
+                        double DET_D_ns = 500 * (double)Vect_FPGAoutMem[10] / master_clk;
+                        double DET_W_ns = 500 * (double)Vect_FPGAoutMem[11] / master_clk;
+                        RxString_txt = RxString_txt + 
+                            Convert.ToString(k) + "\t" + 
+                            Convert.ToString(freq_MZI) + "\t" + 
+                            Convert.ToString(f_sync_MHz) + "\t" + 
+                            Convert.ToString(MZI_D_ns) + "\t" + 
+                            Convert.ToString(MZI_W_ns) + "\t" + 
+                            Convert.ToString(DET_D_ns) + "\t" + 
+                            Convert.ToString(DET_W_ns) + "\t" + 
+                            Convert.ToString(mascara[k]) + "\t" + 
+                            Convert.ToString(ADC0[k]) + "\t" + 
+                            Convert.ToString(ADC1[k]) + "\r\n";
                         k++;
                     }
                     StreamWriter sw = new StreamWriter(direccion_guardar2, true);
@@ -1151,7 +1169,7 @@ public Form1()
         {
             freq_1_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq1.Value);
             ObjetoIOP.guardarPropiedades(50, "freq_1_numericUpDown", buttonSetFreq1.Value.ToString());
-            label1.Text = Convert.ToString(freq_1_FPGA);
+            //label1.Text = Convert.ToString(freq_1_FPGA);
             ParametroSerial(50, 32, freq_1_FPGA, 0);
         }
         long delay_1_FPGA;
@@ -1160,7 +1178,7 @@ public Form1()
             //delay_1_FPGA = (int)(buttonSetDelay1.Value *numericUpDown7.Value / 1000);
             delay_1_FPGA = (long)(buttonSetDelay1.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(51, "delay_1_numericUpDown", buttonSetDelay1.Value.ToString());
-            label1.Text = Convert.ToString(delay_1_FPGA);
+            //label1.Text = Convert.ToString(delay_1_FPGA);
             ParametroSerial(51, 32, (int)delay_1_FPGA, 0);
         }
         int width_1_FPGA;
@@ -1168,7 +1186,7 @@ public Form1()
         {
             width_1_FPGA = (int)(buttonSetWidth1.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(52, "width_1_numericUpDown", buttonSetWidth1.Value.ToString());
-            label1.Text = Convert.ToString(width_1_FPGA);
+            //label1.Text = Convert.ToString(width_1_FPGA);
             ParametroSerial(52, 32, width_1_FPGA, 0);
         }
         int freq_2_FPGA;
@@ -1176,7 +1194,7 @@ public Form1()
         {
             freq_2_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq2.Value);
             ObjetoIOP.guardarPropiedades(53, "freq_2_numericUpDown", buttonSetFreq2.Value.ToString());
-            label1.Text = Convert.ToString(freq_2_FPGA);
+            //label1.Text = Convert.ToString(freq_2_FPGA);
             ParametroSerial(53, 32, freq_2_FPGA, 0);
         }
         int delay_2_FPGA;
@@ -1184,7 +1202,7 @@ public Form1()
         {
             delay_2_FPGA = (int)(buttonSetDelay2.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(54, "delay_2_numericUpDown", buttonSetDelay2.Value.ToString());
-            label1.Text = Convert.ToString(delay_2_FPGA);
+            //label1.Text = Convert.ToString(delay_2_FPGA);
             ParametroSerial(54, 32, delay_2_FPGA, 0);
         }
         int width_2_FPGA;
@@ -1192,7 +1210,7 @@ public Form1()
         {
             width_2_FPGA = (int)(buttonSetWidth2.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(55, "width_2_numericUpDown", buttonSetWidth2.Value.ToString());
-            label1.Text = Convert.ToString(width_2_FPGA);
+            //label1.Text = Convert.ToString(width_2_FPGA);
             ParametroSerial(55, 32, width_2_FPGA, 0);
         }
         int freq_3_FPGA;
@@ -1200,7 +1218,7 @@ public Form1()
         {
             freq_3_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq3.Value);
             ObjetoIOP.guardarPropiedades(56, "freq_3_numericUpDown", buttonSetFreq3.Value.ToString());
-            label1.Text = Convert.ToString(freq_3_FPGA);
+            //label1.Text = Convert.ToString(freq_3_FPGA);
             ParametroSerial(56, 32, freq_3_FPGA, 0);
         }
         int delay_3_FPGA;
@@ -1208,7 +1226,7 @@ public Form1()
         {
             delay_3_FPGA = (int)(buttonSetDelay3.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(57, "delay_3_numericUpDown", buttonSetDelay3.Value.ToString());
-            label1.Text = Convert.ToString(delay_3_FPGA);
+            //label1.Text = Convert.ToString(delay_3_FPGA);
             ParametroSerial(57, 32, delay_3_FPGA, 0);
         }
         int width_3_FPGA;
@@ -1216,7 +1234,7 @@ public Form1()
         {
             width_3_FPGA = (int)(buttonSetWidth3.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(58, "width_3_numericUpDown", buttonSetWidth3.Value.ToString());
-            label1.Text = Convert.ToString(width_3_FPGA);
+            //label1.Text = Convert.ToString(width_3_FPGA);
             ParametroSerial(58, 32, width_3_FPGA, 0);
         }
         int freq_4_FPGA;
@@ -1224,7 +1242,7 @@ public Form1()
         {
             freq_4_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq4.Value);
             ObjetoIOP.guardarPropiedades(59, "freq_4_numericUpDown", buttonSetFreq4.Value.ToString());
-            label1.Text = Convert.ToString(freq_4_FPGA);
+            //label1.Text = Convert.ToString(freq_4_FPGA);
             ParametroSerial(59, 32, freq_4_FPGA, 0);
         }
         int delay_4_FPGA;
@@ -1232,7 +1250,7 @@ public Form1()
         {
             delay_4_FPGA = (int)(buttonSetDelay4.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(60, "delay_4_numericUpDown", buttonSetDelay4.Value.ToString());
-            label1.Text = Convert.ToString(delay_4_FPGA);
+            //label1.Text = Convert.ToString(delay_4_FPGA);
             ParametroSerial(60, 32, delay_4_FPGA, 0);
         }
         int width_4_FPGA;
@@ -1240,7 +1258,7 @@ public Form1()
         {
             width_4_FPGA = (int)(buttonSetWidth4.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(61, "width_4_numericUpDown", buttonSetWidth4.Value.ToString());
-            label1.Text = Convert.ToString(width_4_FPGA);
+            //label1.Text = Convert.ToString(width_4_FPGA);
             ParametroSerial(61, 32, width_4_FPGA, 0);
         }
 
@@ -1272,7 +1290,7 @@ public Form1()
         {
             freq_5_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq5.Value);
             ObjetoIOP.guardarPropiedades(62, "freq_5_numericUpDown", buttonSetFreq5.Value.ToString());
-            label1.Text = Convert.ToString(freq_5_FPGA);
+            //label1.Text = Convert.ToString(freq_5_FPGA);
             ParametroSerial(62, 32, freq_5_FPGA, 0);
         }
         int delay_5_FPGA;
@@ -1280,7 +1298,7 @@ public Form1()
         {
             delay_5_FPGA = (int)(buttonSetDelay5.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(63, "delay_5_numericUpDown", buttonSetDelay5.Value.ToString());
-            label1.Text = Convert.ToString(delay_5_FPGA);
+            //label1.Text = Convert.ToString(delay_5_FPGA);
             ParametroSerial(63, 32, delay_5_FPGA, 0);
         }
         int width_5_FPGA;
@@ -1288,7 +1306,7 @@ public Form1()
         {
             width_5_FPGA = (int)(buttonSetWidth5.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(64, "width_5_numericUpDown", buttonSetWidth5.Value.ToString());
-            label1.Text = Convert.ToString(width_5_FPGA);
+            //label1.Text = Convert.ToString(width_5_FPGA);
             ParametroSerial(64, 32, width_5_FPGA, 0);
         }
         int freq_6_FPGA; 
@@ -1296,7 +1314,7 @@ public Form1()
         {
             freq_6_FPGA = (int)(numericUpDown7.Value / 2 / buttonSetFreq6.Value);
             ObjetoIOP.guardarPropiedades(65, "freq_6_numericUpDown", buttonSetFreq6.Value.ToString());
-            label1.Text = Convert.ToString(freq_6_FPGA);
+            //label1.Text = Convert.ToString(freq_6_FPGA);
             ParametroSerial(65, 32, freq_6_FPGA, 0);
         }
         int delay_6_FPGA;
@@ -1304,7 +1322,7 @@ public Form1()
         {
             delay_6_FPGA = (int)(buttonSetDelay6.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(66, "delay_6_numericUpDown", buttonSetDelay6.Value.ToString());
-            label1.Text = Convert.ToString(delay_6_FPGA);
+            //label1.Text = Convert.ToString(delay_6_FPGA);
             ParametroSerial(66, 32, delay_6_FPGA, 0);
         }
         int width_6_FPGA;
@@ -1312,7 +1330,7 @@ public Form1()
         {
             width_6_FPGA = (int)(buttonSetWidth6.Value * numericUpDown7.Value / 1000);
             ObjetoIOP.guardarPropiedades(67, "width_6_numericUpDown", buttonSetWidth6.Value.ToString());
-            label1.Text = Convert.ToString(width_6_FPGA);
+            //label1.Text = Convert.ToString(width_6_FPGA);
             ParametroSerial(67, 32, width_6_FPGA, 0);
         }
 
@@ -1351,7 +1369,7 @@ public Form1()
         {
             freq_MZI = (int)(numericUpDown7.Value / 2 / numericUpDown11.Value);
             ObjetoIOP.guardarPropiedades(71, "freq_MZI_det_numericUpDown11", numericUpDown11.Value.ToString());
-            label1.Text = Convert.ToString(freq_MZI);
+            //label1.Text = Convert.ToString(freq_MZI);
             ParametroSerial(71, 32, freq_MZI, 0);
         }
 
