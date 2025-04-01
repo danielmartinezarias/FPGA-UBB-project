@@ -2284,7 +2284,8 @@ control_phase_inst : control_phase
   fmc_la_p_00 <=  sync;
   fmc_la_p_17 <=  gate_idqube; --edit DMA 22-09-24
   fmc_la_p_18 <=  MZI;
-  fmc_la_p_24 <=  clk100;
+  fmc_la_n_18 <=  MZI;
+  fmc_la_p_24 <=  sync;
   
 
 -- FMC
