@@ -27,8 +27,8 @@ controlDM	1
 freq_sync_numericUpDown1	0,00006
 delay_pulse_numericUpDown3	0
 width_pulse_numericUpDown4	5
-delay_det_numericUpDown5	8333870,0
-width_det_numericUpDown6	6000
+delay_det_numericUpDown5	8339910,0
+width_det_numericUpDown6	600
 	
 	
 	
@@ -69,7 +69,7 @@ width_6_numericUpDown	200
 	
 	
 	
-freq_MZI_det_numericUpDown11	0,00006
+freq_MZI_det_numericUpDown11	6
 	
 	
 	
