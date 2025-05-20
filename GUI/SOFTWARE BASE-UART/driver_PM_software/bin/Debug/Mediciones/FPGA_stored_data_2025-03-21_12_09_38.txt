@@ -1,1 +1,0 @@
-N	freq_sync	freq_sync	delay_pulse	width_pulse	delay_det	width_det	mascara	ADC0	ADC1

@@ -1,0 +1,1 @@
+N	MZI_f_MHz	SYNC_f_MHz	MZI_D_ns	MZI_W_ns	DET_D_ns	DET_W_ns	State	D0	D1
