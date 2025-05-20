@@ -69,6 +69,7 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
@@ -118,7 +119,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
             this.label24 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -311,6 +311,7 @@
             // 
             // numericUpDown5
             // 
+            this.numericUpDown5.DecimalPlaces = 2;
             resources.ApplyResources(this.numericUpDown5, "numericUpDown5");
             this.numericUpDown5.Increment = new decimal(new int[] {
             25,
@@ -476,6 +477,11 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // radioButton2
             // 
@@ -1069,11 +1075,6 @@
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
             this.label24.Click += new System.EventHandler(this.label24_Click);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
             // 
             // Form1
             // 

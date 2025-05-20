@@ -11,8 +11,6 @@ using System.IO;
 //using System.Windows.Forms.DataVisualization.Charting;
 using System.Globalization;
 using System.Runtime.InteropServices;     // DLL support
-using System.Globalization;
-
 
 
 
@@ -1056,26 +1054,17 @@ public Form1()
                         double DET_D_ns = 500 * (double)Vect_FPGAoutMem[10] / master_clk;
                         double DET_W_ns = 500 * (double)Vect_FPGAoutMem[11] / master_clk;
                         RxString_txt = RxString_txt +
-                            //Convert.ToString(k) + "\t" + 
-                            //Convert.ToString(freq_MZI) + "\t" + 
-                            //Convert.ToString(f_sync_MHz) + "\t" + 
-                            //Convert.ToString(MZI_D_ns) + "\t" + 
-                            //Convert.ToString(MZI_W_ns) + "\t" + 
-                            //Convert.ToString(DET_D_ns) + "\t" + 
-                            //Convert.ToString(DET_W_ns) + "\t" + 
-                            //Convert.ToString(mascara[k]) + "\t" + 
-                            //Convert.ToString(ADC0[k]) + "\t" + 
-                            //Convert.ToString(ADC1[k]) + "\r\n";
-                            k.ToString(CultureInfo.InvariantCulture) + "\t" +
-                            freq_MZI.ToString(CultureInfo.InvariantCulture) + "\t" +
-                            f_sync_MHz.ToString(CultureInfo.InvariantCulture) + "\t" +
-                            MZI_D_ns.ToString(CultureInfo.InvariantCulture) + "\t" +
-                            MZI_W_ns.ToString(CultureInfo.InvariantCulture) + "\t" +
-                            DET_D_ns.ToString("G17", CultureInfo.InvariantCulture) +
-                            DET_W_ns.ToString(CultureInfo.InvariantCulture) + "\t" +
-                            mascara[k].ToString(CultureInfo.InvariantCulture) + "\t" +
-                            ADC0[k].ToString(CultureInfo.InvariantCulture) + "\t" +
-                            ADC1[k].ToString(CultureInfo.InvariantCulture) + "\r\n";
+                            Convert.ToString(k) + "\t" + 
+                            Convert.ToString(freq_MZI) + "\t" + 
+                            Convert.ToString(f_sync_MHz) + "\t" + 
+                            Convert.ToString(MZI_D_ns) + "\t" + 
+                            Convert.ToString(MZI_W_ns) + "\t" + 
+                            Convert.ToString(DET_D_ns) + "\t" + 
+                            Convert.ToString(DET_W_ns) + "\t" + 
+                            Convert.ToString(mascara[k]) + "\t" + 
+                            Convert.ToString(ADC0[k]) + "\t" + 
+                            Convert.ToString(ADC1[k]) + "\r\n";
+                        
                         k++;
                     }
                     StreamWriter sw = new StreamWriter(direccion_guardar2, true);
