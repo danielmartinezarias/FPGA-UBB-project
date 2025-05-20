@@ -311,7 +311,7 @@
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.DecimalPlaces = 2;
+            this.numericUpDown5.DecimalPlaces = 1;
             resources.ApplyResources(this.numericUpDown5, "numericUpDown5");
             this.numericUpDown5.Increment = new decimal(new int[] {
             25,
