@@ -1071,7 +1071,7 @@ public Form1()
                             f_sync_MHz.ToString(CultureInfo.InvariantCulture) + "\t" +
                             MZI_D_ns.ToString(CultureInfo.InvariantCulture) + "\t" +
                             MZI_W_ns.ToString(CultureInfo.InvariantCulture) + "\t" +
-                            DET_D_ns.ToString(CultureInfo.InvariantCulture) + "\t" +
+                            DET_D_ns.ToString("G17", CultureInfo.InvariantCulture) +
                             DET_W_ns.ToString(CultureInfo.InvariantCulture) + "\t" +
                             mascara[k].ToString(CultureInfo.InvariantCulture) + "\t" +
                             ADC0[k].ToString(CultureInfo.InvariantCulture) + "\t" +
