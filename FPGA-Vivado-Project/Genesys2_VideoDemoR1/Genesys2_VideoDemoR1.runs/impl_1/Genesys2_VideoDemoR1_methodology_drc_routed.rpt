@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Jan 14 16:12:43 2026
+| Date         : Wed Jan 14 16:47:29 2026
 | Host         : LAPTOP-RR96MLV1 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Genesys2_VideoDemoR1_methodology_drc_routed.rpt -pb Genesys2_VideoDemoR1_methodology_drc_routed.pb -rpx Genesys2_VideoDemoR1_methodology_drc_routed.rpx
 | Design       : Genesys2_VideoDemoR1

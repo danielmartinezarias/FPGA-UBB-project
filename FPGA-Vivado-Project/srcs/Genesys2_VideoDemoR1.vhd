@@ -837,8 +837,8 @@ signal sync_ext             : std_logic;
  signal ireg_write          : std_logic_vector(31 downto 0);
  signal reset_DDR3          : std_logic; 
  signal dead_time_APD       : std_logic_vector(7 downto 0);
- signal pulse_control       : std_logic;
- signal CW                  : std_logic;
+ signal pulse_control       : std_logic := '1';
+ signal CW                  : std_logic := '0';
  signal AliceBob            : std_logic;
  signal freq_MZI_det        : std_logic_vector(31 downto 0);
 
