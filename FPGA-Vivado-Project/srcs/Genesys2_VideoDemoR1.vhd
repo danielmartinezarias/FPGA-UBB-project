@@ -2281,7 +2281,7 @@ control_phase_inst : control_phase
   led(0)        <= sync;
   --led(0)  <= led_prueba;
 
-  fmc_la_p_00 <=  sync;
+  fmc_la_p_00 <=  MZI;
   fmc_la_p_17 <=  gate_idqube; --edit DMA 22-09-24
   fmc_la_p_32 <=  MZI;
   --fmc_la_n_32 <=  MZI;
